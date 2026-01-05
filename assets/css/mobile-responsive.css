@@ -1,0 +1,1066 @@
+/*
+---------------------------------------------
+Mobile-First Responsive Styles for Starlet Technologies
+---------------------------------------------
+*/
+
+/* Mobile First - Base Styles (Default for mobile) */
+* {
+  box-sizing: border-box;
+}
+
+/* Logo Sizing - Mobile First */
+.header-area .main-nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-area .main-nav .logo img {
+  max-width: 100px;
+  max-height: 40px;
+  height: auto;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.background-header .main-nav .logo img {
+  max-width: 90px;
+  max-height: 38px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Header Mobile First with Animated Gradient */
+.header-area {
+  padding: 10px 15px;
+  height: auto;
+  min-height: 70px;
+  background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 5s ease infinite;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  position: relative !important;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Override transparent background from main CSS */
+.header-area:not(.background-header) {
+  background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
+  background-size: 200% 100%;
+  animation: gradientShift 5s ease infinite;
+  border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+}
+
+.header-area .main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 70px;
+}
+
+.header-area .main-nav .logo {
+  float: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.header-area .main-nav .nav {
+  float: none;
+  margin-top: 0;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  background: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* When JavaScript toggles display, ensure proper styling */
+.header-area .main-nav .nav[style*="display: block"],
+.header-area .main-nav .nav[style*="display:flex"] {
+  display: flex !important;
+  flex-direction: column;
+}
+
+.header-area .main-nav .nav li {
+  width: 100%;
+  padding: 0;
+  border-bottom: 1px solid rgba(25, 118, 210, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header-area .main-nav .nav li:hover {
+  border-bottom-color: rgba(25, 118, 210, 0.2);
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  padding: 15px 20px;
+  height: auto !important;
+  line-height: 1.5 !important;
+  color: #1a237e !important;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Ensure navigation links are visible - inactive tabs should be navy blue */
+.header-area .main-nav .nav li a:not(.active) {
+  color: #1a237e !important;
+  font-weight: 500;
+}
+
+/* Active tab styling with visual indicator */
+.header-area .main-nav .nav li a.active {
+  color: #ffd700 !important;
+  font-weight: 600;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 215, 0, 0.05) 100%) !important;
+  border-left: 4px solid #ffd700;
+  padding-left: 16px;
+}
+
+/* Active tab underline indicator */
+.header-area .main-nav .nav li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+  border-radius: 2px 2px 0 0;
+}
+
+.header-area .main-nav .nav li a:hover:not(.active) {
+  color: #1565c0 !important;
+  transform: translateX(5px);
+}
+
+/* Override template CSS for mobile menu - only change text color, keep original background */
+@media (max-width: 767px) {
+  /* Inactive menu items - only change text color to navy blue, keep original background */
+  .header-area .main-nav .nav li a:not(.active) {
+    color: #1a237e !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+  }
+  
+  /* Active menu items */
+  .header-area .main-nav .nav li a.active {
+    color: #ffd700 !important;
+    font-weight: 600 !important;
+    opacity: 1 !important;
+    border-left: 4px solid #ffd700 !important;
+    padding-left: 16px !important;
+    position: relative;
+  }
+  
+  /* Active tab bottom indicator */
+  .header-area .main-nav .nav li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 2px 2px 0 0;
+  }
+  
+  /* Enhanced hover state for inactive tabs - darker blue for better visibility */
+  .header-area .main-nav .nav li a:hover:not(.active) {
+    color: #1565c0 !important;
+    transform: translateX(5px);
+  }
+}
+
+.menu-trigger {
+  display: block !important;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  color: #ffffff !important;
+  z-index: 1001;
+}
+
+/* Ensure logo has good contrast on gradient background */
+.header-area .main-nav .logo img {
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+  opacity: 1;
+}
+
+.background-header .main-nav .logo img {
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+}
+
+/* Main Banner Mobile First */
+.main-banner {
+  padding: 120px 15px 60px;
+  text-align: center;
+}
+
+.main-banner .left-content h2 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.main-banner .left-content p {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.main-banner .white-button {
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.main-banner .white-button a {
+  display: block;
+  width: 100%;
+  padding: 12px 20px;
+}
+
+/* Services Mobile First */
+.services {
+  padding: 60px 15px;
+}
+
+.section-heading h4 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.section-heading p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.service-item {
+  margin-bottom: 30px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* About Section Mobile First */
+.about-us {
+  padding: 60px 15px;
+}
+
+.about-us .section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us .box-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Pricing Mobile First */
+.pricing-tables {
+  padding: 60px 15px;
+}
+
+.pricing-item-regular,
+.pricing-item-pro {
+  margin-bottom: 30px;
+}
+
+/* Footer Mobile First */
+footer {
+  padding: 60px 15px 30px;
+  text-align: center;
+}
+
+.footer-widget {
+  margin-bottom: 40px;
+}
+
+.footer-widget h4 {
+  margin-bottom: 20px;
+}
+
+.footer-widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widget .logo img {
+  max-width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Container Mobile First */
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Typography Mobile First */
+h1, h2, h3, h4, h5, h6 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  line-height: 1.3;
+}
+
+p {
+  font-size: clamp(14px, 2vw, 16px);
+  line-height: 1.6;
+}
+
+/* Images Responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons Mobile First */
+.gradient-button a,
+.border-button a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* Tablet Styles (min-width: 768px) */
+@media (min-width: 768px) {
+  .header-area {
+    height: 80px;
+    min-height: 80px;
+    background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
+    background-size: 200% 100%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  }
+
+  .header-area .main-nav {
+    min-height: 80px;
+  }
+
+  .header-area .main-nav .logo img {
+    max-width: 110px;
+    max-height: 50px;
+  }
+
+  .background-header .main-nav .logo img {
+    max-width: 100px;
+    max-height: 48px;
+  }
+
+  .header-area .main-nav .nav {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .header-area .main-nav .nav li {
+    width: auto;
+    border-bottom: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-area .main-nav .nav li a {
+    display: inline-block;
+    padding: 0 12px !important;
+    background: transparent !important;
+    height: auto !important;
+    line-height: 80px !important;
+    color: #ffffff !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  /* Desktop navigation hover effect */
+  .header-area .main-nav .nav li a:hover:not(.active) {
+    color: #ffd700 !important;
+    transform: translateY(-2px);
+  }
+  
+  /* Desktop active navigation link */
+  .header-area .main-nav .nav li a.active {
+    color: #ffd700 !important;
+    font-weight: 600;
+  }
+  
+  /* Desktop active navigation underline */
+  .header-area .main-nav .nav li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 2px;
+  }
+  
+  /* Desktop hover underline effect */
+  .header-area .main-nav .nav li a:not(.active)::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+  }
+  
+  .header-area .main-nav .nav li a:hover:not(.active)::after {
+    width: 60%;
+  }
+
+  .menu-trigger {
+    display: none !important;
+  }
+
+  .main-banner {
+    padding: 150px 30px 80px;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 36px;
+  }
+
+  .main-banner .white-button {
+    display: inline-block;
+    width: auto;
+    margin: 0 10px 10px 0;
+  }
+
+  .main-banner .white-button a {
+    display: inline-block;
+    width: auto;
+  }
+
+  .container {
+    max-width: 720px;
+  }
+
+  .section-heading h4 {
+    font-size: 28px;
+  }
+
+  .gradient-button a,
+  .border-button a {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+/* Desktop Styles (min-width: 992px) */
+@media (min-width: 992px) {
+  .header-area {
+    height: 100px;
+    min-height: 100px;
+    background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
+    background-size: 200% 100%;
+    animation: gradientShift 5s ease infinite;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+  }
+
+  .header-area .main-nav {
+    min-height: 100px;
+  }
+
+  .header-area .main-nav .logo {
+    float: left;
+    line-height: 100px;
+  }
+
+  .header-area .main-nav .logo img {
+    max-width: 130px;
+    max-height: 60px;
+  }
+
+  .background-header .main-nav .logo {
+    line-height: 80px;
+  }
+
+  .background-header .main-nav .logo img {
+    max-width: 120px;
+    max-height: 58px;
+  }
+
+  .header-area .main-nav .nav {
+    float: right;
+    margin-top: 30px;
+  }
+
+  .header-area .main-nav .nav li a {
+    line-height: 1 !important;
+  }
+
+  .main-banner {
+    padding: 200px 0 100px;
+    text-align: left;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 48px;
+    line-height: 70px;
+  }
+
+  .main-banner .left-content p {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .section-heading h4 {
+    font-size: 30px;
+  }
+
+  .service-item {
+    text-align: left;
+  }
+
+  .about-us .section-heading {
+    text-align: left;
+  }
+
+  .about-us .box-item {
+    text-align: left;
+  }
+
+  footer {
+    text-align: left;
+  }
+
+  .footer-widget {
+    text-align: left;
+  }
+}
+
+/* Large Desktop Styles (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .header-area .main-nav .logo img {
+    max-width: 150px;
+    max-height: 65px;
+  }
+
+  .background-header .main-nav .logo img {
+    max-width: 140px;
+    max-height: 63px;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 56px;
+  }
+}
+
+/* Extra Large Desktop (min-width: 1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* Utility Classes for Mobile */
+.mobile-center {
+  text-align: center;
+}
+
+.mobile-full-width {
+  width: 100% !important;
+}
+
+.mobile-hide {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-hide {
+    display: block;
+  }
+  
+  .mobile-center {
+    text-align: left;
+  }
+  
+  .mobile-full-width {
+    width: auto !important;
+  }
+}
+
+/* Fix for sticky header on mobile */
+.background-header {
+  height: 70px !important;
+  background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
+  background-size: 200% 100%;
+  animation: gradientShift 5s ease infinite;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.2) !important;
+}
+
+.background-header .main-nav .logo {
+  line-height: 70px;
+}
+
+.background-header .main-nav .nav li a {
+  color: #ffffff !important;
+}
+
+.header-area .main-nav .nav li a {
+  color: #ffffff !important;
+}
+
+.header-area .main-nav .nav li a:hover {
+  color: #ffd700 !important;
+}
+
+@media (min-width: 768px) {
+  .background-header {
+    height: 80px !important;
+    background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
+    background-size: 200% 100%;
+    animation: gradientShift 5s ease infinite;
+  }
+  
+  .background-header .main-nav .logo {
+    line-height: 80px;
+  }
+}
+
+/* Ensure images don't overflow */
+.right-image img,
+.left-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Bootstrap Modal Responsive Styles */
+#loginModal .modal-dialog {
+  margin: 10px;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  #loginModal .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
+@media (min-width: 992px) {
+  #loginModal .modal-dialog {
+    max-width: 800px;
+  }
+}
+
+#loginModal .modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+#loginModal .modal-header {
+  background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 5s ease infinite;
+  color: #fff;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 20px;
+}
+
+#loginModal .modal-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+#loginModal .btn-close {
+  filter: invert(1);
+  opacity: 0.9;
+}
+
+#loginModal .btn-close:hover {
+  opacity: 1;
+}
+
+#loginModal .modal-body {
+  padding: 25px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+/* System Selection Modal Styles */
+.system_selection {
+  padding: 10px 0;
+}
+
+.system_options {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.system_option {
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.system_option:hover {
+  border-color: #4b8ef1;
+  background: #f5f9ff;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(75, 142, 241, 0.2);
+}
+
+.system_option.active {
+  border-color: #4b8ef1;
+  background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+  color: #fff;
+  animation: gradientShift 5s ease infinite;
+  background-size: 200% 100%;
+}
+
+.system_option.loading {
+  pointer-events: none;
+  cursor: wait;
+}
+
+.system_option.loading .system_icon,
+.system_option.loading h4,
+.system_option.loading p {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.system_icon {
+  font-size: 48px;
+  color: #4b8ef1;
+  margin-bottom: 15px;
+}
+
+.system_option.active .system_icon {
+  color: #fff;
+}
+
+.system_option h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2a2a2a;
+}
+
+.system_option.active h4 {
+  color: #fff;
+}
+
+.system_option p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+.system_option.active p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.selected_system_info {
+  background: #f5f9ff;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4b8ef1;
+}
+
+.selected_system_info p {
+  margin: 0;
+  color: #2a2a2a;
+  font-size: 14px;
+}
+
+.selected_system_info strong {
+  color: #4b8ef1;
+}
+
+#selected_system_name {
+  color: #4b8ef1;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .system_option {
+    padding: 25px 20px;
+    min-height: 180px;
+  }
+}
+
+@media (min-width: 768px) {
+  .system_options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .system_option {
+    padding: 30px 20px;
+    min-height: 200px;
+  }
+}
+
+/* Bootstrap Form Styles in Modal */
+#loginModal .form-label {
+  font-weight: 500;
+  color: #2a2a2a;
+  margin-bottom: 8px;
+}
+
+#loginModal .form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+#loginModal .form-control:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.15);
+}
+
+#loginModal .form-check-input:checked {
+  background-color: #1976d2;
+  border-color: #1976d2;
+}
+
+#loginModal .btn-primary {
+  background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 5s ease infinite;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+#loginModal .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+}
+
+#loginModal .btn-outline-primary {
+  border: 2px solid #1976d2;
+  color: #1976d2;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+#loginModal .btn-outline-primary:hover {
+  background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+  border-color: transparent;
+  color: #fff;
+}
+
+#loginModal .btn-outline-secondary {
+  border: 2px solid #6c757d;
+  color: #6c757d;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+
+#loginModal .btn-outline-secondary:hover {
+  background: #6c757d;
+  color: #fff;
+}
+
+/* Social Login Boxes */
+#loginModal .social_box {
+  border-radius: 8px;
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#loginModal .social_box:hover {
+  transform: translateX(5px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Selected System Info */
+#loginModal .selected_system_info {
+  background: linear-gradient(135deg, rgba(26, 35, 126, 0.1) 0%, rgba(3, 169, 244, 0.1) 100%);
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #1976d2;
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 575px) {
+  #loginModal .modal-dialog {
+    margin: 0;
+    max-width: 100%;
+    height: 100%;
+  }
+  
+  #loginModal .modal-content {
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #loginModal .modal-header {
+    border-radius: 0;
+    flex-shrink: 0;
+  }
+  
+  #loginModal .modal-body {
+    padding: 20px 15px;
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .system_option {
+    padding: 20px 15px;
+    min-height: 140px;
+  }
+  
+  .system_icon {
+    font-size: 36px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .system_option h4 {
+    font-size: 16px !important;
+    margin-bottom: 8px !important;
+  }
+  
+  .system_option p {
+    font-size: 13px !important;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Button adjustments for mobile */
+  #loginModal .d-grid.gap-2.d-md-flex {
+    flex-direction: column;
+  }
+  
+  #loginModal .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #loginModal .btn:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 576px) and (max-width: 991px) {
+  .system_options {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .system_option {
+    min-height: 160px;
+  }
+}
+
+/* Ensure modal backdrop is visible on mobile */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Smooth scrolling for modal body */
+#loginModal .modal-body {
+  scroll-behavior: smooth;
+}
+
+/* Loading state improvements */
+.system_option.loading {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.system_option.loading div {
+  width: 100%;
+}
+
+/* Testimonials Mobile First */
+.the-clients {
+  padding: 60px 15px;
+}
+
+/* Newsletter Mobile First */
+footer #search {
+  margin-bottom: 30px;
+}
+
+footer #search input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+footer #search button {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  footer #search input {
+    width: auto;
+    margin-bottom: 0;
+  }
+  
+  footer #search button {
+    width: auto;
+  }
+}
+

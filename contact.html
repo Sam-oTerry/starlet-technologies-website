@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Contact Starlet Technologies in Uganda. Call +256 769 214 437, WhatsApp, or email info@starlettechnologies.com for free demos and consultations.">
+    <meta name="author" content="Starlet Technologies">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Contact Us | Starlet Technologies - Uganda</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
+    <link rel="stylesheet" href="assets/css/color-theme.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        background-color: #20ba5a;
+        transform: scale(1.1);
+        color: #FFF;
+        text-decoration: none;
+      }
+      .whatsapp-float i {
+        margin-top: 0;
+      }
+      @media (max-width: 767px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+      .page-header {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+        background-size: 200% 100%;
+        animation: gradientShift 5s ease infinite;
+        padding: 150px 0 80px;
+        color: #fff;
+        text-align: center;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .contact-section {
+        padding: 100px 0;
+        background: #f8f9fa;
+      }
+      .contact-form-wrapper {
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        height: 100%;
+      }
+      .contact-form-wrapper h4 {
+        color: #1a237e;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 35px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #1976d2;
+      }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 2px solid #e0e0e0;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        background: #fafafa;
+        font-family: 'Roboto', sans-serif;
+      }
+      .contact-form input:focus,
+      .contact-form select:focus,
+      .contact-form textarea:focus {
+        border-color: #1976d2;
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.1);
+        background: #fff;
+        transform: translateY(-2px);
+      }
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: #999;
+      }
+      .contact-form fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+      .contact-info-card {
+        background: #fff;
+        padding: 35px 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        margin-bottom: 25px;
+        height: 100%;
+        transition: all 0.3s ease;
+        border: 1px solid #f0f0f0;
+        text-align: center;
+      }
+      .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(25, 118, 210, 0.15);
+        border-color: #1976d2;
+      }
+      .contact-info-card .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        transition: all 0.3s ease;
+      }
+      .contact-info-card:hover .icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+      }
+      .contact-info-card i {
+        font-size: 32px;
+        color: #fff;
+      }
+      .contact-info-card h5 {
+        color: #1a237e;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+      .contact-info-card p {
+        color: #666;
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 0;
+      }
+      .contact-info-card a {
+        color: #1976d2;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      .contact-info-card a:hover {
+        color: #1a237e;
+        text-decoration: underline;
+      }
+      .whatsapp-button a {
+        background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
+        border: none;
+        border-radius: 12px;
+        padding: 18px 30px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+      }
+      .whatsapp-button a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
+      }
+      .map-container {
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        margin-bottom: 30px;
+      }
+      .map-container iframe {
+        border: none;
+        width: 100%;
+        height: 300px;
+      }
+      .social-icons {
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      }
+      .social-icons h5 {
+        color: #1a237e;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .social-icons a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        border-radius: 50%;
+        background: #f0f7ff;
+        transition: all 0.3s ease;
+        margin: 0 8px;
+      }
+      .social-icons a:hover {
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      }
+      .business-hours-card {
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(25, 118, 210, 0.05) 100%);
+        border: 2px solid #1976d2;
+      }
+      .business-hours-card .icon-wrapper {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+      }
+      .main-button {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+        border: none;
+        border-radius: 10px;
+        padding: 16px 40px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        transition: all 0.3s ease;
+        width: 100%;
+        box-shadow: 0 5px 20px rgba(25, 118, 210, 0.3);
+      }
+      .main-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
+      }
+      @media (max-width: 768px) {
+        .contact-section {
+          padding: 60px 0;
+        }
+        .contact-form-wrapper {
+          padding: 35px 25px;
+          margin-bottom: 30px;
+        }
+        .contact-info-card {
+          padding: 25px 20px;
+        }
+      }
+    </style>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  
+  <!-- Bootstrap Modal for System Selection -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
+          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- System Selection -->
+          <div class="system_selection">
+            <div class="text-center mb-4">
+              <p class="mb-0">Please select the system you want to login to:</p>
+            </div>
+
+            <div class="system_options">
+              <div class="system_option" data-system="school">
+                <div class="system_icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>School Management System</h4>
+                <p>Manage students, teachers, and academic activities</p>
+              </div>
+
+              <div class="system_option" data-system="hospital">
+                <div class="system_icon">
+                  <i class="fas fa-hospital"></i>
+                </div>
+                <h4>Hospital/Drugshop Management System</h4>
+                <p>Manage patients, appointments, and inventory</p>
+              </div>
+
+              <div class="system_option" data-system="pos">
+                <div class="system_icon">
+                  <i class="fas fa-cash-register"></i>
+                </div>
+                <h4>Point of Sale Systems</h4>
+                <p>Process sales and manage transactions</p>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <p class="text-muted small">New client? Request access or demo below.</p>
+            </div>
+          </div>
+
+          <!-- Social Login (Hidden initially) -->
+          <div class="social_login" style="display:none;">
+            <div class="mb-3">
+              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
+                <span class="icon"><i class="fab fa-facebook"></i></span>
+                <span class="icon_title">Connect with Facebook</span>
+              </a>
+
+              <a href="#" class="social_box google d-block text-decoration-none">
+                <span class="icon"><i class="fab fa-google-plus"></i></span>
+                <span class="icon_title">Connect with Google</span>
+              </a>
+            </div>
+
+            <div class="text-center my-3">
+              <span>Or use your Email address</span>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex">
+              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
+              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
+            </div>
+          </div>
+
+          <!-- Username & Password Login form -->
+          <div class="user_login" style="display:none;">
+            <div class="selected_system_info mb-3">
+              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="login_email" class="form-label">Email / Username</label>
+                <input type="text" class="form-control" id="login_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="login_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" />
+                <label class="form-check-label" for="remember">Remember me on this computer</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
+              </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
+            </div>
+          </div>
+
+          <!-- Register Form -->
+          <div class="user_register" style="display:none;">
+            <form>
+              <div class="mb-3">
+                <label for="register_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="register_name" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="register_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="register_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="send_updates" />
+                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="wow fadeInDown">Get in Touch</h1>
+      <p class="wow fadeInUp">We're Based in Uganda – Ready to Help You Transform Your Operations</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Contact <em>Starlet Technologies</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Ready to transform your operations? Contact us for a free demo or consultation. We're based in Uganda and serve clients across the nation. Call, WhatsApp, or visit us today!</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div class="contact-form-wrapper">
+            <h4>Send Us a Message</h4>
+            <form id="contactForm" action="#" method="POST" class="contact-form">
+              <fieldset>
+                <input type="text" name="name" id="name" placeholder="Your Full Name" required>
+              </fieldset>
+              <fieldset>
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number (e.g., +256 769 214 437)" required>
+              </fieldset>
+              <fieldset>
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+              </fieldset>
+              <fieldset>
+                <select name="business_type" id="business_type" required>
+                  <option value="">Select Business Type</option>
+                  <option value="school">School</option>
+                  <option value="clinic">Clinic/Hospital</option>
+                  <option value="drugshop">Drugshop/Pharmacy</option>
+                  <option value="shop">Shop/Retail Business</option>
+                  <option value="saccos">SACCOS</option>
+                  <option value="other">Other</option>
+                </select>
+              </fieldset>
+              <fieldset>
+                <textarea name="message" id="message" placeholder="Tell us about your needs and how we can help..." rows="6" required></textarea>
+              </fieldset>
+              <fieldset>
+                <button type="submit" class="main-button">
+                  <i class="fa fa-paper-plane"></i> Request Free Demo
+                </button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-info">
+            <div class="whatsapp-button mb-4">
+              <a href="https://wa.me/256769214437" target="_blank" class="btn btn-lg w-100 text-white">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+            
+            <div class="row">
+              <div class="col-lg-12 mb-4">
+                <div class="contact-info-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-map-marker-alt"></i>
+                  </div>
+                  <h5>Our Location</h5>
+                  <p>Kampala, Uganda<br>Based in Uganda, serving the nation</p>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="contact-info-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <h5>Phone</h5>
+                  <p>
+                    <a href="tel:+256394558267">0394 558 267</a><br>
+                    <a href="tel:+256769214437">+256 769 214 437</a>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 mb-4">
+                <div class="contact-info-card">
+                  <div class="icon-wrapper">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <h5>Email</h5>
+                  <p><a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63856.515416234!2d32.5292!3d0.3476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db3e8c6e6c6b5%3A0x1e3a4b5c6d7e8f9a!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1234567890123!5m2!1sen!2sug" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="social-icons text-center">
+              <h5>Follow Us</h5>
+              <a href="https://wa.me/256769214437" target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp" style="color: #25d366; font-size: 24px;"></i>
+              </a>
+              <a href="#" target="_blank" title="Facebook">
+                <i class="fab fa-facebook" style="color: #1877f2; font-size: 24px;"></i>
+              </a>
+              <a href="#" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin" style="color: #0077b5; font-size: 24px;"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Hours -->
+      <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="contact-info-card business-hours-card">
+            <div class="icon-wrapper">
+              <i class="fa fa-clock"></i>
+            </div>
+            <h4>Business Hours</h4>
+            <p style="font-size: 16px; margin-top: 20px; line-height: 2;">
+              <strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM<br>
+              <strong>Saturday:</strong> 9:00 AM - 2:00 PM<br>
+              <strong>Sunday:</strong> Closed<br>
+              <em style="color: #1976d2; font-weight: 500;">Emergency support available via WhatsApp</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="services.html">School Management System</a></li>
+              <li><a href="services.html">Hospital Management</a></li>
+              <li><a href="services.html">POS Systems</a></li>
+              <li><a href="services.html">ICT Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>About Starlet Technologies</h4>
+            <div class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
+            </div>
+            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
+            <p class="mt-3"><strong>Contact:</strong><br>
+            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
+            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2025 Starlet Technologies – Uganda. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
+

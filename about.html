@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Learn about Starlet Technologies - A Uganda-based IT company providing affordable school, clinic, and POS management systems across Uganda.">
+    <meta name="author" content="Starlet Technologies">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>About Us | Starlet Technologies - Uganda</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
+    <link rel="stylesheet" href="assets/css/color-theme.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        background-color: #20ba5a;
+        transform: scale(1.1);
+        color: #FFF;
+        text-decoration: none;
+      }
+      .whatsapp-float i {
+        margin-top: 0;
+      }
+      @media (max-width: 767px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+      .page-header {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+        background-size: 200% 100%;
+        animation: gradientShift 5s ease infinite;
+        padding: 150px 0 80px;
+        color: #fff;
+        text-align: center;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .mission-vision {
+        padding: 60px 0;
+      }
+      .mission-vision .card {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        padding: 30px;
+        height: 100%;
+        transition: transform 0.3s ease;
+      }
+      .mission-vision .card:hover {
+        transform: translateY(-5px);
+      }
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .value-item {
+        text-align: center;
+        padding: 30px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .value-item:hover {
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(3, 169, 244, 0.05) 100%);
+        transform: translateY(-5px);
+      }
+      .value-item i {
+        font-size: 48px;
+        color: #1976d2;
+        margin-bottom: 20px;
+      }
+    </style>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html" class="active">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  
+  <!-- Bootstrap Modal for System Selection -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
+          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- System Selection -->
+          <div class="system_selection">
+            <div class="text-center mb-4">
+              <p class="mb-0">Please select the system you want to login to:</p>
+            </div>
+
+            <div class="system_options">
+              <div class="system_option" data-system="school">
+                <div class="system_icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>School Management System</h4>
+                <p>Manage students, teachers, and academic activities</p>
+              </div>
+
+              <div class="system_option" data-system="hospital">
+                <div class="system_icon">
+                  <i class="fas fa-hospital"></i>
+                </div>
+                <h4>Hospital/Drugshop Management System</h4>
+                <p>Manage patients, appointments, and inventory</p>
+              </div>
+
+              <div class="system_option" data-system="pos">
+                <div class="system_icon">
+                  <i class="fas fa-cash-register"></i>
+                </div>
+                <h4>Point of Sale Systems</h4>
+                <p>Process sales and manage transactions</p>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <p class="text-muted small">New client? Request access or demo below.</p>
+            </div>
+          </div>
+
+          <!-- Social Login (Hidden initially) -->
+          <div class="social_login" style="display:none;">
+            <div class="mb-3">
+              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
+                <span class="icon"><i class="fab fa-facebook"></i></span>
+                <span class="icon_title">Connect with Facebook</span>
+              </a>
+
+              <a href="#" class="social_box google d-block text-decoration-none">
+                <span class="icon"><i class="fab fa-google-plus"></i></span>
+                <span class="icon_title">Connect with Google</span>
+              </a>
+            </div>
+
+            <div class="text-center my-3">
+              <span>Or use your Email address</span>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex">
+              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
+              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
+            </div>
+          </div>
+
+          <!-- Username & Password Login form -->
+          <div class="user_login" style="display:none;">
+            <div class="selected_system_info mb-3">
+              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="login_email" class="form-label">Email / Username</label>
+                <input type="text" class="form-control" id="login_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="login_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" />
+                <label class="form-check-label" for="remember">Remember me on this computer</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
+              </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
+            </div>
+          </div>
+
+          <!-- Register Form -->
+          <div class="user_register" style="display:none;">
+            <form>
+              <div class="mb-3">
+                <label for="register_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="register_name" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="register_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="register_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="send_updates" />
+                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="wow fadeInDown">About Starlet Technologies</h1>
+      <p class="wow fadeInUp">Empowering Uganda with Affordable Technology Solutions</p>
+    </div>
+  </div>
+
+  <!-- About Content -->
+  <div class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h4>Who <em>We Are</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src="assets/images/about-right-dec.png" alt="Starlet Technologies">
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <div class="section-heading">
+            <h4>Our <em>Story</em></h4>
+            <p>Starlet Technologies was founded in Uganda with a clear mission: to bridge the digital divide and make professional management systems accessible to schools, clinics, and businesses across the nation.</p>
+            <p>We understand the unique challenges faced by organizations in Uganda - unreliable internet connectivity, limited budgets, and the need for systems that work in local contexts. That's why we design our solutions with offline capability, affordable pricing, and local support in mind.</p>
+            <p>Our team is based right here in Uganda, which means we understand local needs, provide quick response times, and offer support in languages our clients are comfortable with. We're not just a technology company - we're your neighbors, committed to your success.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mission & Vision -->
+  <div class="mission-vision section" style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="text-center mb-4">
+              <i class="fas fa-bullseye fa-3x" style="color: #1976d2;"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To empower schools, clinics, and businesses across Uganda with affordable, reliable, and easy-to-use technology solutions that improve operations and enable better service delivery to communities.</p>
+            <p>We believe that every organization, regardless of size or budget, should have access to professional management systems that help them operate efficiently and serve their communities better.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card">
+            <div class="text-center mb-4">
+              <i class="fas fa-eye fa-3x" style="color: #1976d2;"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To become the leading provider of affordable technology solutions in Uganda, known for reliability, local expertise, and commitment to client success.</p>
+            <p>We envision a future where every school, clinic, and business in Uganda has access to digital tools that help them thrive, contributing to the nation's economic and social development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Why Choose Us -->
+  <div class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Why <em>Choose Us</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>What sets Starlet Technologies apart in the Uganda market</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-3">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>Local Uganda Team</h4>
+            <p>Our team is based right here in Uganda, providing quick response times, understanding local needs, and offering support in local languages when needed.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Affordable Pricing</h4>
+            <p>Competitive pricing designed specifically for Ugandan businesses and institutions, with flexible payment plans to make our systems accessible.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Offline-Capable</h4>
+            <p>All our systems work offline, ensuring continuous operations even when internet connectivity is unreliable - crucial for Uganda.</p>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="service-item fourth-service">
+            <div class="icon"></div>
+            <h4>Free Training</h4>
+            <p>Comprehensive training and installation included with every system. We ensure your team can use the system effectively from day one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Our Values -->
+  <div class="section" style="background-color: #f8f9fa; padding: 80px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Our <em>Core Values</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="values-grid">
+        <div class="value-item">
+          <i class="fas fa-handshake"></i>
+          <h4>Integrity</h4>
+          <p>We conduct business with honesty, transparency, and ethical practices in all our dealings.</p>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-users"></i>
+          <h4>Client-Focused</h4>
+          <p>Your success is our success. We listen, understand, and deliver solutions that meet your specific needs.</p>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-lightbulb"></i>
+          <h4>Innovation</h4>
+          <p>We continuously improve our systems and services to better serve our clients in Uganda.</p>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-heart"></i>
+          <h4>Community Impact</h4>
+          <p>We're committed to contributing positively to the development of Uganda through technology.</p>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Reliability</h4>
+          <p>You can count on us for consistent, dependable service and support when you need it most.</p>
+        </div>
+        <div class="value-item">
+          <i class="fas fa-graduation-cap"></i>
+          <h4>Education</h4>
+          <p>We believe in empowering our clients through training and knowledge sharing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="section" style="padding: 80px 0; background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%); background-size: 200% 100%; animation: gradientShift 5s ease infinite;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h2 style="color: #fff; margin-bottom: 20px;">Ready to Transform Your Operations?</h2>
+          <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px;">Contact us today for a free consultation and see how our systems can help your organization.</p>
+          <div class="white-button">
+            <a href="contact.html">Request Free Demo <i class="fa fa-calendar-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="services.html">School Management System</a></li>
+              <li><a href="services.html">Hospital Management</a></li>
+              <li><a href="services.html">POS Systems</a></li>
+              <li><a href="services.html">ICT Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>About Starlet Technologies</h4>
+            <div class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
+            </div>
+            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
+            <p class="mt-3"><strong>Contact:</strong><br>
+            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
+            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2025 Starlet Technologies – Uganda. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
+

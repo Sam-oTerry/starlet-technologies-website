@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Explore Starlet Technologies products: School Management System, Hospital/Drugshop Management, and POS Systems. Request a free demo today.">
+    <meta name="author" content="Starlet Technologies">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Our Products | Starlet Technologies - Uganda</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
+    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
+    <link rel="stylesheet" href="assets/css/color-theme.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+    <style>
+      .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+      .whatsapp-float:hover {
+        background-color: #20ba5a;
+        transform: scale(1.1);
+        color: #FFF;
+        text-decoration: none;
+      }
+      .whatsapp-float i {
+        margin-top: 0;
+      }
+      @media (max-width: 767px) {
+        .whatsapp-float {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+      .page-header {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+        background-size: 200% 100%;
+        animation: gradientShift 5s ease infinite;
+        padding: 150px 0 80px;
+        color: #fff;
+        text-align: center;
+      }
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .product-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 50px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+      }
+      .product-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.08) 0%, rgba(25, 118, 210, 0.08) 50%, rgba(3, 169, 244, 0.08) 100%);
+        background-size: 200% 100%;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 0;
+      }
+      .product-card::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.1) 0%, rgba(25, 118, 210, 0.1) 50%, rgba(3, 169, 244, 0.1) 100%);
+        background-size: 200% 200%;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 0;
+        animation: gradientShift 3s ease infinite;
+      }
+      .product-card:hover::before {
+        opacity: 1;
+        animation: gradientShift 3s ease infinite;
+      }
+      .product-card:hover::after {
+        opacity: 1;
+      }
+      .product-card:hover {
+        transform: translateY(-10px) scale(1.01);
+        box-shadow: 0 25px 60px rgba(25, 118, 210, 0.25);
+        border-color: rgba(25, 118, 210, 0.4);
+      }
+      .product-card > * {
+        position: relative;
+        z-index: 1;
+      }
+      .product-card h2 {
+        transition: color 0.3s ease;
+      }
+      .product-card:hover h2 {
+        color: #1976d2 !important;
+      }
+      .product-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        transition: transform 0.4s ease;
+      }
+      .product-card:hover .product-image {
+        transform: scale(1.02);
+      }
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+      }
+      .feature-list li {
+        padding: 15px 0;
+        padding-left: 50px;
+        position: relative;
+        border-bottom: 1px solid #f0f0f0;
+        transition: all 0.3s ease;
+      }
+      .feature-list li:hover {
+        padding-left: 55px;
+        color: #1976d2;
+      }
+      .feature-list li:last-child {
+        border-bottom: none;
+      }
+      .feature-list li:before {
+        content: "\f058";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #1976d2;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .feature-list li:hover:before {
+        transform: scale(1.2) rotate(5deg);
+        font-size: 22px;
+      }
+      .feature-list li[data-icon="user"]:before { content: "\f007"; }
+      .feature-list li[data-icon="money"]:before { content: "\f3d1"; }
+      .feature-list li[data-icon="bell"]:before { content: "\f0f3"; }
+      .feature-list li[data-icon="calendar"]:before { content: "\f073"; }
+      .feature-list li[data-icon="file"]:before { content: "\f15b"; }
+      .feature-list li[data-icon="users"]:before { content: "\f0c0"; }
+      .feature-list li[data-icon="book"]:before { content: "\f02d"; }
+      .feature-list li[data-icon="chart"]:before { content: "\f200"; }
+      .feature-list li[data-icon="wifi"]:before { content: "\f1eb"; }
+      .feature-list li[data-icon="building"]:before { content: "\f1ad"; }
+      .feature-list li[data-icon="download"]:before { content: "\f019"; }
+      .feature-list li[data-icon="hospital"]:before { content: "\f0f8"; }
+      .feature-list li[data-icon="clock"]:before { content: "\f017"; }
+      .feature-list li[data-icon="shopping"]:before { content: "\f07a"; }
+      .feature-list li[data-icon="barcode"]:before { content: "\f02a"; }
+      .feature-list li[data-icon="print"]:before { content: "\f02f"; }
+      .feature-list li[data-icon="credit-card"]:before { content: "\f09d"; }
+      .feature-list li[data-icon="gift"]:before { content: "\f06b"; }
+      .feature-list li[data-icon="store"]:before { content: "\f54e"; }
+      .feature-list li[data-icon="mobile"]:before { content: "\f3cd"; }
+    </style>
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html" class="active">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  
+  <!-- Bootstrap Modal for System Selection -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
+          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- System Selection -->
+          <div class="system_selection">
+            <div class="text-center mb-4">
+              <p class="mb-0">Please select the system you want to login to:</p>
+            </div>
+
+            <div class="system_options">
+              <div class="system_option" data-system="school">
+                <div class="system_icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h4>School Management System</h4>
+                <p>Manage students, teachers, and academic activities</p>
+              </div>
+
+              <div class="system_option" data-system="hospital">
+                <div class="system_icon">
+                  <i class="fas fa-hospital"></i>
+                </div>
+                <h4>Hospital/Drugshop Management System</h4>
+                <p>Manage patients, appointments, and inventory</p>
+              </div>
+
+              <div class="system_option" data-system="pos">
+                <div class="system_icon">
+                  <i class="fas fa-cash-register"></i>
+                </div>
+                <h4>Point of Sale Systems</h4>
+                <p>Process sales and manage transactions</p>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <p class="text-muted small">New client? Request access or demo below.</p>
+            </div>
+          </div>
+
+          <!-- Social Login (Hidden initially) -->
+          <div class="social_login" style="display:none;">
+            <div class="mb-3">
+              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
+                <span class="icon"><i class="fab fa-facebook"></i></span>
+                <span class="icon_title">Connect with Facebook</span>
+              </a>
+
+              <a href="#" class="social_box google d-block text-decoration-none">
+                <span class="icon"><i class="fab fa-google-plus"></i></span>
+                <span class="icon_title">Connect with Google</span>
+              </a>
+            </div>
+
+            <div class="text-center my-3">
+              <span>Or use your Email address</span>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex">
+              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
+              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
+            </div>
+          </div>
+
+          <!-- Username & Password Login form -->
+          <div class="user_login" style="display:none;">
+            <div class="selected_system_info mb-3">
+              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
+            </div>
+            <form>
+              <div class="mb-3">
+                <label for="login_email" class="form-label">Email / Username</label>
+                <input type="text" class="form-control" id="login_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="login_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="login_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" />
+                <label class="form-check-label" for="remember">Remember me on this computer</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
+              </div>
+            </form>
+
+            <div class="text-center mt-3">
+              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
+            </div>
+          </div>
+
+          <!-- Register Form -->
+          <div class="user_register" style="display:none;">
+            <form>
+              <div class="mb-3">
+                <label for="register_name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="register_name" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="register_email" />
+              </div>
+
+              <div class="mb-3">
+                <label for="register_password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="register_password" />
+              </div>
+
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="send_updates" />
+                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
+              </div>
+
+              <div class="d-grid gap-2 d-md-flex">
+                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
+                  <i class="fa fa-angle-double-left"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="wow fadeInDown">Our Products</h1>
+      <p class="wow fadeInUp">Feature-Rich Management Systems Built for Reliability and Ease of Use</p>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="services section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>Explore Our <em>Products</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+            <p>Each system includes free training and ongoing support from our Uganda office. Request a free demo to see how they can transform your operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 1: School Management System -->
+  <div class="section" style="padding: 80px 0; background-color: #f8f9fa;">
+    <div class="container">
+      <div class="product-card wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/images/demo.PNG" alt="School Management System" class="product-image">
+          </div>
+          <div class="col-lg-6">
+            <h2 style="color: #1a237e; margin-bottom: 20px;">School Management System</h2>
+            <p style="font-size: 18px; color: #333; margin-bottom: 30px; line-height: 1.8;">Complete solution for managing all aspects of school operations, from student records to fee collection, attendance, and academic reporting. Designed specifically for Ugandan schools with offline capability.</p>
+            
+            <h5 style="color: #1976d2; margin-bottom: 20px;">Key Features:</h5>
+            <ul class="feature-list">
+              <li data-icon="user">Student registration and comprehensive records management</li>
+              <li data-icon="money">Automated fee collection and payment tracking with receipts</li>
+              <li data-icon="bell">Real-time attendance monitoring with SMS notifications to parents</li>
+              <li data-icon="calendar">Dynamic timetable creation and management</li>
+              <li data-icon="file">Exam results processing and automated report cards</li>
+              <li data-icon="users">Parent communication portal for accessing student information</li>
+              <li data-icon="book">Library management system with book tracking</li>
+              <li data-icon="users">Staff management and payroll integration</li>
+              <li data-icon="chart">Financial reports and analytics dashboard</li>
+              <li data-icon="wifi">Offline mode for unreliable internet areas</li>
+              <li data-icon="building">Multi-campus support for schools with branches</li>
+              <li data-icon="download">Customizable reports and exports</li>
+            </ul>
+
+            <div class="row mt-4">
+              <div class="col-lg-6">
+                <div class="border-button">
+                  <a href="contact.html">Request Free Demo</a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="text-button">
+                  <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2: Hospital Management System -->
+  <div class="section" style="padding: 80px 0;">
+    <div class="container">
+      <div class="product-card wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/images/hospital-system.png" alt="Hospital Management System" class="product-image">
+          </div>
+          <div class="col-lg-6">
+            <h2 style="color: #1a237e; margin-bottom: 20px;">Hospital &amp; Drugshop Management System</h2>
+            <p style="font-size: 18px; color: #333; margin-bottom: 30px; line-height: 1.8;">Streamline patient management, appointments, inventory tracking, and prescription handling. Perfect for clinics, hospitals, and pharmacies across Uganda.</p>
+            
+            <h5 style="color: #1976d2; margin-bottom: 20px;">Key Features:</h5>
+            <ul class="feature-list">
+              <li data-icon="user">Patient registration and comprehensive medical records</li>
+              <li data-icon="calendar">Appointment scheduling system with reminders</li>
+              <li data-icon="hospital">Prescription management and medication tracking</li>
+              <li data-icon="shopping">Drug inventory management with low-stock alerts</li>
+              <li data-icon="money">Billing and payment processing with receipts</li>
+              <li data-icon="file">Medical reports and patient history tracking</li>
+              <li data-icon="hospital">Laboratory test management and results</li>
+              <li data-icon="clock">Staff and doctor scheduling system</li>
+              <li data-icon="chart">Financial reports and revenue analytics</li>
+              <li data-icon="wifi">Offline capability for remote clinics</li>
+              <li data-icon="mobile">Integration with mobile money payments</li>
+              <li data-icon="building">Multi-location support for chain pharmacies</li>
+            </ul>
+
+            <div class="row mt-4">
+              <div class="col-lg-6">
+                <div class="border-button">
+                  <a href="contact.html">Request Free Demo</a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="text-button">
+                  <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 3: POS System -->
+  <div class="section" style="padding: 80px 0; background-color: #f8f9fa;">
+    <div class="container">
+      <div class="product-card wow fadeInUp">
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="assets/images/pos-system.png" alt="POS System" class="product-image">
+          </div>
+          <div class="col-lg-6">
+            <h2 style="color: #1a237e; margin-bottom: 20px;">Point of Sale (POS) System</h2>
+            <p style="font-size: 18px; color: #333; margin-bottom: 30px; line-height: 1.8;">Modern POS solutions for shops, supermarkets, and retail businesses. Track sales, manage inventory, generate reports, and accept multiple payment methods. Works offline when needed.</p>
+            
+            <h5 style="color: #1976d2; margin-bottom: 20px;">Key Features:</h5>
+            <ul class="feature-list">
+              <li data-icon="barcode">Fast checkout with barcode scanning support</li>
+              <li data-icon="print">Receipt printing and email receipts</li>
+              <li data-icon="shopping">Real-time inventory management with alerts</li>
+              <li data-icon="chart">Sales reports and analytics dashboard</li>
+              <li data-icon="credit-card">Multiple payment methods (Cash, Mobile Money, Cards)</li>
+              <li data-icon="users">Customer management and loyalty programs</li>
+              <li data-icon="bell">Low stock alerts and automatic reordering suggestions</li>
+              <li data-icon="building">Multi-branch support for chain stores</li>
+              <li data-icon="user">Employee management and sales tracking</li>
+              <li data-icon="wifi">Offline mode for unreliable internet</li>
+              <li data-icon="mobile">Integration with MTN Mobile Money and Airtel Money</li>
+              <li data-icon="chart">Profit and loss reports with detailed analytics</li>
+            </ul>
+
+            <div class="row mt-4">
+              <div class="col-lg-6">
+                <div class="border-button">
+                  <a href="contact.html">Request Free Demo</a>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="text-button">
+                  <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Benefits Section -->
+  <div class="section" style="padding: 80px 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="section-heading text-center">
+            <h4>What You Get <em>With Every System</em></h4>
+            <img src="assets/images/heading-line-dec.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-4">
+          <div class="service-item first-service">
+            <div class="icon"></div>
+            <h4>Free Installation</h4>
+            <p>Our team will install the system on your computers and ensure everything is set up correctly.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-item second-service">
+            <div class="icon"></div>
+            <h4>Comprehensive Training</h4>
+            <p>We train your staff to use the system effectively, ensuring everyone is comfortable from day one.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="service-item third-service">
+            <div class="icon"></div>
+            <h4>Ongoing Support</h4>
+            <p>Get help whenever you need it from our Uganda-based support team via phone, WhatsApp, or email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="section" style="padding: 80px 0; background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%); background-size: 200% 100%; animation: gradientShift 5s ease infinite;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h2 style="color: #fff; margin-bottom: 20px;">See Our Products in Action</h2>
+          <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 30px;">Request a free demo today and see how our systems can transform your operations. No obligation required.</p>
+          <div class="white-button">
+            <a href="contact.html">Request Free Demo <i class="fa fa-calendar-check"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="services.html">School Management System</a></li>
+              <li><a href="services.html">Hospital Management</a></li>
+              <li><a href="services.html">POS Systems</a></li>
+              <li><a href="services.html">ICT Solutions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="footer-widget">
+            <h4>About Starlet Technologies</h4>
+            <div class="logo">
+              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
+            </div>
+            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
+            <p class="mt-3"><strong>Contact:</strong><br>
+            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
+            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p>Copyright © 2025 Starlet Technologies – Uganda. All Rights Reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+</html>
+
