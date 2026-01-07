@@ -363,6 +363,280 @@ Customized for Starlet Technologies
           padding-left: 32px;
         }
       }
+      /* Professional Testimonials Section */
+      .testimonials-wrapper {
+        padding: 40px 0;
+      }
+      
+      /* Client Cards - Professional Design */
+      .client-card {
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .client-card-inner {
+        background: #fff;
+        border: 2px solid #e8ecf1;
+        border-radius: 12px;
+        padding: 25px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .client-card-inner::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: transparent;
+        transition: all 0.4s ease;
+      }
+      
+      .client-card:hover .client-card-inner {
+        border-color: #1976d2;
+        box-shadow: 0 8px 24px rgba(25, 118, 210, 0.12);
+        transform: translateY(-4px);
+      }
+      
+      .client-card:hover .client-card-inner::before {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+      }
+      
+      .client-card.active .client-card-inner {
+        border-color: #1976d2;
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.03) 0%, rgba(25, 118, 210, 0.03) 100%);
+        box-shadow: 0 8px 24px rgba(25, 118, 210, 0.15);
+      }
+      
+      .client-card.active .client-card-inner::before {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+      }
+      
+      .client-header {
+        margin-bottom: 12px;
+      }
+      
+      .client-header h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1a237e;
+        margin-bottom: 6px;
+        transition: color 0.3s ease;
+      }
+      
+      .client-card:hover .client-header h4,
+      .client-card.active .client-header h4 {
+        color: #1976d2;
+      }
+      
+      .client-date {
+        font-size: 13px;
+        color: #6c757d;
+        font-weight: 500;
+      }
+      
+      .client-category {
+        display: inline-block;
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.08) 0%, rgba(25, 118, 210, 0.08) 100%);
+        color: #1976d2;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+      }
+      
+      .client-card:hover .client-category,
+      .client-card.active .client-category {
+        background: linear-gradient(135deg, rgba(26, 35, 126, 0.15) 0%, rgba(25, 118, 210, 0.15) 100%);
+      }
+      
+      .client-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .client-rating i {
+        color: #ffc107;
+        font-size: 16px;
+      }
+      
+      .client-rating .rating-value {
+        font-size: 16px;
+        font-weight: 700;
+        color: #1a237e;
+        margin-left: 4px;
+      }
+      
+      /* Testimonial Slides - Professional Design */
+      .testimonial-slide {
+        padding: 10px;
+      }
+      
+      .testimonial-content-wrapper {
+        background: #fff;
+        border-radius: 16px;
+        padding: 35px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s ease;
+      }
+      
+      .testimonial-quote {
+        position: relative;
+        margin-bottom: 30px;
+        flex-grow: 1;
+      }
+      
+      .testimonial-quote img {
+        width: 50px;
+        height: 50px;
+        opacity: 0.15;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+      }
+      
+      .testimonial-quote p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #444;
+        margin-top: 15px;
+        text-align: justify;
+        font-style: italic;
+        position: relative;
+        z-index: 1;
+      }
+      
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        padding-top: 25px;
+        border-top: 2px solid #f0f0f0;
+      }
+      
+      .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 18px;
+        border: 3px solid #e0f2f7;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      
+      .author-details h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a237e;
+        margin-bottom: 5px;
+      }
+      
+      .author-details span {
+        font-size: 14px;
+        color: #6c757d;
+        font-weight: 500;
+      }
+      
+      /* Testimonials Carousel Navigation - Professional */
+      .testimonials-carousel .owl-nav {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        pointer-events: none;
+        z-index: 10;
+        padding: 0 20px;
+      }
+      
+      .testimonials-carousel .owl-nav button {
+        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
+        pointer-events: auto;
+        border: none;
+      }
+      
+      .testimonials-carousel .owl-nav button:hover {
+        background: linear-gradient(135deg, #1976d2 0%, #03a9f4 100%);
+        transform: scale(1.15);
+        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
+      }
+      
+      .testimonials-carousel .owl-nav .owl-prev {
+        margin-left: -25px;
+      }
+      
+      .testimonials-carousel .owl-nav .owl-next {
+        margin-right: -25px;
+      }
+      
+      .testimonials-carousel .owl-dots {
+        text-align: center;
+        margin-top: 35px;
+      }
+      
+      .testimonials-carousel .owl-dots button {
+        width: 12px;
+        height: 12px;
+        background-color: #ddd;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 6px;
+        transition: all 0.3s ease;
+        border: none;
+      }
+      
+      .testimonials-carousel .owl-dots button.active {
+        background-color: #1976d2;
+        transform: scale(1.3);
+        width: 30px;
+        border-radius: 15px;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 991px) {
+        .testimonials-carousel .owl-nav {
+          position: relative;
+          transform: none;
+          justify-content: center;
+          margin-top: 20px;
+          padding: 0;
+        }
+        
+        .testimonials-carousel .owl-nav .owl-prev,
+        .testimonials-carousel .owl-nav .owl-next {
+          margin: 0 10px;
+          position: relative;
+        }
+        
+        .client-card-inner {
+          padding: 20px;
+        }
+        
+        .testimonial-content-wrapper {
+          padding: 25px;
+        }
+      }
       /* Typography Improvements */
       body {
         font-family: 'Roboto', sans-serif;
@@ -1260,144 +1534,208 @@ Customized for Starlet Technologies
           </div>
         </div>
         <div class="col-lg-12">
-          <div class="naccs">
-            <div class="grid">
-              <div class="row">
-                <div class="col-lg-7 align-self-center">
-                  <div class="menu">
-                    <div class="first-thumb active">
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>Uganda Secondary School</h4>
-                            <span class="date">15 January 2024</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">School Management</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">5.0</span>
-                          </div>
-                        </div>
+          <div class="testimonials-wrapper">
+            <div class="row">
+              <div class="col-lg-7 align-self-center">
+                <div class="clients-list clients-carousel owl-carousel">
+                  <div class="client-card" data-testimonial="0">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>Uganda Secondary School</h4>
+                        <span class="client-date">15 January 2024</span>
+                      </div>
+                      <div class="client-category">School Management</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">5.0</span>
                       </div>
                     </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>St. Mary's Clinic, Uganda</h4>
-                            <span class="date">8 December 2023</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">Hospital Management</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.9</span>
-                          </div>
-                        </div>
+                  </div>
+                  <div class="client-card" data-testimonial="1">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>St. Mary's Clinic, Uganda</h4>
+                        <span class="client-date">8 December 2023</span>
+                      </div>
+                      <div class="client-category">Hospital Management</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">4.9</span>
                       </div>
                     </div>
-                    <div>
-                      <div class="thumb">
-                        <div class="row">
-                          <div class="col-lg-4 col-sm-4 col-12">
-                            <h4>City Mart Supermarket</h4>
-                            <span class="date">22 November 2023</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 d-none d-sm-block">
-                            <span class="category">POS System</span>
-                          </div>
-                          <div class="col-lg-4 col-sm-4 col-12">
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <i class="fa fa-star"></i>
-                              <span class="rating">4.8</span>
-                          </div>
+                  </div>
+                  <div class="client-card" data-testimonial="2">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>City Mart Supermarket</h4>
+                        <span class="client-date">22 November 2023</span>
+                      </div>
+                      <div class="client-category">POS System</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">4.8</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-card" data-testimonial="3">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>Kampala Primary School</h4>
+                        <span class="client-date">10 October 2023</span>
+                      </div>
+                      <div class="client-category">School Management</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-card" data-testimonial="4">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>Nakawa Medical Center</h4>
+                        <span class="client-date">5 September 2023</span>
+                      </div>
+                      <div class="client-category">Hospital Management</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">4.9</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="client-card" data-testimonial="5">
+                    <div class="client-card-inner">
+                      <div class="client-header">
+                        <h4>Mukono SACCOS</h4>
+                        <span class="client-date">18 August 2023</span>
+                      </div>
+                      <div class="client-category">Financial System</div>
+                      <div class="client-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <span class="rating-value">5.0</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> 
+              <div class="col-lg-5">
+                <div class="testimonials-carousel owl-carousel">
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"The school management system has reduced our administrative workload dramatically. Fee collection is now much faster, and we can generate reports instantly. The offline capability is crucial for us when internet is slow. Highly recommend Starlet Technologies!"</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Mr. Okello James">
+                        <div class="author-details">
+                          <h4>Mr. Okello James</h4>
+                          <span>Headteacher, Uganda Secondary School</span>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div> 
-                <div class="col-lg-5">
-                  <ul class="nacc">
-                    <li class="active">
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <img src="assets/images/quote.png" alt="">
-                                <p>"The school management system has reduced our administrative workload dramatically. Fee collection is now much faster, and we can generate reports instantly. The offline capability is crucial for us when internet is slow. Highly recommend Starlet Technologies!"</p>
-                              </div>
-                              <div class="down-content">
-                                <img src="assets/images/client-image.jpg" alt="">
-                                <div class="right-content">
-                                  <h4>Mr. Okello James</h4>
-                                  <span>Headteacher, Uganda Secondary School</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"Managing patient records and appointments used to be chaotic. Now everything is organized digitally. The inventory tracking for drugs has saved us money and time. The team in Uganda provides excellent support whenever we need help."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Dr. Aceng Sarah">
+                        <div class="author-details">
+                          <h4>Dr. Aceng Sarah</h4>
+                          <span>Medical Director, St. Mary's Clinic, Uganda</span>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <img src="assets/images/quote.png" alt="">
-                                <p>"Managing patient records and appointments used to be chaotic. Now everything is organized digitally. The inventory tracking for drugs has saved us money and time. The team in Uganda provides excellent support whenever we need help."</p>
-                              </div>
-                              <div class="down-content">
-                                <img src="assets/images/client-image.jpg" alt="">
-                                <div class="right-content">
-                                  <h4>Dr. Aceng Sarah</h4>
-                                  <span>Medical Director, St. Mary's Clinic, Uganda</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"Our sales have increased since implementing the POS system. The inventory management helps us know exactly what's in stock, and the sales reports are very detailed. The system works perfectly even when internet is down. Great value for money!"</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Mr. Ocen Peter">
+                        <div class="author-details">
+                          <h4>Mr. Ocen Peter</h4>
+                          <span>Owner, City Mart Supermarket, Uganda</span>
                         </div>
                       </div>
-                    </li>
-                    <li>
-                      <div>
-                        <div class="thumb">
-                          <div class="row">
-                            <div class="col-lg-12">
-                              <div class="client-content">
-                                <img src="assets/images/quote.png" alt="">
-                                <p>"Our sales have increased since implementing the POS system. The inventory management helps us know exactly what's in stock, and the sales reports are very detailed. The system works perfectly even when internet is down. Great value for money!"</p>
-                              </div>
-                              <div class="down-content">
-                                <img src="assets/images/client-image.jpg" alt="">
-                                <div class="right-content">
-                                  <h4>Mr. Ocen Peter</h4>
-                                  <span>Owner, City Mart Supermarket, Uganda</span>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"As a primary school, we needed an affordable system that our teachers could easily use. Starlet Technologies delivered exactly that. The attendance tracking and parent communication features have transformed how we operate. The training was excellent and the support team responds quickly to any questions."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Ms. Nakato Grace">
+                        <div class="author-details">
+                          <h4>Ms. Nakato Grace</h4>
+                          <span>Headmistress, Kampala Primary School</span>
                         </div>
                       </div>
-                    </li>
-                  </ul>
-                </div>          
-              </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"The hospital management system has streamlined our entire operation. Patient registration is now instant, and we can track medical history efficiently. The drug inventory alerts help us avoid stockouts. What impressed us most was the local support - they understand our needs and are always available."</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Dr. Kigozi Robert">
+                        <div class="author-details">
+                          <h4>Dr. Kigozi Robert</h4>
+                          <span>Administrator, Nakawa Medical Center</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="testimonial-slide">
+                    <div class="testimonial-content-wrapper">
+                      <div class="testimonial-quote">
+                        <img src="assets/images/quote.png" alt="">
+                        <p>"Managing our SACCOS operations manually was time-consuming and error-prone. The financial management system from Starlet Technologies has automated member registration, loan processing, and savings tracking. Our members love the transparency, and our staff can now focus on serving members better. Highly recommended for any SACCOS in Uganda!"</p>
+                      </div>
+                      <div class="testimonial-author">
+                        <img src="assets/images/client-image.jpg" alt="Mr. Ssemwogerere David">
+                        <div class="author-details">
+                          <h4>Mr. Ssemwogerere David</h4>
+                          <span>Chairman, Mukono SACCOS</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>          
             </div>
           </div>
         </div>
@@ -1637,7 +1975,7 @@ Customized for Starlet Technologies
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
-            <p>Copyright © 2025 Starlet Technologies – Uganda. All Rights Reserved.</p>
+            <p>Copyright © <span id="copyright-year">2025</span> Starlet Technologies – Uganda. All Rights Reserved.</p>
           </div>
         </div>
       </div>
@@ -1657,5 +1995,123 @@ Customized for Starlet Technologies
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    // Update copyright year dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('copyright-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+    
+    // Professional Testimonials Carousel with Perfect Synchronization
+    jQuery(document).ready(function($) {
+      if ($('.clients-carousel').length && $('.testimonials-carousel').length) {
+        var isNavigating = false;
+        var clientsCarousel, testimonialsCarousel;
+        
+        // Initialize clients carousel
+        clientsCarousel = $('.clients-carousel').owlCarousel({
+          loop: false,
+          margin: 20,
+          nav: false,
+          dots: false,
+          autoplay: false,
+          smartSpeed: 600,
+          items: 1,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 1 },
+            992: { items: 1 }
+          }
+        });
+        
+        // Initialize testimonials carousel
+        testimonialsCarousel = $('.testimonials-carousel').owlCarousel({
+          loop: false,
+          margin: 0,
+          nav: true,
+          dots: true,
+          autoplay: true,
+          autoplayTimeout: 6000,
+          autoplayHoverPause: true,
+          smartSpeed: 600,
+          items: 1,
+          responsive: {
+            0: { items: 1 },
+            768: { items: 1 },
+            992: { items: 1 }
+          },
+          navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
+        });
+        
+        // Set first client as active
+        $('.client-card').first().addClass('active');
+        
+        // Click handler for client cards - Perfect synchronization using data attributes
+        $(document).on('click', '.client-card', function(e) {
+          e.preventDefault();
+          if (isNavigating) return;
+          
+          var testimonialIndex = parseInt($(this).attr('data-testimonial'));
+          
+          if (!isNaN(testimonialIndex)) {
+            isNavigating = true;
+            
+            // Remove active class from all cards
+            $('.client-card').removeClass('active');
+            
+            // Add active class to clicked card
+            $(this).addClass('active');
+            
+            // Navigate both carousels to the same index
+            testimonialsCarousel.trigger('to.owl.carousel', [testimonialIndex, 600]);
+            clientsCarousel.trigger('to.owl.carousel', [testimonialIndex, 600]);
+            
+            // Stop autoplay temporarily
+            testimonialsCarousel.trigger('stop.owl.autoplay');
+            
+            setTimeout(function() {
+              isNavigating = false;
+              // Resume autoplay after a delay
+              setTimeout(function() {
+                testimonialsCarousel.trigger('play.owl.autoplay');
+              }, 3000);
+            }, 650);
+          }
+        });
+        
+        // Synchronize: when testimonials carousel changes (via nav/dots/autoplay), update clients
+        testimonialsCarousel.on('changed.owl.carousel', function(event) {
+          if (!isNavigating) {
+            isNavigating = true;
+            var currentIndex = event.item.index;
+            
+            // Update active client card
+            $('.client-card').removeClass('active');
+            $('.client-card[data-testimonial="' + currentIndex + '"]').addClass('active');
+            
+            // Sync clients carousel
+            clientsCarousel.trigger('to.owl.carousel', [currentIndex, 600]);
+            
+            setTimeout(function() {
+              isNavigating = false;
+            }, 650);
+          }
+        });
+        
+        // Pause autoplay when hovering over client cards
+        $('.clients-list').on('mouseenter', function() {
+          testimonialsCarousel.trigger('stop.owl.autoplay');
+        });
+        
+        $('.clients-list').on('mouseleave', function() {
+          if (!isNavigating) {
+            testimonialsCarousel.trigger('play.owl.autoplay');
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>

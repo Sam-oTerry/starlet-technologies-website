@@ -638,7 +638,7 @@
         </div>
         <div class="col-lg-12">
           <div class="copyright-text">
-            <p>Copyright © 2025 Starlet Technologies – Uganda. All Rights Reserved.</p>
+            <p>Copyright © <span id="copyright-year">2025</span> Starlet Technologies – Uganda. All Rights Reserved.</p>
           </div>
         </div>
       </div>
@@ -658,6 +658,15 @@
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    // Update copyright year dynamically
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('copyright-year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
 </body>
 </html>
 
