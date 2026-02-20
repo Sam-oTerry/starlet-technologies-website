@@ -1,464 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Privacy Policy — Starlet Systems Africa. Learn how we collect, use, and safeguard your information. We are committed to protecting your privacy.">
+<title>Privacy Policy | Starlet Systems Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+<style>
+:root{
+  --navy:#0D3349;--navy-deep:#081E2E;--navy-mid:#124060;--navy-light:#1A5276;
+  --gold:#F5C518;--gold-dark:#C8A000;--gold-glow:rgba(245,197,24,.28);
+  --cyan:#00D4FF;--cyan-dark:#00A8CC;--cyan-glow:rgba(0,212,255,.22);
+  --cream:#F8F4EC;--warm-white:#FDFAF4;
+  --ank-tc:#C1440E;--ank-burnt:#E65100;--ank-ochre:#E6A817;--ank-green:#2E7D32;
+  --text:#0D1F2D;--text-mid:#3A5068;
+  --shadow-sm:0 2px 12px rgba(13,51,73,.08);--shadow-md:0 8px 32px rgba(13,51,73,.13);
+  --shadow-lg:0 20px 60px rgba(13,51,73,.2);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;color:var(--text);background:var(--warm-white);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Crimson Pro',serif;font-weight:600;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-  <head>
+.kente-bar{height:7px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px,var(--navy) 88px 110px,var(--ank-ochre) 110px 132px)}
+.ankara-overlay{position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(45deg,rgba(245,197,24,.04) 0 2px,transparent 2px 22px),
+  repeating-linear-gradient(-45deg,rgba(0,212,255,.03) 0 2px,transparent 2px 22px),
+  repeating-conic-gradient(rgba(193,68,14,.03) 0% 25%,transparent 0% 50%) center/36px 36px}
+.ankara-diamonds{display:flex;justify-content:center;gap:10px;margin:18px 0}
+.ankara-diamonds span{display:block;width:10px;height:10px;transform:rotate(45deg)}
+.ad-gold{background:var(--gold)}.ad-tc{background:var(--ank-tc);width:16px!important;height:16px!important}
+.ad-cyan{background:var(--cyan)}.ad-gr{background:var(--ank-green)}.ad-oc{background:var(--ank-ochre)}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Privacy Policy - Starlet Technologies. Learn how we protect your data and privacy.">
-    <meta name="author" content="Starlet Technologies">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy-deep);border-bottom:1px solid rgba(245,197,24,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;max-width:1440px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.nav-logo img{height:38px;width:auto;object-fit:contain}
+.logo-text-wrap{display:flex;flex-direction:column}
+.logo-wordmark{font-family:'Crimson Pro',serif;font-size:20px;line-height:1}
+.logo-star{color:var(--gold)}.logo-let{color:var(--cyan)}
+.logo-sub{font-size:9.5px;letter-spacing:2.5px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.72);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:7px;transition:all .25s;letter-spacing:.2px}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);background:rgba(245,197,24,.08)}
+.nav-signin{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep)!important;border-radius:8px!important;padding:8px 17px!important;font-weight:700!important;font-size:13px!important;box-shadow:0 4px 16px rgba(245,197,24,.32);transition:all .25s!important}
+.nav-signin:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(245,197,24,.45)!important;color:var(--navy-deep)!important}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 
-    <title>Privacy Policy | Starlet Technologies - Uganda</title>
+/* ── MODAL ── */
+.modal-bg{display:none;position:fixed;inset:0;z-index:2000;background:rgba(8,30,46,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal-box{background:#fff;border-radius:20px;width:90%;max-width:500px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.38);animation:mIn .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes mIn{from{opacity:0;transform:scale(.9) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-kente{height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px)}
+.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:20px 26px 14px;border-bottom:1px solid rgba(13,51,73,.1)}
+.modal-title{font-size:19px;font-weight:700;color:var(--navy);font-family:'Crimson Pro',serif}
+.modal-x{width:32px;height:32px;border-radius:50%;border:none;background:rgba(13,51,73,.07);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .2s}
+.modal-x:hover{background:rgba(193,68,14,.12);color:var(--ank-tc)}
+.modal-body{padding:22px 26px 26px}
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 18px}
+.sys-card{border:2px solid rgba(13,51,73,.12);border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s}
+.sys-card:hover,.sys-card.sel{border-color:var(--gold);background:rgba(245,197,24,.06);transform:translateY(-2px)}
+.sys-ico{width:46px;height:46px;border-radius:11px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.si-sch{background:rgba(193,68,14,.12);color:var(--ank-tc)}.si-hos{background:rgba(46,125,50,.12);color:#2E7D32}.si-pos{background:rgba(245,197,24,.15);color:var(--gold-dark)}
+.sys-card h5{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px;font-family:'Sora',sans-serif}
+.sys-card p{font-size:11px;color:#999;line-height:1.4}
+.mform{display:none}.mform.on{display:block}
+.mback{display:flex;align-items:center;gap:6px;background:none;border:none;font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;margin-bottom:14px;padding:0;font-family:'Sora',sans-serif}
+.mback:hover{color:var(--ank-tc)}
+.sys-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.3);border-radius:8px;padding:7px 13px;margin-bottom:18px;font-size:13px;font-weight:600;color:var(--navy)}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:5px;letter-spacing:.4px}
+.fc{width:100%;padding:11px 13px;border:2px solid rgba(13,51,73,.14);border-radius:9px;font-size:14px;font-family:'Sora',sans-serif;background:var(--warm-white);color:var(--text);transition:all .2s;outline:none}
+.fc:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,197,24,.18)}
+.fchk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid);margin-bottom:18px}
+.fchk input{accent-color:var(--gold)}
+.btn-mp{width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;transition:all .25s;margin-bottom:10px}
+.btn-mp:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,51,73,.28)}
+.btn-mo{width:100%;padding:10px;border:2px solid rgba(13,51,73,.18);border-radius:10px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:'Sora',sans-serif;background:transparent;color:var(--navy);transition:all .25s}
+.btn-mo:hover{border-color:var(--navy);background:rgba(13,51,73,.04)}
+.mfnote{text-align:center;font-size:12px;color:#bbb;margin-top:14px}
+.mfnote a{color:var(--navy);font-weight:600}
+.mforgot{text-align:center;font-size:12.5px;color:var(--text-mid);margin-top:12px}
+.mforgot a{color:var(--navy);font-weight:600}
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+/* ── PAGE HEADER ── */
+.page-hdr{padding:130px 5% 72px;background:var(--navy-deep);position:relative;overflow:hidden;text-align:center}
+.page-hdr::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(245,197,24,.05) 0% 25%,transparent 0% 50%) center/44px 44px}
+.ph-inner{position:relative;z-index:1}
+.ph-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-ochre);margin-bottom:14px}
+.ph-title{font-size:clamp(34px,5vw,52px);font-weight:600;color:#fff;margin-bottom:14px}
+.ph-title em{font-style:normal;background:linear-gradient(135deg,var(--gold),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ph-desc{font-size:16px;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;line-height:1.8;font-weight:300}
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
-    <link rel="stylesheet" href="assets/css/color-theme.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+/* ── BUTTONS ── */
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 22px rgba(245,197,24,.33)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(245,197,24,.5);color:var(--navy-deep)}
+.btn-outline-gold{display:inline-flex;align-items:center;gap:9px;border:2px solid var(--gold);color:var(--gold);padding:12px 26px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s}
+.btn-outline-gold:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-2px)}
 
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-      .whatsapp-float:hover {
-        background-color: #20ba5a;
-        transform: scale(1.1);
-        color: #FFF;
-        text-decoration: none;
-      }
-      .whatsapp-float i {
-        margin-top: 0;
-      }
-      @media (max-width: 767px) {
-        .whatsapp-float {
-          width: 50px;
-          height: 50px;
-          font-size: 24px;
-          bottom: 15px;
-          right: 15px;
-        }
-      }
-      .page-header {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
-        background-size: 200% 100%;
-        animation: gradientShift 5s ease infinite;
-        padding: 150px 0 80px;
-        color: #fff;
-        text-align: center;
-      }
-      @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      .content-section {
-        padding: 60px 0;
-      }
-      .content-section h3 {
-        color: #1a237e;
-        margin-top: 40px;
-        margin-bottom: 20px;
-      }
-      .content-section h4 {
-        color: #1976d2;
-        margin-top: 30px;
-        margin-bottom: 15px;
-      }
-      .content-section p {
-        margin-bottom: 15px;
-        line-height: 1.8;
-      }
-      .content-section ul {
-        margin-bottom: 20px;
-        padding-left: 30px;
-      }
-      .content-section ul li {
-        margin-bottom: 10px;
-        line-height: 1.8;
-      }
-    </style>
+/* ── POLICY LAYOUT ── */
+.policy-wrap{display:grid;grid-template-columns:260px 1fr;gap:48px;max-width:1100px;margin:0 auto;align-items:start;padding:80px 5%}
+.policy-toc{position:sticky;top:88px}
+.toc-card{background:#fff;border-radius:16px;border:1px solid rgba(13,51,73,.09);box-shadow:0 2px 12px rgba(13,51,73,.07);overflow:hidden}
+.toc-hdr{background:var(--navy);padding:16px 20px}
+.toc-hdr h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin:0}
+.toc-list{list-style:none;padding:10px 0}
+.toc-list li a{display:flex;align-items:center;gap:10px;padding:9px 20px;font-size:13px;font-weight:600;color:var(--text-mid);transition:all .2s;border-left:3px solid transparent}
+.toc-list li a:hover,.toc-list li a.active{color:var(--ank-tc);border-color:var(--ank-tc);background:rgba(193,68,14,.04)}
+.toc-list li a .toc-n{font-size:10px;font-weight:700;width:20px;height:20px;border-radius:50%;background:rgba(13,51,73,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--navy)}
+.toc-contact{margin:12px 16px 16px;background:rgba(245,197,24,.08);border:1px solid rgba(245,197,24,.25);border-radius:10px;padding:14px}
+.toc-contact p{font-size:12px;color:var(--text-mid);line-height:1.7;margin-bottom:8px}
+.toc-contact a{font-size:12.5px;font-weight:700;color:var(--ank-tc);display:flex;align-items:center;gap:7px}
 
-  </head>
+.policy-body{min-width:0}
+.policy-meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:40px}
+.pm-badge{display:inline-flex;align-items:center;gap:7px;padding:7px 14px;border-radius:8px;font-size:12.5px;font-weight:700}
+.pm-date{background:rgba(13,51,73,.07);color:var(--navy)}
+.pm-ver{background:rgba(46,125,50,.08);color:#2E7D32}
 
+.policy-section{margin-bottom:50px;opacity:0;transform:translateY(18px);transition:all .5s}
+.policy-section.on{opacity:1;transform:translateY(0)}
+.ps-hdr{display:flex;align-items:center;gap:14px;margin-bottom:22px;padding-bottom:16px;border-bottom:2px solid rgba(13,51,73,.08)}
+.ps-num{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--gold);flex-shrink:0}
+.ps-hdr h2{font-size:22px;color:var(--navy);margin:0}
+.policy-section p{font-size:15px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:16px}
+.policy-section p:last-child{margin-bottom:0}
+
+.p-list{list-style:none;margin:16px 0 20px}
+.p-list li{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;background:#fff;border-radius:10px;border:1px solid rgba(13,51,73,.07);margin-bottom:8px;font-size:14.5px;color:var(--text-mid);line-height:1.7;font-weight:300;transition:all .25s}
+.p-list li:hover{border-color:rgba(245,197,24,.25);box-shadow:0 2px 10px rgba(13,51,73,.07)}
+.p-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--ank-tc);flex-shrink:0;margin-top:8px}
+.p-list li strong{color:var(--navy);font-weight:700}
+
+.highlight-box{background:var(--navy);border-radius:16px;padding:28px 30px;margin:24px 0;position:relative;overflow:hidden}
+.highlight-box::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--ank-ochre))}
+.highlight-box h4{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--gold);margin-bottom:12px;letter-spacing:.5px}
+.highlight-box p{font-size:14px;color:rgba(255,255,255,.65);line-height:1.8;font-weight:300;margin:0}
+
+.rights-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.right-item{background:#fff;border-radius:12px;padding:18px;border:1px solid rgba(13,51,73,.08);display:flex;align-items:flex-start;gap:12px;transition:all .25s}
+.right-item:hover{border-color:rgba(193,68,14,.2);box-shadow:0 3px 12px rgba(13,51,73,.07);transform:translateY(-2px)}
+.ri-ico{width:36px;height:36px;border-radius:9px;background:rgba(193,68,14,.1);color:var(--ank-tc);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.ri-text h5{font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:4px;font-family:'Sora',sans-serif}
+.ri-text p{font-size:12.5px;color:var(--text-mid);line-height:1.6;margin:0;font-weight:300}
+
+.contact-box{background:var(--cream);border-radius:16px;padding:28px 30px;border:1px solid rgba(13,51,73,.09)}
+.contact-box h4{font-size:20px;color:var(--navy);margin-bottom:14px}
+.contact-box p{font-size:14.5px;color:var(--text-mid);line-height:1.8;font-weight:300;margin-bottom:8px}
+.contact-box a{color:var(--ank-tc);font-weight:600}
+
+/* ── CTA BAND ── */
+.cta-band{background:var(--navy-deep);padding:80px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(245,197,24,.04) 0% 25%,transparent 0% 50%) center/36px 36px}
+.cta-inner{position:relative;z-index:1;max-width:640px;margin:0 auto}
+.cta-inner h2{font-size:clamp(26px,3.5vw,38px);color:#fff;margin-bottom:14px}
+.cta-inner p{font-size:16px;color:rgba(255,255,255,.6);line-height:1.8;font-weight:300;margin-bottom:30px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.s-eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-tc);margin-bottom:12px}
+.s-eyebrow.lt{color:var(--gold)}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);color:#fff}
+.ft-top{padding:72px 5% 48px;max-width:1440px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:44px}
+.ft-logo{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.ft-logo img{height:36px;width:auto}
+.ft-logo-text .nl-star{color:var(--gold);font-family:'Crimson Pro',serif;font-size:22px;font-weight:700}
+.ft-logo-text .nl-let{color:var(--cyan);font-family:'Crimson Pro',serif;font-size:22px;font-weight:700}
+.ft-logo-text small{display:block;font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.35);text-transform:uppercase}
+.ft-tag{font-size:13.5px;color:rgba(255,255,255,.42);line-height:1.85;font-weight:300;margin-bottom:22px}
+.ft-contact{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.ft-contact a{font-size:13px;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:9px;transition:.2s}
+.ft-contact a:hover{color:var(--gold)}
+.ft-social{display:flex;gap:9px}
+.fsoc{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;transition:all .3s;border:1px solid rgba(255,255,255,.12)}
+.fs-wa{color:#25D366}.fs-wa:hover{background:#25D366;color:#fff;border-color:#25D366}
+.fs-fb{color:#1877F2}.fs-fb:hover{background:#1877F2;color:#fff;border-color:#1877F2}
+.fs-li{color:#0077B5}.fs-li:hover{background:#0077B5;color:#fff;border-color:#0077B5}
+.ft-col h4{font-family:'Sora',sans-serif;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.35);margin-bottom:18px}
+.ft-lnks{list-style:none}
+.ft-lnks li{margin-bottom:10px}
+.ft-lnks a{font-size:13.5px;color:rgba(255,255,255,.48);transition:.2s}
+.ft-lnks a:hover{color:var(--gold)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding:22px 5%;text-align:center;font-size:12.5px;color:rgba(255,255,255,.3)}
+.ft-bot em{color:var(--gold);font-style:normal}
+.wa-float{position:fixed;bottom:28px;right:28px;z-index:900;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:all .3s}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55);color:#fff}
+
+@media(max-width:960px){.policy-wrap{grid-template-columns:1fr}.policy-toc{position:static}}
+@media(max-width:700px){.rights-grid{grid-template-columns:1fr}.ft-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:500px){.ft-grid{grid-template-columns:1fr}.menu-toggle{display:flex}
+  .nav-links{display:none;position:fixed;top:68px;left:0;right:0;background:var(--navy-deep);padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid rgba(245,197,24,.12);gap:4px}
+  .nav-links.open{display:flex}}
+@media(max-width:900px){.menu-toggle{display:flex}
+  .nav-links{display:none;position:fixed;top:68px;left:0;right:0;background:var(--navy-deep);padding:20px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid rgba(245,197,24,.12);gap:4px}
+  .nav-links.open{display:flex}}
+</style>
+</head>
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+<div class="kente-bar"></div>
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      <div class="logo-text-wrap" style="display:none">
+        <div class="logo-wordmark"><span class="logo-star">Star</span><span class="logo-let">Let</span></div>
+        <div class="logo-sub">Systems Africa</div>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#" id="openModal" class="nav-signin"><i class="fa fa-sign-in-alt"></i> Sign In</a></li>
+    </ul>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Modal -->
+<div class="modal-bg" id="loginModal">
+  <div class="modal-box">
+    <div class="modal-kente"></div>
+    <div class="modal-hdr">
+      <div class="modal-title" id="mTitle">Select Your System</div>
+      <button class="modal-x" id="closeModal"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div id="stepSys">
+        <p style="font-size:13.5px;color:var(--text-mid);margin-bottom:16px">Choose the platform you'd like to access:</p>
+        <div class="sys-grid">
+          <div class="sys-card" onclick="selectSys('school','School System')">
+            <div class="sys-ico si-sch"><i class="fa fa-graduation-cap"></i></div>
+            <h5>School</h5><p>Management System</p>
+          </div>
+          <div class="sys-card" onclick="selectSys('hospital','Hospital System')">
+            <div class="sys-ico si-hos"><i class="fa fa-heartbeat"></i></div>
+            <h5>Hospital</h5><p>& Clinic System</p>
+          </div>
+          <div class="sys-card" onclick="selectSys('pos','POS System')">
+            <div class="sys-ico si-pos"><i class="fa fa-cash-register"></i></div>
+            <h5>POS</h5><p>Point of Sale</p>
+          </div>
+        </div>
+      </div>
+      <div class="mform" id="stepLogin">
+        <button class="mback" onclick="backToSys()"><i class="fa fa-arrow-left"></i> Back</button>
+        <div class="sys-badge" id="sysLabel"></div>
+        <div class="fg"><label>EMAIL ADDRESS</label><input type="email" class="fc" placeholder="you@organisation.com"></div>
+        <div class="fg"><label>PASSWORD</label><input type="password" class="fc" placeholder="••••••••"></div>
+        <button class="btn-mp">Sign In</button>
+        <button class="btn-mo" id="toReg">Create Account</button>
+        <div class="mforgot"><a href="#">Forgot your password?</a></div>
+      </div>
+      <div class="mform" id="stepReg">
+        <button class="mback" onclick="backToLogin()"><i class="fa fa-arrow-left"></i> Back to Sign In</button>
+        <div class="fg"><label>FULL NAME</label><input type="text" class="fc" placeholder="Your name"></div>
+        <div class="fg"><label>EMAIL ADDRESS</label><input type="email" class="fc" placeholder="you@organisation.com"></div>
+        <div class="fg"><label>ORGANISATION</label><input type="text" class="fc" placeholder="School / Clinic / Business name"></div>
+        <div class="fg"><label>PASSWORD</label><input type="password" class="fc" placeholder="Min. 8 characters"></div>
+        <div class="fchk"><input type="checkbox" id="chkUp"><label for="chkUp">Send me occasional updates & tips</label></div>
+        <button class="btn-mp">Create Account</button>
+        <div class="mfnote">Already have an account? <a href="#" onclick="backToLogin()">Sign In</a></div>
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+</div>
 
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
+<!-- PAGE HEADER -->
+<div class="kente-bar"></div>
+<div class="page-hdr">
+  <div class="ankara-overlay"></div>
+  <div class="ph-inner">
+    <div class="ph-eyebrow">✦ Legal & Trust</div>
+    <h1 class="ph-title">Privacy <em>Policy</em></h1>
+    <p class="ph-desc">Your privacy matters to us. We are committed to being transparent about how we handle your data and to safeguarding your information at every step.</p>
+    <div class="ankara-diamonds" style="margin-top:28px">
+      <span class="ad-gold"></span><span class="ad-tc"></span><span class="ad-cyan"></span><span class="ad-gr"></span><span class="ad-oc"></span>
+    </div>
+  </div>
+</div>
+
+<!-- POLICY CONTENT -->
+<div class="policy-wrap">
+  <!-- Table of Contents -->
+  <aside class="policy-toc">
+    <div class="toc-card">
+      <div class="toc-hdr"><h4>Contents</h4></div>
+      <ul class="toc-list">
+        <li><a href="#s1"><span class="toc-n">1</span>Information We Collect</a></li>
+        <li><a href="#s2"><span class="toc-n">2</span>How We Use Your Data</a></li>
+        <li><a href="#s3"><span class="toc-n">3</span>Data Security</a></li>
+        <li><a href="#s4"><span class="toc-n">4</span>Data Storage</a></li>
+        <li><a href="#s5"><span class="toc-n">5</span>Sharing & Disclosure</a></li>
+        <li><a href="#s6"><span class="toc-n">6</span>Your Rights</a></li>
+        <li><a href="#s7"><span class="toc-n">7</span>Cookies & Tracking</a></li>
+        <li><a href="#s8"><span class="toc-n">8</span>Children's Privacy</a></li>
+        <li><a href="#s9"><span class="toc-n">9</span>Policy Changes</a></li>
+        <li><a href="#s10"><span class="toc-n">10</span>Contact Us</a></li>
+      </ul>
+      <div class="toc-contact">
+        <p>Questions about your privacy? Reach us directly:</p>
+        <a href="mailto:info@starletsystems.africa"><i class="fa fa-envelope"></i> Email Us</a>
       </div>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-  
-  <!-- Bootstrap Modal for System Selection -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
-          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- System Selection -->
-          <div class="system_selection">
-            <div class="text-center mb-4">
-              <p class="mb-0">Please select the system you want to login to:</p>
-            </div>
+  </aside>
 
-            <div class="system_options">
-              <div class="system_option" data-system="school">
-                <div class="system_icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h4>School Management System</h4>
-                <p>Manage students, teachers, and academic activities</p>
-              </div>
+  <!-- Policy Body -->
+  <div class="policy-body">
+    <div class="policy-meta">
+      <span class="pm-badge pm-date"><i class="fa fa-calendar-alt"></i> Last Updated: January 2025</span>
+      <span class="pm-badge pm-ver"><i class="fa fa-check-circle"></i> Version 1.0</span>
+    </div>
 
-              <div class="system_option" data-system="hospital">
-                <div class="system_icon">
-                  <i class="fas fa-hospital"></i>
-                </div>
-                <h4>Hospital/Drugshop Management System</h4>
-                <p>Manage patients, appointments, and inventory</p>
-              </div>
+    <p style="font-size:15.5px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:40px;padding:24px 28px;background:#fff;border-radius:14px;border:1px solid rgba(13,51,73,.09);border-left:4px solid var(--ank-tc)">
+      Starlet Systems Africa ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains clearly how we collect, use, disclose, and safeguard your information when you use our services or visit our website. Please read it carefully.
+    </p>
 
-              <div class="system_option" data-system="pos">
-                <div class="system_icon">
-                  <i class="fas fa-cash-register"></i>
-                </div>
-                <h4>Point of Sale Systems</h4>
-                <p>Process sales and manage transactions</p>
-              </div>
-            </div>
-            
-            <div class="text-center mt-4">
-              <p class="text-muted small">New client? Request access or demo below.</p>
-            </div>
-          </div>
+    <!-- Section 1 -->
+    <div class="policy-section" id="s1">
+      <div class="ps-hdr">
+        <div class="ps-num">1</div>
+        <h2>Information We Collect</h2>
+      </div>
+      <p>We collect only what is necessary to provide you with our services. This includes information you give us directly, as well as technical information gathered automatically when you visit our website.</p>
+      <ul class="p-list">
+        <li><strong>Personal Contact Information:</strong> Your name, email address, phone number, and business details when you request a demo, fill in a contact form, or get in touch with us.</li>
+        <li><strong>Operational System Data:</strong> When you use our management systems, we process data essential to delivering the service — such as student records, patient information, or sales transactions — strictly to operate and support the system.</li>
+        <li><strong>Technical & Usage Data:</strong> IP address, browser type, device identifiers, and general usage patterns when you visit our website, collected through standard server logs and analytics.</li>
+        <li><strong>Communication Records:</strong> Messages, support requests, or correspondence you send us, retained to ensure continuity of service and resolve issues effectively.</li>
+      </ul>
+    </div>
 
-          <!-- Social Login (Hidden initially) -->
-          <div class="social_login" style="display:none;">
-            <div class="mb-3">
-              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
-                <span class="icon"><i class="fab fa-facebook"></i></span>
-                <span class="icon_title">Connect with Facebook</span>
-              </a>
+    <!-- Section 2 -->
+    <div class="policy-section" id="s2">
+      <div class="ps-hdr">
+        <div class="ps-num">2</div>
+        <h2>How We Use Your Information</h2>
+      </div>
+      <p>Every piece of information we collect has a clear purpose. We use your data to:</p>
+      <ul class="p-list">
+        <li>Provide, maintain, and continuously improve our software and services</li>
+        <li>Respond to your enquiries, support requests, and demo bookings</li>
+        <li>Send you important service updates, security notices, and where you have consented, newsletters</li>
+        <li>Analyse usage patterns to make our systems more effective and user-friendly</li>
+        <li>Protect the security and integrity of our systems and prevent fraudulent activity</li>
+        <li>Comply with applicable legal and regulatory obligations</li>
+      </ul>
+      <div class="highlight-box">
+        <h4>Our Core Promise</h4>
+        <p>We will never sell your data to third parties. We will never use your information for purposes you have not been made aware of. Your data exists to help us serve you better — nothing more.</p>
+      </div>
+    </div>
 
-              <a href="#" class="social_box google d-block text-decoration-none">
-                <span class="icon"><i class="fab fa-google-plus"></i></span>
-                <span class="icon_title">Connect with Google</span>
-              </a>
-            </div>
+    <!-- Section 3 -->
+    <div class="policy-section" id="s3">
+      <div class="ps-hdr">
+        <div class="ps-num">3</div>
+        <h2>Data Security</h2>
+      </div>
+      <p>Protecting your information is a responsibility we take seriously. We apply appropriate technical and organisational safeguards, including:</p>
+      <ul class="p-list">
+        <li>Encryption of sensitive data both in transit and at rest</li>
+        <li>Regular security assessments and system updates to address emerging vulnerabilities</li>
+        <li>Strict access controls — only authorised personnel may access client data</li>
+        <li>Automated, regular backups to protect against data loss</li>
+        <li>Secure, protected storage environments for all client information</li>
+      </ul>
+      <p>While we strive for the highest standards of security, no system can guarantee absolute protection against all threats. We will notify you promptly in the unlikely event of a data breach that affects your information.</p>
+    </div>
 
-            <div class="text-center my-3">
-              <span>Or use your Email address</span>
-            </div>
+    <!-- Section 4 -->
+    <div class="policy-section" id="s4">
+      <div class="ps-hdr">
+        <div class="ps-num">4</div>
+        <h2>Data Storage & Location</h2>
+      </div>
+      <p>Your data is stored on secure servers located in Uganda or other secure, reputable facilities. We ensure all storage complies with applicable data protection legislation. Where your preference is to store data locally on your own infrastructure, our systems fully support that option — giving you maximum control over your own information.</p>
+    </div>
 
-            <div class="d-grid gap-2 d-md-flex">
-              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
-              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
-            </div>
-          </div>
+    <!-- Section 5 -->
+    <div class="policy-section" id="s5">
+      <div class="ps-hdr">
+        <div class="ps-num">5</div>
+        <h2>Sharing & Disclosure</h2>
+      </div>
+      <p>We do not sell, trade, or rent your personal information to anyone. We will only share your information in the following, limited circumstances:</p>
+      <ul class="p-list">
+        <li>With your explicit, prior consent</li>
+        <li>To comply with a legal obligation, court order, or lawful government request</li>
+        <li>To protect the rights, property, or safety of Starlet Systems Africa, our clients, or the public</li>
+        <li>With carefully vetted service providers who support our operations — and who are bound by strict confidentiality and data protection agreements</li>
+      </ul>
+    </div>
 
-          <!-- Username & Password Login form -->
-          <div class="user_login" style="display:none;">
-            <div class="selected_system_info mb-3">
-              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
-            </div>
-            <form>
-              <div class="mb-3">
-                <label for="login_email" class="form-label">Email / Username</label>
-                <input type="text" class="form-control" id="login_email" />
-              </div>
+    <!-- Section 6 -->
+    <div class="policy-section" id="s6">
+      <div class="ps-hdr">
+        <div class="ps-num">6</div>
+        <h2>Your Rights</h2>
+      </div>
+      <p>You are in control of your personal data. You have the right to:</p>
+      <div class="rights-grid">
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-eye"></i></div><div class="ri-text"><h5>Access</h5><p>Request a copy of the personal data we hold about you</p></div></div>
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-edit"></i></div><div class="ri-text"><h5>Correct</h5><p>Ask us to update or correct inaccurate data</p></div></div>
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-trash-alt"></i></div><div class="ri-text"><h5>Delete</h5><p>Request erasure of your personal data from our systems</p></div></div>
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-hand-paper"></i></div><div class="ri-text"><h5>Object</h5><p>Object to how we are processing your data</p></div></div>
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-file-export"></i></div><div class="ri-text"><h5>Portability</h5><p>Receive your data in a portable, machine-readable format</p></div></div>
+        <div class="right-item"><div class="ri-ico"><i class="fa fa-times-circle"></i></div><div class="ri-text"><h5>Withdraw Consent</h5><p>Withdraw consent for processing at any time</p></div></div>
+      </div>
+      <p>To exercise any of these rights, contact us at <a href="mailto:info@starletsystems.africa" style="color:var(--ank-tc);font-weight:600">info@starletsystems.africa</a> or call <strong>+256 769 214 437</strong>. We will respond to all requests within a reasonable timeframe.</p>
+    </div>
 
-              <div class="mb-3">
-                <label for="login_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="login_password" />
-              </div>
+    <!-- Section 7 -->
+    <div class="policy-section" id="s7">
+      <div class="ps-hdr">
+        <div class="ps-num">7</div>
+        <h2>Cookies & Tracking</h2>
+      </div>
+      <p>Our website may use cookies — small text files stored on your device — to improve your experience. You can manage or disable cookies through your browser settings at any time. We use cookies for the following limited purposes:</p>
+      <ul class="p-list">
+        <li>Remembering your preferences so you don't have to re-enter them</li>
+        <li>Analysing aggregate website traffic to understand how visitors use our site</li>
+        <li>Ensuring core website features work correctly and securely</li>
+      </ul>
+      <p>We do not use cookies for advertising, tracking across third-party websites, or profiling individual users.</p>
+    </div>
 
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="remember" />
-                <label class="form-check-label" for="remember">Remember me on this computer</label>
-              </div>
+    <!-- Section 8 -->
+    <div class="policy-section" id="s8">
+      <div class="ps-hdr">
+        <div class="ps-num">8</div>
+        <h2>Children's Privacy</h2>
+      </div>
+      <p>Our software is designed for educational institutions, healthcare facilities, and businesses — all of which are managed by adults. We do not knowingly collect or process personal information from children under the age of 13 as individual data subjects. Student records within our School Management System are managed by the institution as the data controller, with appropriate safeguards in place. If you believe we have inadvertently collected a child's personal data, please contact us immediately so we can take prompt action.</p>
+    </div>
 
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
-              </div>
-            </form>
+    <!-- Section 9 -->
+    <div class="policy-section" id="s9">
+      <div class="ps-hdr">
+        <div class="ps-num">9</div>
+        <h2>Changes to This Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time as our services evolve or regulations change. When we do, we will post the revised policy on this page with an updated "Last Updated" date. For material changes, we will also notify existing clients directly via email or through our systems. We encourage you to review this page periodically to stay informed.</p>
+    </div>
 
-            <div class="text-center mt-3">
-              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
-            </div>
-          </div>
-
-          <!-- Register Form -->
-          <div class="user_register" style="display:none;">
-            <form>
-              <div class="mb-3">
-                <label for="register_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="register_name" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="register_email" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="register_password" />
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="send_updates" />
-                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
-              </div>
-
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
-              </div>
-            </form>
-          </div>
-        </div>
+    <!-- Section 10 -->
+    <div class="policy-section" id="s10">
+      <div class="ps-hdr">
+        <div class="ps-num">10</div>
+        <h2>Contact Us</h2>
+      </div>
+      <p>If you have any questions, concerns, or requests related to this Privacy Policy or how we handle your data, please don't hesitate to reach out. We aim to respond to all privacy-related enquiries within 5 business days.</p>
+      <div class="contact-box">
+        <h4>Starlet Systems Africa</h4>
+        <p>Uganda</p>
+        <p>Email: <a href="mailto:info@starletsystems.africa">info@starletsystems.africa</a></p>
+        <p>Phone: <a href="tel:+256769214437" style="color:var(--ank-tc);font-weight:600">+256 769 214 437</a> &nbsp;/&nbsp; <a href="tel:+256394558267" style="color:var(--ank-tc);font-weight:600">0394 558 267</a></p>
+        <p>WhatsApp: <a href="https://wa.me/256769214437" target="_blank" style="color:#25D366;font-weight:600"><i class="fab fa-whatsapp"></i> +256 769 214 437</a></p>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Page Header -->
-  <div class="page-header">
-    <div class="container">
-      <h1 class="wow fadeInDown">Privacy Policy</h1>
-      <p class="wow fadeInUp">How We Protect Your Data and Privacy</p>
+<!-- CTA -->
+<div class="kente-bar"></div>
+<div class="cta-band">
+  <div class="ankara-overlay"></div>
+  <div class="cta-inner">
+    <span class="s-eyebrow lt" style="text-align:center;display:block">✦ Ready to Get Started?</span>
+    <h2>Transform Your Organisation Today</h2>
+    <p>Book a free demo with our team. We'll come to you, walk you through the system live, and show you exactly how it fits — no pressure, no obligation.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-gold"><i class="fa fa-calendar-check"></i> Book Free Demo</a>
+      <a href="https://wa.me/256769214437" target="_blank" class="btn-outline-gold"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
     </div>
   </div>
+</div>
 
-  <!-- Content Section -->
-  <div class="content-section section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="section-heading">
-            <p><strong>Last Updated:</strong> January 2025</p>
-            <p>Starlet Technologies ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services or visit our website.</p>
+<div class="kente-bar"></div>
+<footer>
+  <div class="ft-top">
+    <div class="ft-grid">
+      <div>
+        <div class="ft-logo">
+          <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="ft-logo-text" style="display:none">
+            <span class="nl-star">Star</span><span class="nl-let">Let</span>
+            <small>Systems Africa</small>
           </div>
-
-          <h3>1. Information We Collect</h3>
-          <p>We collect information that you provide directly to us, including:</p>
-          <ul>
-            <li><strong>Personal Information:</strong> Name, email address, phone number, business type, and other contact details when you request a demo or contact us.</li>
-            <li><strong>System Data:</strong> When you use our management systems, we collect data related to your operations (student records, patient information, sales data, etc.) as necessary to provide our services.</li>
-            <li><strong>Technical Information:</strong> IP address, browser type, device information, and usage patterns when you visit our website.</li>
-          </ul>
-
-          <h3>2. How We Use Your Information</h3>
-          <p>We use the information we collect to:</p>
-          <ul>
-            <li>Provide, maintain, and improve our services</li>
-            <li>Process your requests and respond to your inquiries</li>
-            <li>Send you updates, newsletters, and marketing communications (with your consent)</li>
-            <li>Monitor and analyze usage patterns to improve our systems</li>
-            <li>Ensure system security and prevent fraud</li>
-            <li>Comply with legal obligations</li>
-          </ul>
-
-          <h3>3. Data Security</h3>
-          <p>We implement appropriate technical and organizational measures to protect your data:</p>
-          <ul>
-            <li>Encryption of sensitive data in transit and at rest</li>
-            <li>Regular security assessments and updates</li>
-            <li>Access controls and user authentication</li>
-            <li>Regular automated backups</li>
-            <li>Secure data storage facilities</li>
-          </ul>
-          <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your data, we cannot guarantee absolute security.</p>
-
-          <h3>4. Data Storage and Location</h3>
-          <p>Your data is stored securely on servers located in Uganda or other secure locations. We ensure compliance with applicable data protection laws. You can choose to store data locally on your systems if preferred.</p>
-
-          <h3>5. Data Sharing and Disclosure</h3>
-          <p>We do not sell your personal information. We may share your information only in the following circumstances:</p>
-          <ul>
-            <li>With your explicit consent</li>
-            <li>To comply with legal obligations or court orders</li>
-            <li>To protect our rights, property, or safety</li>
-            <li>With service providers who assist us in operating our business (under strict confidentiality agreements)</li>
-          </ul>
-
-          <h3>6. Your Rights</h3>
-          <p>You have the right to:</p>
-          <ul>
-            <li>Access your personal data</li>
-            <li>Correct inaccurate data</li>
-            <li>Request deletion of your data</li>
-            <li>Object to processing of your data</li>
-            <li>Request data portability</li>
-            <li>Withdraw consent at any time</li>
-          </ul>
-          <p>To exercise these rights, please contact us at <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a> or call +256 769 214 437.</p>
-
-          <h3>7. Cookies and Tracking</h3>
-          <p>Our website may use cookies to enhance your experience. You can control cookies through your browser settings. We use cookies for:</p>
-          <ul>
-            <li>Remembering your preferences</li>
-            <li>Analyzing website traffic</li>
-            <li>Improving website functionality</li>
-          </ul>
-
-          <h3>8. Children's Privacy</h3>
-          <p>Our services are designed for educational and business institutions. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
-
-          <h3>9. Changes to This Policy</h3>
-          <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.</p>
-
-          <h3>10. Contact Us</h3>
-          <p>If you have questions about this Privacy Policy or our data practices, please contact us:</p>
-          <p>
-            <strong>Starlet Technologies</strong><br>
-            Uganda<br>
-            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a><br>
-            Phone: <a href="tel:+256769214437">+256 769 214 437</a> / <a href="tel:+256394558267">0394 558 267</a>
-          </p>
         </div>
+        <p class="ft-tag">Empowering schools, clinics, and businesses across Africa with affordable, reliable technology. Purpose-built for African organisations, delivered with on-the-ground expertise.</p>
+        <div class="ft-contact">
+          <a href="tel:+256394558267"><i class="fa fa-phone" style="width:14px"></i>0394 558 267</a>
+          <a href="tel:+256769214437"><i class="fab fa-whatsapp" style="width:14px"></i>+256 769 214 437</a>
+          <a href="mailto:info@starletsystems.africa"><i class="fa fa-envelope" style="width:14px"></i>info@starletsystems.africa</a>
+        </div>
+        <div class="ft-social">
+          <a href="https://wa.me/256769214437" target="_blank" class="fsoc fs-wa"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="fsoc fs-fb"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="fsoc fs-li"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Navigate</h4>
+        <ul class="ft-lnks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="team.html">Our Team</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Systems</h4>
+        <ul class="ft-lnks">
+          <li><a href="products.html">School Management</a></li>
+          <li><a href="products.html">Hospital System</a></li>
+          <li><a href="products.html">POS System</a></li>
+          <li><a href="services.html">ICT Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Legal</h4>
+        <ul class="ft-lnks">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+        <h4 style="margin-top:28px">Our Mission</h4>
+        <p style="font-size:13.5px;color:rgba(255,255,255,.42);line-height:1.82;font-weight:300;">"Bright ideas, Built for Africa." We exist to make world-class technology accessible to every African school, clinic, and business.</p>
       </div>
     </div>
   </div>
+  <div class="ft-bot">
+    <p>Copyright &copy; <span id="yr"></span> Starlet Systems Africa. All Rights Reserved. &nbsp;|&nbsp; <em>Bright ideas, Built for Africa.</em></p>
+  </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="privacy.html">Privacy Policy</a></li>
-              <li><a href="terms.html">Terms of Service</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>About Starlet Technologies</h4>
-            <div class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
-            </div>
-            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
-            <p class="mt-3"><strong>Contact:</strong><br>
-            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
-            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Copyright © <span id="copyright-year">2025</span> Starlet Technologies – Uganda. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+<a href="https://wa.me/256769214437" target="_blank" class="wa-float" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    // Update copyright year dynamically
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('copyright-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+document.getElementById('menuToggle').addEventListener('click', () => {
+  document.getElementById('navLinks').classList.toggle('open');
+});
+
+const modal = document.getElementById('loginModal');
+let selectedSystem = null;
+const systemLoginUrls = {
+  'school': 'http://localhost/school-management-system/login.php',
+  'hospital': 'https://myhospital.starletsystemsafrica.com',
+  'pos': 'https://mypos.starletsystemsafrica.com'
+};
+document.getElementById('openModal').addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+document.getElementById('closeModal').addEventListener('click', () => modal.classList.remove('open'));
+modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+function selectSys(id, name) {
+  selectedSystem = id;
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    modal.classList.remove('open');
+    setTimeout(()=>{
+      window.location.href = systemLoginUrls[selectedSystem];
+    }, 100);
+  }
+}
+function backToSys() {
+  selectedSystem = null;
+  document.getElementById('mTitle').textContent = 'Select Your System';
+  document.getElementById('stepSys').style.display = 'block';
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.remove('on');
+}
+function backToLogin() {
+  document.getElementById('stepReg').classList.remove('on');
+  document.getElementById('stepLogin').classList.add('on');
+  document.getElementById('mTitle').textContent = 'Sign In';
+}
+document.getElementById('toReg').addEventListener('click', () => {
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.add('on');
+  document.getElementById('mTitle').textContent = 'Create Account';
+});
+document.getElementById('stepLogin').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    window.location.href = systemLoginUrls[selectedSystem];
+  }
+});
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) e.target.classList.add('on');
+}), { threshold: 0.08 });
+document.querySelectorAll('.policy-section').forEach(el => io.observe(el));
+
+// TOC active highlight
+const sections = document.querySelectorAll('.policy-section');
+const tocLinks = document.querySelectorAll('.toc-list li a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+  tocLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+});
+</script>
 </body>
 </html>
-

@@ -1,666 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Meet the passionate team behind Starlet Systems Africa — delivering technology solutions that transform schools, clinics, and businesses across Africa.">
+<title>Our Team | Starlet Systems Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
-  <head>
+<style>
+:root{
+  --navy:#0D3349;--navy-deep:#081E2E;--navy-mid:#124060;--navy-light:#1A5276;
+  --gold:#F5C518;--gold-dark:#C8A000;--gold-glow:rgba(245,197,24,.28);
+  --cyan:#00D4FF;--cyan-dark:#00A8CC;--cyan-glow:rgba(0,212,255,.22);
+  --cream:#F8F4EC;--warm-white:#FDFAF4;
+  --ank-tc:#C1440E;--ank-burnt:#E65100;--ank-ochre:#E6A817;--ank-green:#2E7D32;
+  --text:#0D1F2D;--text-mid:#3A5068;
+  --shadow-sm:0 2px 12px rgba(13,51,73,.08);--shadow-md:0 8px 32px rgba(13,51,73,.13);
+  --shadow-lg:0 20px 60px rgba(13,51,73,.2);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;color:var(--text);background:var(--warm-white);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Crimson Pro',serif;font-weight:600;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Meet the Starlet Technologies team - Experienced professionals based in Uganda, dedicated to providing excellent technology solutions.">
-    <meta name="author" content="Starlet Technologies">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+/* ── ANKARA SYSTEM ── */
+.kente-bar{height:7px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px,var(--navy) 88px 110px,var(--ank-ochre) 110px 132px)}
+.ankara-overlay{position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(45deg,rgba(245,197,24,.04) 0 2px,transparent 2px 22px),
+  repeating-linear-gradient(-45deg,rgba(0,212,255,.03) 0 2px,transparent 2px 22px),
+  repeating-conic-gradient(rgba(193,68,14,.03) 0% 25%,transparent 0% 50%) center/36px 36px}
+.ankara-diamonds{display:flex;justify-content:center;gap:10px;margin:18px 0}
+.ankara-diamonds span{display:block;width:10px;height:10px;transform:rotate(45deg)}
+.ad-gold{background:var(--gold)}.ad-tc{background:var(--ank-tc);width:16px!important;height:16px!important}
+.ad-cyan{background:var(--cyan)}.ad-gr{background:var(--ank-green)}.ad-oc{background:var(--ank-ochre)}
 
-    <title>Our Team | Starlet Technologies - Uganda</title>
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy-deep);border-bottom:1px solid rgba(245,197,24,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;max-width:1440px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.nav-logo img{height:38px;width:auto;object-fit:contain}
+.logo-text-wrap{display:flex;flex-direction:column}
+.logo-wordmark{font-family:'Crimson Pro',serif;font-size:20px;line-height:1}
+.logo-star{color:var(--gold)}.logo-let{color:var(--cyan)}
+.logo-sub{font-size:9.5px;letter-spacing:2.5px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.72);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:7px;transition:all .25s;letter-spacing:.2px}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);background:rgba(245,197,24,.08)}
+.nav-signin{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep)!important;border-radius:8px!important;padding:8px 17px!important;font-weight:700!important;font-size:13px!important;box-shadow:0 4px 16px rgba(245,197,24,.32);transition:all .25s!important}
+.nav-signin:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(245,197,24,.45)!important;color:var(--navy-deep)!important}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+/* ── MODAL ── */
+.modal-bg{display:none;position:fixed;inset:0;z-index:2000;background:rgba(8,30,46,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal-box{background:#fff;border-radius:20px;width:90%;max-width:500px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.38);animation:mIn .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes mIn{from{opacity:0;transform:scale(.9) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-kente{height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px)}
+.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:20px 26px 14px;border-bottom:1px solid rgba(13,51,73,.1)}
+.modal-title{font-size:19px;font-weight:700;color:var(--navy);font-family:'Crimson Pro',serif}
+.modal-x{width:32px;height:32px;border-radius:50%;border:none;background:rgba(13,51,73,.07);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .2s}
+.modal-x:hover{background:rgba(193,68,14,.12);color:var(--ank-tc)}
+.modal-body{padding:22px 26px 26px}
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 18px}
+.sys-card{border:2px solid rgba(13,51,73,.12);border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s}
+.sys-card:hover,.sys-card.sel{border-color:var(--gold);background:rgba(245,197,24,.06);transform:translateY(-2px)}
+.sys-ico{width:46px;height:46px;border-radius:11px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.si-sch{background:rgba(193,68,14,.12);color:var(--ank-tc)}
+.si-hos{background:rgba(46,125,50,.12);color:#2E7D32}
+.si-pos{background:rgba(245,197,24,.15);color:var(--gold-dark)}
+.sys-card h5{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px;font-family:'Sora',sans-serif}
+.sys-card p{font-size:11px;color:#999;line-height:1.4}
+.mform{display:none}.mform.on{display:block}
+.mback{display:flex;align-items:center;gap:6px;background:none;border:none;font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;margin-bottom:14px;padding:0;font-family:'Sora',sans-serif}
+.mback:hover{color:var(--ank-tc)}
+.sys-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.3);border-radius:8px;padding:7px 13px;margin-bottom:18px;font-size:13px;font-weight:600;color:var(--navy)}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:5px;letter-spacing:.4px}
+.fc{width:100%;padding:11px 13px;border:2px solid rgba(13,51,73,.14);border-radius:9px;font-size:14px;font-family:'Sora',sans-serif;background:var(--warm-white);color:var(--text);transition:all .2s;outline:none}
+.fc:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,197,24,.18)}
+.fchk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid);margin-bottom:18px}
+.fchk input{accent-color:var(--gold)}
+.btn-mp{width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;transition:all .25s;margin-bottom:10px}
+.btn-mp:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,51,73,.28)}
+.btn-mo{width:100%;padding:10px;border:2px solid rgba(13,51,73,.18);border-radius:10px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:'Sora',sans-serif;background:transparent;color:var(--navy);transition:all .25s}
+.btn-mo:hover{border-color:var(--navy);background:rgba(13,51,73,.04)}
+.mfnote{text-align:center;font-size:12px;color:#bbb;margin-top:14px}
+.mfnote a{color:var(--navy);font-weight:600}
+.mforgot{text-align:center;font-size:12.5px;color:var(--text-mid);margin-top:12px}
+.mforgot a{color:var(--navy);font-weight:600}
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
-    <link rel="stylesheet" href="assets/css/color-theme.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+/* ── SECTION COMMONS ── */
+.section{padding:90px 5%;position:relative}
+.s-cream{background:var(--cream)}.s-white{background:var(--warm-white)}.s-dark{background:var(--navy-deep)}
+.s-eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-tc);margin-bottom:12px}
+.s-eyebrow.lt{color:var(--gold)}
+.s-title{font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--navy);margin-bottom:14px}
+.s-title em{font-style:normal;color:var(--ank-tc)}
+.s-title.lt{color:#fff}.s-title.lt em{color:var(--gold)}
+.s-desc{font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;max-width:600px}
+.s-hdr{text-align:center;margin-bottom:56px}
+.s-hdr .s-desc{margin:14px auto 0}
+.s-inner{max-width:1200px;margin:0 auto}
 
-    <style>
-      .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-      .whatsapp-float:hover {
-        background-color: #20ba5a;
-        transform: scale(1.1);
-        color: #FFF;
-        text-decoration: none;
-      }
-      .whatsapp-float i {
-        margin-top: 0;
-      }
-      @media (max-width: 767px) {
-        .whatsapp-float {
-          width: 50px;
-          height: 50px;
-          font-size: 24px;
-          bottom: 15px;
-          right: 15px;
-        }
-      }
-      .page-header {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
-        background-size: 200% 100%;
-        animation: gradientShift 5s ease infinite;
-        padding: 150px 0 80px;
-        color: #fff;
-        text-align: center;
-      }
-      @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      .team-member {
-        text-align: center;
-        padding: 40px 30px;
-        background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        margin-bottom: 30px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border: 1px solid #f0f0f0;
-      }
-      .team-member:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 40px rgba(25, 118, 210, 0.15);
-        border-color: #1976d2;
-      }
-      .team-member img {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 25px;
-        border: 4px solid #f0f7ff;
-        transition: all 0.3s ease;
-      }
-      .team-member:hover img {
-        border-color: #1976d2;
-        transform: scale(1.05);
-      }
-      .team-member h4 {
-        color: #1a237e;
-        margin-bottom: 12px;
-        font-size: 22px;
-        font-weight: 700;
-        letter-spacing: -0.5px;
-        line-height: 1.3;
-      }
-      .team-member .position {
-        color: #1976d2;
-        font-weight: 600;
-        margin-bottom: 20px;
-        font-size: 15px;
-        line-height: 1.6;
-        text-align: center;
-      }
-      .team-member .position span {
-        display: block;
-        font-size: 13px;
-        color: #555;
-        font-weight: 500;
-        margin-top: 6px;
-        font-style: italic;
-      }
-      .team-member .bio {
-        color: #333;
-        font-size: 15px;
-        line-height: 1.85;
-        margin-bottom: 0;
-        text-align: left;
-        flex-grow: 1;
-        font-weight: 400;
-        letter-spacing: 0.2px;
-      }
-      .team-member .bio p {
-        margin-bottom: 14px;
-        text-align: justify;
-        text-justify: inter-word;
-        color: #333;
-      }
-      .team-member .bio p:last-child {
-        margin-bottom: 0;
-      }
-      .team-member .bio p:first-child {
-        font-weight: 500;
-        color: #222;
-      }
-      .team-member .social-links {
-        margin-top: 20px;
-      }
-      .team-member .social-links a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-        text-align: center;
-        border-radius: 50%;
-        background: #f0f0f0;
-        color: #1976d2;
-        margin: 0 5px;
-        transition: all 0.3s ease;
-      }
-      .team-member .social-links a:hover {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
-        color: #fff;
-        transform: scale(1.1);
-      }
-      @media (max-width: 768px) {
-        .team-member {
-          padding: 30px 20px;
-        }
-        .team-member img {
-          width: 160px;
-          height: 160px;
-        }
-        .team-member h4 {
-          font-size: 20px;
-        }
-        .team-member .position {
-          font-size: 14px;
-        }
-        .team-member .bio {
-          font-size: 14px;
-          line-height: 1.7;
-        }
-        .team-member .bio p {
-          margin-bottom: 10px;
-        }
-      }
-      /* Fix decorative images z-index in Join Our Team section */
-      .join-team-section::before,
-      .join-team-section::after {
-        z-index: 0 !important;
-        display: none !important;
-      }
-      .join-team-section .right-image,
-      .join-team-section .left-image,
-      .join-team-section img[src*="dec"],
-      .join-team-section .decoration {
-        z-index: 0 !important;
-        position: absolute !important;
-        display: none !important;
-      }
-      .join-team-section .container,
-      .join-team-section .row,
-      .join-team-section .col-lg-8,
-      .join-team-section h3,
-      .join-team-section p,
-      .join-team-section .gradient-button {
-        position: relative;
-        z-index: 10 !important;
-      }
-    </style>
+/* ── PAGE HEADER ── */
+.page-hdr{padding:130px 5% 72px;background:var(--navy-deep);position:relative;overflow:hidden;text-align:center}
+.page-hdr::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(245,197,24,.05) 0% 25%,transparent 0% 50%) center/44px 44px}
+.ph-inner{position:relative;z-index:1}
+.ph-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-ochre);margin-bottom:14px}
+.ph-title{font-size:clamp(34px,5vw,56px);font-weight:600;color:#fff;margin-bottom:14px}
+.ph-title em{font-style:normal;background:linear-gradient(135deg,var(--gold),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ph-desc{font-size:17px;color:rgba(255,255,255,.65);max-width:600px;margin:0 auto;line-height:1.8;font-weight:300}
 
-  </head>
+/* ── BUTTONS ── */
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 22px rgba(245,197,24,.33)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(245,197,24,.5);color:var(--navy-deep)}
+.btn-navy{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 20px rgba(13,51,73,.25)}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,51,73,.38);color:#fff}
+.btn-outline-gold{display:inline-flex;align-items:center;gap:9px;border:2px solid var(--gold);color:var(--gold);padding:12px 26px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s}
+.btn-outline-gold:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-2px)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:9px;border:2px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;transition:all .3s}
+.btn-outline-white:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+.btn-white{display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--navy);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.14)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.22);color:var(--navy)}
 
+/* ── SERVICE CARDS ── */
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+.sc-card{background:#fff;border-radius:18px;padding:36px 28px;border:1px solid rgba(13,51,73,.08);position:relative;overflow:hidden;transition:all .4s cubic-bezier(.23,1,.32,1);box-shadow:var(--shadow-sm)}
+.sc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.sc-school::after{background:linear-gradient(90deg,var(--ank-tc),var(--ank-burnt))}
+.sc-hospital::after{background:linear-gradient(90deg,#2E7D32,#43A047)}
+.sc-pos::after{background:linear-gradient(90deg,var(--gold),var(--ank-ochre))}
+.sc-ict::after{background:linear-gradient(90deg,var(--cyan-dark),var(--cyan))}
+.sc-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}.sc-card:hover::after{transform:scaleX(1)}
+.sc-ico{width:66px;height:66px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:20px;transition:transform .3s}
+.sc-card:hover .sc-ico{transform:scale(1.1) rotate(5deg)}
+.sci-s{background:rgba(193,68,14,.1);color:var(--ank-tc)}
+.sci-h{background:rgba(46,125,50,.1);color:#2E7D32}
+.sci-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.sci-i{background:rgba(0,212,255,.11);color:var(--cyan-dark)}
+.sc-card h3{font-size:20px;font-weight:600;color:var(--navy);margin-bottom:9px}
+.sc-card p{font-size:13.5px;color:var(--text-mid);line-height:1.8;margin-bottom:18px;font-weight:300}
+.sc-feats{list-style:none;margin-bottom:22px}
+.sc-feats li{font-size:13px;color:#555;padding:3.5px 0;display:flex;align-items:center;gap:8px}
+.sc-feats li::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.sc-school .sc-feats li::before{background:var(--ank-tc)}
+.sc-hospital .sc-feats li::before{background:#2E7D32}
+.sc-pos .sc-feats li::before{background:var(--gold-dark)}
+.sc-ict .sc-feats li::before{background:var(--cyan-dark)}
+.sc-lnk{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:gap .25s}
+.sc-lnk:hover{gap:10px}
+.sc-school .sc-lnk{color:var(--ank-tc)}.sc-hospital .sc-lnk{color:#2E7D32}
+.sc-pos .sc-lnk{color:var(--gold-dark)}.sc-ict .sc-lnk{color:var(--cyan-dark)}
+
+/* ── WHY US ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
+.ank-showcase{background:var(--navy);border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(13,51,73,.3)}
+.ank-kente-thick{height:11px;background:repeating-linear-gradient(90deg,var(--gold) 0 20px,var(--ank-tc) 20px 40px,var(--cyan) 40px 60px,var(--ank-green) 60px 80px,var(--ank-ochre) 80px 100px,var(--navy-light) 100px 120px)}
+.ank-body{padding:34px}
+.ank-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:22px}
+.ank-stat{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,24,.2);border-radius:12px;padding:18px;text-align:center}
+.ank-n{font-family:'Crimson Pro',serif;font-size:30px;color:var(--gold);display:block;line-height:1}
+.ank-l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1.2px;margin-top:4px}
+.why-pts{list-style:none}
+.why-pt{display:flex;gap:17px;margin-bottom:26px}
+.wpi{width:50px;height:50px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px}
+.wpi-1{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold)}
+.wpi-2{background:linear-gradient(135deg,#2E7D32,#43A047);color:#fff}
+.wpi-3{background:linear-gradient(135deg,var(--gold-dark),var(--ank-ochre));color:var(--navy)}
+.wpi-4{background:linear-gradient(135deg,var(--cyan-dark),var(--cyan));color:var(--navy)}
+.wpt h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px;font-family:'Sora',sans-serif}
+.wpt p{font-size:13.5px;color:var(--text-mid);line-height:1.78;font-weight:300}
+
+/* ── TESTIMONIALS ── */
+.tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+.tst-card{background:#fff;border-radius:18px;padding:32px 28px;border:1px solid rgba(13,51,73,.08);position:relative;box-shadow:var(--shadow-sm);overflow:hidden}
+.tst-card::before{content:'"';position:absolute;top:12px;right:20px;font-family:'Crimson Pro',serif;font-size:88px;line-height:1;color:rgba(13,51,73,.06)}
+.tst-stars{color:var(--gold);font-size:13px;margin-bottom:13px;letter-spacing:2px}
+.tst-text{font-size:14.5px;color:#555;line-height:1.85;margin-bottom:20px;font-style:italic;font-weight:300}
+.tst-auth{display:flex;align-items:center;gap:12px}
+.tst-av{width:43px;height:43px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--navy),var(--cyan-dark));display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-size:17px;font-weight:600;color:#fff}
+.tst-name{font-size:14.5px;font-weight:700;color:var(--navy)}
+.tst-role{font-size:12px;color:var(--ank-tc);font-weight:600}
+
+/* ── FAQ ── */
+.faq-wrap{max-width:740px;margin:0 auto}
+.faq-item{border:1px solid rgba(13,51,73,.1);border-radius:12px;margin-bottom:9px;overflow:hidden}
+.faq-btn{width:100%;background:#fff;border:none;padding:19px 22px;text-align:left;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Sora',sans-serif;transition:background .2s}
+.faq-ico{width:25px;height:25px;border-radius:50%;background:rgba(13,51,73,.07);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--navy);transition:all .3s;flex-shrink:0}
+.faq-btn.open{color:var(--ank-tc)}.faq-btn.open .faq-ico{background:var(--ank-tc);color:#fff;transform:rotate(45deg)}
+.faq-body{display:none;padding:0 22px 18px;font-size:14px;color:var(--text-mid);line-height:1.85;font-weight:300;background:#fff}
+.faq-body.open{display:block}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(135deg,var(--navy-deep),var(--navy-mid));padding:90px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:repeating-conic-gradient(rgba(245,197,24,.04) 0% 25%,transparent 0% 50%) center/36px 36px}
+.cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.cta-inner h2{font-size:clamp(28px,4vw,48px);color:#fff;margin-bottom:14px}
+.cta-inner p{font-size:16.5px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:34px;font-weight:300}
+.cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.62)}
+.ft-top{padding:68px 5% 44px;max-width:1440px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:44px}
+.ft-logo img{height:42px;margin-bottom:16px}
+.ft-logo-text .nl-star{font-family:'Crimson Pro',serif;font-size:19px;color:var(--gold)}
+.ft-logo-text .nl-let{font-family:'Crimson Pro',serif;font-size:19px;color:var(--cyan)}
+.ft-logo-text small{display:block;font-size:9.5px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:2px}
+.ft-tag{font-size:13.5px;line-height:1.82;margin-bottom:18px;font-weight:300}
+.ft-contact a{color:var(--gold);font-size:13.5px;display:block;margin-bottom:4px;font-weight:600}
+.ft-social{display:flex;gap:9px;margin-top:14px}
+.fsoc{width:37px;height:37px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .25s}
+.fsoc:hover{transform:translateY(-2px)}
+.fs-wa{background:rgba(37,211,102,.14);color:#25D366}.fs-fb{background:rgba(24,119,242,.14);color:#1877F2}.fs-li{background:rgba(0,119,181,.14);color:#0077B5}
+.ft-col h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;padding-bottom:9px;border-bottom:2px solid rgba(245,197,24,.28)}
+.ft-lnks{list-style:none}
+.ft-lnks li{margin-bottom:8px}
+.ft-lnks a{font-size:13.5px;color:rgba(255,255,255,.52);transition:color .2s;font-weight:300}
+.ft-lnks a:hover{color:var(--gold)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding:18px 5%;text-align:center;font-size:12.5px;color:rgba(255,255,255,.28);max-width:1440px;margin:0 auto}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:900;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,.48);transition:all .3s}
+.wa-float:hover{transform:scale(1.1);color:#fff;box-shadow:0 8px 28px rgba(37,211,102,.6)}
+
+/* ── TEAM CARDS ── */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;max-width:1200px;margin:0 auto}
+.tm-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(13,51,73,.08);transition:all .4s cubic-bezier(.23,1,.32,1)}
+.tm-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(245,197,24,.3)}
+.tm-card-top{height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--ank-tc) 18px 36px,var(--cyan) 36px 54px,var(--ank-green) 54px 72px)}
+.tm-body{padding:30px 26px}
+.tm-avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 18px;border:4px solid rgba(245,197,24,.25);transition:all .3s;display:block}
+.tm-card:hover .tm-avatar{border-color:var(--gold);transform:scale(1.04)}
+.tm-avatar-placeholder{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Crimson Pro',serif;font-size:36px;font-weight:600;color:var(--gold)}
+.tm-name{text-align:center;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:5px}
+.tm-role{text-align:center;font-size:13px;font-weight:700;color:var(--ank-tc);margin-bottom:4px}
+.tm-role-sub{text-align:center;font-size:12px;color:#999;margin-bottom:16px;font-style:italic}
+.tm-bio{font-size:13.5px;color:var(--text-mid);line-height:1.8;font-weight:300;margin-bottom:18px}
+.tm-bio p{margin-bottom:10px}
+.tm-bio p:last-child{margin-bottom:0}
+.tm-soc{display:flex;justify-content:center;gap:9px}
+.tm-soc a{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;border:1.5px solid rgba(13,51,73,.15);color:var(--navy);transition:all .25s}
+.tm-soc a:hover{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:1200px;margin:0 auto;align-items:start}
+.cform-box{background:#fff;border-radius:20px;padding:44px 36px;box-shadow:var(--shadow-md);border:1px solid rgba(13,51,73,.08)}
+.cform-hdr{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(13,51,73,.1)}
+.cform-ico{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px}
+.cform-hdr h3{font-size:22px;font-weight:600;color:var(--navy)}
+.cform-hdr p{font-size:12px;color:#999;margin-top:2px}
+.cfg{margin-bottom:16px}
+.cfg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;letter-spacing:.4px}
+.cfi{width:100%;padding:12px 15px;border:2px solid rgba(13,51,73,.13);border-radius:9px;font-size:14px;font-family:'Sora',sans-serif;background:var(--warm-white);color:var(--text);transition:all .2s;outline:none}
+.cfi:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,197,24,.16)}
+.cfg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit-form{width:100%;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;transition:all .3s;box-shadow:0 4px 18px rgba(13,51,73,.24)}
+.btn-submit-form:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,51,73,.36)}
+.cinfo-col{display:flex;flex-direction:column;gap:18px}
+.wa-cta-big{background:linear-gradient(135deg,#1B5E20,#25D366);border-radius:16px;padding:22px 26px;display:flex;align-items:center;gap:15px;transition:all .3s;box-shadow:0 4px 20px rgba(37,211,102,.28)}
+.wa-cta-big:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.4)}
+.wa-cta-big .wa-ico{font-size:34px;color:#fff}
+.wa-cta-big h4{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:3px}
+.wa-cta-big p{font-size:13px;color:rgba(255,255,255,.82)}
+.info-card{background:#fff;border-radius:14px;padding:22px;border:1px solid rgba(13,51,73,.09);display:flex;align-items:flex-start;gap:16px;transition:all .3s;box-shadow:var(--shadow-sm)}
+.info-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(245,197,24,.3)}
+.ic-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ici-loc{background:rgba(193,68,14,.11);color:var(--ank-tc)}
+.ici-ph{background:rgba(46,125,50,.11);color:#2E7D32}
+.ici-em{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.ici-clk{background:rgba(0,212,255,.11);color:var(--cyan-dark)}
+.ic-text h5{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.ic-text p,.ic-text a{font-size:13.5px;color:var(--text-mid);line-height:1.7;font-weight:300}
+.ic-text a{color:var(--ank-tc);font-weight:600}
+.hrs-box{background:var(--navy);border-radius:14px;overflow:hidden}
+.hrs-kente{height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--ank-tc) 18px 36px,var(--cyan) 36px 54px)}
+.hrs-body{padding:20px 22px}
+.hrs-body h4{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+.hrs-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
+.hrs-row:last-of-type{border:none}
+.hrs-day{color:rgba(255,255,255,.55)}.hrs-time{color:var(--gold);font-weight:700}
+.hrs-note{font-size:12px;color:#25D366;margin-top:11px;display:flex;align-items:center;gap:6px}
+.social-bar{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.soc-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:30px;font-size:13px;font-weight:700;transition:all .3s}
+.soc-pill:hover{transform:translateY(-2px)}
+.sp-wa{background:rgba(37,211,102,.11);color:#25D366}.sp-fb{background:rgba(24,119,242,.11);color:#1877F2}.sp-li{background:rgba(0,119,181,.11);color:#0077B5}
+
+/* ── PRODUCTS PAGE ── */
+.prod-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}
+.ptab{padding:11px 22px;border-radius:50px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);font-family:'Sora',sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:8px}
+.ptab:hover,.ptab.active{border-color:var(--gold);background:rgba(245,197,24,.12);color:var(--gold)}
+.prod-panel{display:none;padding:72px 5%}
+.prod-panel.on{display:block}
+.prod-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
+.prod-inner.flip{direction:rtl}.prod-inner.flip>*{direction:ltr}
+.prod-visual{background:var(--navy);border-radius:20px;overflow:hidden}
+.pv-kente{height:9px}
+.pv-s{background:repeating-linear-gradient(90deg,var(--ank-tc) 0 22px,var(--gold) 22px 44px,#2E7D32 44px 66px)}
+.pv-h{background:repeating-linear-gradient(90deg,#2E7D32 0 22px,var(--gold) 22px 44px,var(--cyan) 44px 66px)}
+.pv-p{background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,#2E7D32 44px 66px)}
+.pv-body{padding:36px}
+.pv-icon{width:72px;height:72px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:20px}
+.pvi-s{background:rgba(193,68,14,.25);color:#FF7043}
+.pvi-h{background:rgba(46,125,50,.25);color:#66BB6A}
+.pvi-p{background:rgba(245,197,24,.2);color:var(--gold)}
+.pv-body h3{font-size:22px;color:#fff;margin-bottom:10px}
+.pv-body p{font-size:13.5px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.75;margin-bottom:22px}
+.pv-stats{display:flex;gap:22px}
+.pvs-n{font-family:'Crimson Pro',serif;font-size:28px;color:var(--gold);display:block;line-height:1}
+.pvs-l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.pd-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 15px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:20px}
+.pd-s{background:rgba(193,68,14,.1);color:var(--ank-tc)}.pd-h{background:rgba(46,125,50,.1);color:#2E7D32}.pd-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.pd-detail h2{font-size:clamp(24px,3.5vw,36px);font-weight:600;color:var(--navy);margin-bottom:13px}
+.pd-detail h2 em{font-style:normal;color:var(--ank-tc)}
+.pd-detail p{font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:28px;font-weight:300}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}
+.feat-item{display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--warm-white);border-radius:10px;border:1px solid rgba(13,51,73,.08)}
+.feat-ico{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.fi-s{background:rgba(193,68,14,.11);color:var(--ank-tc)}.fi-h{background:rgba(46,125,50,.11);color:#2E7D32}.fi-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.feat-item span{font-size:12.5px;font-weight:600;color:#444;line-height:1.5}
+.pd-actions{display:flex;gap:13px;flex-wrap:wrap}
+
+/* ── SERVICES DETAIL ── */
+.sd-section{padding:72px 5%}
+.sd-section:nth-child(even){background:#fff}
+.sd-section:nth-child(odd){background:var(--cream)}
+.sd-hdr{display:flex;align-items:center;gap:18px;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(13,51,73,.1)}
+.sd-ico{width:70px;height:70px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0}
+.sd-hdr-text h3{font-size:clamp(22px,3vw,32px);color:var(--navy);margin-bottom:7px}
+.sd-hdr-text h3 em{font-style:normal;color:var(--ank-tc)}
+.sd-hdr-text p{font-size:14.5px;color:var(--text-mid);font-weight:300;line-height:1.7}
+.sd-content{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.sd-desc{font-size:15px;color:#555;line-height:1.9;margin-bottom:24px;font-weight:300}
+.sd-feats{list-style:none}
+.sd-feats li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(13,51,73,.07);font-size:13.5px;color:#444}
+.sd-feats li:last-child{border:none}
+.sd-feats li i{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.sfi-tc{background:rgba(193,68,14,.11);color:var(--ank-tc)}.sfi-bl{background:rgba(21,101,192,.11);color:#1565C0}
+.sfi-gr{background:rgba(46,125,50,.11);color:#2E7D32}.sfi-gd{background:rgba(245,197,24,.13);color:var(--gold-dark)}
+.sfi-pu{background:rgba(123,31,162,.11);color:#7B1FA2}.sfi-tl{background:rgba(0,121,107,.11);color:#00796B}
+.sd-visual-box{background:var(--navy);border-radius:18px;padding:30px}
+.sd-visual-kente{height:6px;border-radius:3px;margin-bottom:22px}
+.sd-visual-box h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:16px}
+.sd-stats{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:22px}
+.sd-stat{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,24,.2);border-radius:10px;padding:14px;text-align:center}
+.sd-stat .n{font-family:'Crimson Pro',serif;font-size:25px;color:var(--gold)}
+.sd-stat .l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.sd-cta-btn{display:block;width:100%;padding:13px;border-radius:10px;font-size:14px;font-weight:700;text-align:center;font-family:'Sora',sans-serif;transition:all .3s;color:#fff}
+.sd-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(193,68,14,.35);color:#fff}
+
+/* ── PROCESS STEPS ── */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.proc-step{text-align:center;position:relative}
+.proc-step::after{content:'→';position:absolute;right:-18px;top:18px;font-size:22px;color:var(--gold);opacity:.4}
+.proc-step:last-child::after{display:none}
+.proc-num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-size:22px;font-weight:600;color:var(--gold);margin:0 auto 14px;box-shadow:0 4px 16px rgba(13,51,73,.25)}
+.proc-step h4{font-size:16px;color:var(--navy);margin-bottom:7px}
+.proc-step p{font-size:13px;color:var(--text-mid);line-height:1.65;font-weight:300}
+
+/* ── OVERVIEW CARDS (services) ── */
+.sov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto}
+.sov-card{background:#fff;border-radius:16px;padding:34px 26px;border:1px solid rgba(13,51,73,.09);transition:all .4s;cursor:pointer;display:block;text-decoration:none}
+.sov-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(245,197,24,.3);text-decoration:none}
+.sov-ico{width:62px;height:62px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px;transition:transform .3s}
+.sov-card:hover .sov-ico{transform:scale(1.1) rotate(5deg)}
+.sov-card h5{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.sov-card p{font-size:13.5px;color:var(--text-mid);line-height:1.75;margin-bottom:14px;font-weight:300}
+.sov-tags{display:flex;flex-wrap:wrap;gap:5px}
+.sov-tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px}
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px){
+  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .why-grid{grid-template-columns:1fr}
+  .sov-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:75px;left:0;right:0;background:var(--navy-deep);padding:14px 5%;gap:2px;border-bottom:1px solid rgba(245,197,24,.13)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:flex}
+  .section{padding:68px 5%}
+  .sc-grid,.tst-grid,.why-grid,.contact-grid,.prod-inner,.prod-inner.flip,.sd-content,.feat-grid,.sov-grid,.process-steps{grid-template-columns:1fr!important;direction:ltr!important}
+  .ft-grid{grid-template-columns:1fr;gap:26px}
+  .sys-grid{grid-template-columns:1fr}
+  .prod-tabs{gap:7px}
+  .proc-step::after{display:none}
+  .cfg-row{grid-template-columns:1fr}
+}
+</style>
+
+</head>
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<div class="kente-bar"></div>
+<nav class="navbar">
+<div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="logo-text-wrap" style="display:none">
+      <div class="logo-wordmark"><span class="logo-star">Star</span><span class="logo-let">Let</span></div>
+      <span class="logo-sub">Systems Africa</span>
     </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="team.html" class="active">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-  
-  <!-- Bootstrap Modal for System Selection -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
-          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- System Selection -->
-          <div class="system_selection">
-            <div class="text-center mb-4">
-              <p class="mb-0">Please select the system you want to login to:</p>
-            </div>
-
-            <div class="system_options">
-              <div class="system_option" data-system="school">
-                <div class="system_icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h4>School Management System</h4>
-                <p>Manage students, teachers, and academic activities</p>
-              </div>
-
-              <div class="system_option" data-system="hospital">
-                <div class="system_icon">
-                  <i class="fas fa-hospital"></i>
-                </div>
-                <h4>Hospital/Drugshop Management System</h4>
-                <p>Manage patients, appointments, and inventory</p>
-              </div>
-
-              <div class="system_option" data-system="pos">
-                <div class="system_icon">
-                  <i class="fas fa-cash-register"></i>
-                </div>
-                <h4>Point of Sale Systems</h4>
-                <p>Process sales and manage transactions</p>
-              </div>
-            </div>
-            
-            <div class="text-center mt-4">
-              <p class="text-muted small">New client? Request access or demo below.</p>
-            </div>
-          </div>
-
-          <!-- Social Login (Hidden initially) -->
-          <div class="social_login" style="display:none;">
-            <div class="mb-3">
-              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
-                <span class="icon"><i class="fab fa-facebook"></i></span>
-                <span class="icon_title">Connect with Facebook</span>
-              </a>
-
-              <a href="#" class="social_box google d-block text-decoration-none">
-                <span class="icon"><i class="fab fa-google-plus"></i></span>
-                <span class="icon_title">Connect with Google</span>
-              </a>
-            </div>
-
-            <div class="text-center my-3">
-              <span>Or use your Email address</span>
-            </div>
-
-            <div class="d-grid gap-2 d-md-flex">
-              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
-              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
-            </div>
-          </div>
-
-          <!-- Username & Password Login form -->
-          <div class="user_login" style="display:none;">
-            <div class="selected_system_info mb-3">
-              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
-            </div>
-            <form>
-              <div class="mb-3">
-                <label for="login_email" class="form-label">Email / Username</label>
-                <input type="text" class="form-control" id="login_email" />
-              </div>
-
-              <div class="mb-3">
-                <label for="login_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="login_password" />
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="remember" />
-                <label class="form-check-label" for="remember">Remember me on this computer</label>
-              </div>
-
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
-              </div>
-            </form>
-
-            <div class="text-center mt-3">
-              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
-            </div>
-          </div>
-
-          <!-- Register Form -->
-          <div class="user_register" style="display:none;">
-            <form>
-              <div class="mb-3">
-                <label for="register_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="register_name" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="register_email" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="register_password" />
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="send_updates" />
-                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
-              </div>
-
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Page Header -->
-  <div class="page-header">
-    <div class="container">
-      <h1>Meet Our Team</h1>
-      <p>Experienced professionals dedicated to delivering innovative technology solutions</p>
-    </div>
-  </div>
-
-  <!-- Team Section -->
-  <div class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading text-center">
-            <h4>Our <em>Expert Team</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Our diverse team combines technical expertise, international experience, and deep understanding of local needs in Uganda. From AI innovation to biomedical engineering, marketing to community engagement, we work together to deliver comprehensive technology solutions.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <!-- Mwaka Samuel Terence - Founder & CEO -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.1s">
-            <img src="assets/images/team/Mwaka Samuel Terence.JPG" alt="Mwaka Samuel Terence">
-            <h4>Mwaka Samuel Terence</h4>
-            <p class="position">Founder & Chief Executive Officer (CEO)</p>
-            <div class="bio">
-              <p>Mwaka is the visionary founder of Starlet Technologies, leading innovation in AI-driven software, digital transformation, and accessible technology solutions across Uganda.</p>
-              <p>He oversees strategic direction, partnerships, and organizational growth while ensuring all initiatives deliver measurable social impact, operational excellence, and alignment with national development goals.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="mailto:mwaka@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Lubangaokonya Jimmy - Technical Director -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.2s">
-            <img src="assets/images/team/lubangaokonya Jimmy.jpg" alt="Lubangaokonya Jimmy">
-            <h4>Lubangaokonya Jimmy</h4>
-            <p class="position">Technical Director – Biomedical & Material Engineering <span>(Japan-Based)</span></p>
-            <div class="bio">
-              <p>Jimmy brings advanced international expertise in Material Engineering and Biomedical Sciences, gained from studies and research in Japan.</p>
-              <p>He leads the design, testing, and implementation of robust engineering solutions, with a focus on system architecture, materials innovation, quality assurance, and integrating global best practices into Starlet's digital health and management platforms.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-github"></i></a>
-              <a href="mailto:jimmy@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Okello Samuel - Head of Marketing & Software Developer -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.3s">
-            <img src="assets/images/client-image.jpg" alt="Okello Samuel">
-            <h4>Okello Samuel</h4>
-            <p class="position">Head of Marketing & Software Development</p>
-            <div class="bio">
-              <p>Okello drives marketing strategy, business development, and brand growth, leveraging over 10 years of experience in technology marketing and system administration in Uganda.</p>
-              <p>He builds strategic partnerships, leads client outreach, and contributes hands-on to software development, troubleshooting, and technical optimization to ensure seamless product delivery.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="mailto:okello@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Okello Emanuel - Finance & Operations Manager -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.4s">
-            <img src="assets/images/team/okello emanuel.jpg" alt="Okello Emanuel">
-            <h4>Okello Emanuel</h4>
-            <p class="position">Finance & Operations Manager</p>
-            <div class="bio">
-              <p>Okello oversees financial planning, budgeting, reporting, and operational efficiency.</p>
-              <p>His expertise ensures accurate resource allocation, regulatory compliance, data-driven decision-making, and sustainable scaling of Starlet's projects across health, education, and business sectors.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:emanuel@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Achan Winnie Babra - Sales, Business Development & Community Engagement Manager -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.5s">
-            <img src="assets/images/client-image.jpg" alt="Achan Winnie Babra">
-            <h4>Achan Winnie Babra</h4>
-            <p class="position">Sales, Business Development & Community Engagement Manager</p>
-            <div class="bio">
-              <p>Winnie leads sales strategies, client acquisition, and community-centered partnerships.</p>
-              <p>She excels at translating client needs into tailored solutions, building long-term relationships, and driving adoption through effective communication, stakeholder engagement, and on-ground program support.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/256769214437"><i class="fab fa-whatsapp"></i></a>
-              <a href="mailto:winnie@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Ogwang Allan - Training Specialist -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.6s">
-            <img src="assets/images/client-image.jpg" alt="Ogwang Allan">
-            <h4>Ogwang Allan</h4>
-            <p class="position">Training Specialist</p>
-            <div class="bio">
-              <p>Allan designs and delivers comprehensive training, onboarding, and capacity-building programs for clients and end-users.</p>
-              <p>He creates user-friendly materials tailored to non-technical audiences, facilitates hands-on sessions, provides ongoing support, and gathers feedback to drive continuous product improvement and higher adoption rates.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/256769214437"><i class="fab fa-whatsapp"></i></a>
-              <a href="mailto:allan@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Dr. Onono Justine - Health Systems & Program Lead -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.7s">
-            <img src="assets/images/team/Onono justine.jpg" alt="Dr. Onono Justine">
-            <h4>Dr. Onono Justine</h4>
-            <p class="position">Health Systems & Program Lead <span>(Medical & Clinical Expert)</span></p>
-            <div class="bio">
-              <p>Dr. Onono combines deep clinical expertise as a Medical Clinical Officer and Sonographer with strong program leadership to oversee all health-focused digital initiatives.</p>
-              <p>She manages solution design, facility deployment, workflow integration, staff training, and compliance assurance, ensuring Starlet's tools meet rigorous clinical standards and deliver real-world impact in Ugandan healthcare settings.</p>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i></a>
-              <a href="mailto:justine@starlettechnologies.com"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Education & School Programs Lead - To Be Appointed -->
-        <div class="col-lg-4 col-md-6">
-          <div class="team-member wow fadeInUp" data-wow-delay="0.8s" style="opacity: 0.8;">
-            <div style="width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 5px solid #f0f0f0;">
-              <i class="fas fa-user-plus" style="font-size: 80px; color: #fff;"></i>
-            </div>
-            <h4>Education & School Programs Lead</h4>
-            <p class="position">To Be Appointed</p>
-            <div class="bio">
-              <p>This role will lead Starlet's education-sector initiatives, including school management systems, e-learning platforms, and ICT integration programs.</p>
-              <p>The appointee will coordinate digital literacy training, teacher development, stakeholder partnerships, and program rollout to empower schools and strengthen technology adoption across Uganda's education ecosystem.</p>
-            </div>
-            <div class="social-links">
-              <a href="contact.html" style="background: #1976d2; color: #fff;"><i class="fa fa-envelope"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Join Us Section -->
-  <div class="section join-team-section" style="background-color: #f8f9fa; padding: 80px 0; position: relative; z-index: 1; overflow: hidden;">
-    <div class="container" style="position: relative; z-index: 2;">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2 text-center" style="position: relative; z-index: 3;">
-          <h3 style="color: #1a237e; margin-bottom: 20px; position: relative; z-index: 3;">Join Our Team</h3>
-          <p style="font-size: 18px; color: #333; margin-bottom: 30px; position: relative; z-index: 3;">We're always looking for talented individuals who share our passion for making technology accessible in Uganda. If you're interested in joining our team, please contact us.</p>
-          <div class="gradient-button" style="position: relative; z-index: 3;">
-            <a href="contact.html">Contact Us <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="services.html">School Management System</a></li>
-              <li><a href="services.html">Hospital Management</a></li>
-              <li><a href="services.html">POS Systems</a></li>
-              <li><a href="services.html">ICT Solutions</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>About Starlet Technologies</h4>
-            <div class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
-            </div>
-            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
-            <p class="mt-3"><strong>Contact:</strong><br>
-            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
-            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Copyright © <span id="copyright-year">2025</span> Starlet Technologies – Uganda. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
   </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" >Home</a></li>
+<li><a href="services.html" >Services</a></li>
+<li><a href="products.html" >Products</a></li>
+<li><a href="about.html" >About</a></li>
+<li><a href="team.html" class="active">Team</a></li>
+<li><a href="contact.html" >Contact</a></li>
+    <li><a href="#" class="nav-signin" id="openModal"><i class="fa fa-sign-in-alt"></i> Sign In</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+</nav>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    // Update copyright year dynamically
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('copyright-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
-  </script>
+<div class="modal-bg" id="loginModal">
+<div class="modal-box">
+  <div class="modal-kente"></div>
+  <div class="modal-hdr">
+    <span class="modal-title" id="mTitle">Select Your System</span>
+    <button class="modal-x" id="closeModal">✕</button>
+  </div>
+  <div class="modal-body">
+    <div id="stepSys">
+      <p style="font-size:13px;color:#999;margin-bottom:14px;">Choose the system you want to access to continue signing in.</p>
+      <div class="sys-grid">
+        <div class="sys-card" onclick="selectSys('school','School Management System')">
+          <div class="sys-ico si-sch"><i class="fa fa-graduation-cap"></i></div>
+          <h5>School System</h5><p>Students, fees & academics</p>
+        </div>
+        <div class="sys-card" onclick="selectSys('hospital','Hospital / Clinic System')">
+          <div class="sys-ico si-hos"><i class="fa fa-hospital"></i></div>
+          <h5>Hospital System</h5><p>Patients, pharmacy & billing</p>
+        </div>
+        <div class="sys-card" onclick="selectSys('pos','Point of Sale System')">
+          <div class="sys-ico si-pos"><i class="fa fa-cash-register"></i></div>
+          <h5>POS System</h5><p>Sales & inventory</p>
+        </div>
+      </div>
+      <p class="mfnote">New client? <a href="contact.html">Request a free demo</a></p>
+    </div>
+    <div id="stepLogin" class="mform">
+      <button class="mback" onclick="backToSys()"><i class="fa fa-chevron-left"></i> Back to Systems</button>
+      <div class="sys-badge"><i class="fa fa-lock"></i> <span id="sysLabel">System</span></div>
+      <div class="fg"><label>Email / Username</label><input type="text" class="fc" placeholder="Enter your email or username"></div>
+      <div class="fg"><label>Password</label><input type="password" class="fc" placeholder="Enter your password"></div>
+      <div class="fchk"><input type="checkbox" id="rem"><label for="rem">Remember me on this device</label></div>
+      <button class="btn-mp">Sign In <i class="fa fa-arrow-right"></i></button>
+      <button class="btn-mo" id="toReg">Create an Account</button>
+      <p class="mforgot"><a href="#">Forgot your password?</a></p>
+    </div>
+    <div id="stepReg" class="mform">
+      <button class="mback" onclick="backToLogin()"><i class="fa fa-chevron-left"></i> Back to Sign In</button>
+      <div class="fg"><label>Full Name</label><input type="text" class="fc" placeholder="Your full name"></div>
+      <div class="fg"><label>Email Address</label><input type="email" class="fc" placeholder="your@email.com"></div>
+      <div class="fg"><label>Password</label><input type="password" class="fc" placeholder="Create a strong password"></div>
+      <div class="fchk"><input type="checkbox" id="upd"><label for="upd">Keep me updated on new features</label></div>
+      <button class="btn-mp">Create Account <i class="fa fa-check"></i></button>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="page-hdr">
+  <div class="ankara-overlay"></div>
+  <div class="ph-inner">
+    <span class="ph-eyebrow">✦ The People Behind the Platform</span>
+    <h1 class="ph-title">Meet Our <em>Team</em></h1>
+    <p class="ph-desc">A diverse team combining technical expertise, international experience, and deep understanding of local needs — united by a shared mission to make technology work for Africa.</p>
+  </div>
+</div>
+<div class="kente-bar"></div>
+
+<section class="section s-cream" style="position:relative">
+<div class="ankara-overlay"></div>
+<div style="position:relative;z-index:1">
+  <div class="s-hdr s-inner" style="margin-bottom:52px"><span class="s-eyebrow">✦ Our Expert Team</span><h2 class="s-title">People Who Are <em>Passionate About Africa</em></h2><div class="ankara-diamonds"><span class="ad-gold"></span><span class="ad-tc"></span><span class="ad-cyan"></span><span class="ad-gr"></span><span class="ad-oc"></span></div><p class="s-desc" style="margin:14px auto 0">From AI-driven innovation to biomedical engineering, financial operations to community engagement — our team brings complementary expertise to every client engagement.</p></div>
+  <div class="team-grid">
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <img class="tm-avatar" src="assets/images/team/Mwaka Samuel Terence.JPG" alt="Mwaka Samuel Terence" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="tm-avatar-placeholder" style="display:none">M</div>
+        <h4 class="tm-name">Mwaka Samuel Terence</h4>
+        <p class="tm-role">Founder & Chief Executive Officer</p>
+        <div class="tm-bio"><p>Mwaka is the visionary founder of Starlet Systems Africa, leading innovation in AI-driven software, digital transformation, and accessible technology solutions across Africa.</p><p>He oversees strategic direction, key partnerships, and organisational growth — ensuring every initiative delivers measurable impact and aligns with Africa's broader development goals.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <img class="tm-avatar" src="assets/images/team/lubangaokonya Jimmy.jpg" alt="Lubangaokonya Jimmy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="tm-avatar-placeholder" style="display:none">L</div>
+        <h4 class="tm-name">Lubangaokonya Jimmy</h4>
+        <p class="tm-role">Technical Director</p>
+        <p class="tm-role-sub">Biomedical & Material Engineering · Japan-Based</p>
+        <div class="tm-bio"><p>Jimmy brings advanced international expertise in Material Engineering and Biomedical Sciences, developed through studies and research in Japan.</p><p>He leads the design, testing, and implementation of robust engineering solutions — with a focus on system architecture, quality assurance, and integrating global best practices into Starlet's digital health platforms.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-github"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <img class="tm-avatar" src="assets/images/client-image.jpg" alt="Okello Samuel" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="tm-avatar-placeholder" style="display:none">O</div>
+        <h4 class="tm-name">Okello Samuel</h4>
+        <p class="tm-role">Head of Marketing & Software Development</p>
+        <div class="tm-bio"><p>Okello drives marketing strategy, business development, and brand growth — leveraging over a decade of experience in technology marketing and system administration across Africa.</p><p>He builds strategic partnerships, leads client outreach, and contributes hands-on to software development, troubleshooting, and technical optimisation to ensure seamless product delivery.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-linkedin"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <div class="tm-avatar-placeholder">O</div>
+        <h4 class="tm-name">Okello Emanuel</h4>
+        <p class="tm-role">Finance & Operations Manager</p>
+        <div class="tm-bio"><p>Okello oversees financial planning, budgeting, reporting, and operational efficiency across all of Starlet's programmes.</p><p>His expertise ensures accurate resource allocation, regulatory compliance, data-driven decision-making, and the sustainable scaling of Starlet's work across health, education, and business sectors.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-linkedin"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <div class="tm-avatar-placeholder">W</div>
+        <h4 class="tm-name">Achan Winnie Babra</h4>
+        <p class="tm-role">Sales, Business Development & Community Engagement</p>
+        <div class="tm-bio"><p>Winnie leads sales strategies, client acquisition, and community-centred partnerships with a sharp focus on long-term relationships and measurable impact.</p><p>She excels at translating complex client needs into tailored technology solutions, and drives adoption through effective communication, stakeholder engagement, and on-the-ground programme support.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-facebook"></i></a><a href="https://wa.me/256769214437"><i class="fab fa-whatsapp"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <div class="tm-avatar-placeholder">A</div>
+        <h4 class="tm-name">Ogwang Allan</h4>
+        <p class="tm-role">Training Specialist</p>
+        <div class="tm-bio"><p>Allan designs and delivers comprehensive training, onboarding, and capacity-building programmes for clients and end-users across all sectors.</p><p>He creates user-friendly materials tailored to non-technical audiences, facilitates hands-on sessions, provides ongoing support, and gathers feedback to continuously improve product usability and adoption rates.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-facebook"></i></a><a href="https://wa.me/256769214437"><i class="fab fa-whatsapp"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <img class="tm-avatar" src="assets/images/team/Onono justine.jpg" alt="Dr. Onono Justine" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="tm-avatar-placeholder" style="display:none">J</div>
+        <h4 class="tm-name">Dr. Onono Justine</h4>
+        <p class="tm-role">Health Systems & Programme Lead</p>
+        <p class="tm-role-sub">Medical Clinical Officer & Sonographer</p>
+        <div class="tm-bio"><p>Dr. Onono combines deep clinical expertise as a Medical Clinical Officer and Sonographer with strong programme leadership to oversee all health-focused digital initiatives.</p><p>She manages solution design, facility deployment, workflow integration, and compliance — ensuring Starlet's tools meet rigorous clinical standards and deliver real-world impact across African healthcare settings.</p></div>
+        <div class="tm-soc"><a href="#"><i class="fab fa-linkedin"></i></a><a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope"></i></a></div>
+      </div>
+    </div>
+
+    <div class="tm-card" style="opacity:.85">
+      <div class="tm-card-top"></div>
+      <div class="tm-body">
+        <div class="tm-avatar-placeholder" style="background:linear-gradient(135deg,var(--navy-mid),var(--cyan-dark))"><i class="fa fa-user-plus" style="color:rgba(255,255,255,.7);font-size:32px"></i></div>
+        <h4 class="tm-name">Education & School Programmes Lead</h4>
+        <p class="tm-role" style="color:#999">Position Opening Soon</p>
+        <div class="tm-bio"><p>This pivotal role will lead Starlet's education-sector initiatives, including school management systems, e-learning platforms, and ICT integration programmes across Africa.</p><p>The appointee will coordinate digital literacy training, teacher development, stakeholder partnerships, and programme rollout to strengthen technology adoption across Africa's education ecosystem.</p></div>
+        <div class="tm-soc"><a href="contact.html" style="background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold);border-color:transparent"><i class="fa fa-envelope"></i> Apply Now</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- JOIN US -->
+<div class="kente-bar"></div>
+<section class="cta-band"><div class="cta-inner"><span class="s-eyebrow lt" style="text-align:center;display:block">✦ Join Our Mission</span><h2>We're Looking for Talented People</h2><p>Passionate about making technology accessible across Africa? We're always looking for driven individuals who share our vision. If you're interested in joining our team, we'd love to hear from you.</p><div class="cta-btns"><a href="contact.html" class="btn-gold"><i class="fa fa-envelope"></i> Get in Touch</a><a href="https://wa.me/256769214437" target="_blank" class="btn-outline-gold"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></div></div></section>
+
+
+<div class="kente-bar"></div>
+<footer>
+<div class="ft-top">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">
+        <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ft-logo-text" style="display:none">
+          <span class="nl-star">Star</span><span class="nl-let">Let</span>
+          <small>Systems Africa</small>
+        </div>
+      </div>
+      <p class="ft-tag">Empowering schools, clinics, and businesses across Africa with affordable, reliable technology. Purpose-built for African organisations, delivered with on-the-ground expertise.</p>
+      <div class="ft-contact">
+        <a href="tel:+256394558267"><i class="fa fa-phone" style="margin-right:7px;width:14px"></i>0394 558 267</a>
+        <a href="tel:+256769214437"><i class="fab fa-whatsapp" style="margin-right:7px;width:14px"></i>+256 769 214 437</a>
+        <a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope" style="margin-right:7px;width:14px"></i>info@starlettechnologies.com</a>
+      </div>
+      <div class="ft-social">
+        <a href="https://wa.me/256769214437" target="_blank" class="fsoc fs-wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsoc fs-fb"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="fsoc fs-li"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Navigate</h4>
+      <ul class="ft-lnks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Systems</h4>
+      <ul class="ft-lnks">
+        <li><a href="products.html">School Management</a></li>
+        <li><a href="products.html">Hospital System</a></li>
+        <li><a href="products.html">POS System</a></li>
+        <li><a href="services.html">ICT Infrastructure</a></li>
+        <li><a href="services.html">Web & Mobile Apps</a></li>
+        <li><a href="services.html">Managed IT Support</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Our Mission</h4>
+      <p style="font-size:13.5px;color:rgba(255,255,255,.42);line-height:1.82;font-weight:300;">"Bright ideas, built for Africa." We exist to make world-class technology accessible to every African school, clinic, and business — regardless of size or location.</p>
+    </div>
+  </div>
+</div>
+<div class="ft-bot">
+  <p>Copyright &copy; <span id="yr"></span> Starlet Systems Africa. All Rights Reserved. &nbsp;|&nbsp; <em>Bright ideas, Built for Africa.</em></p>
+</div>
+</footer>
+<a href="https://wa.me/256769214437" target="_blank" class="wa-float" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// Modal
+const modal = document.getElementById('loginModal');
+let selectedSystem = null;
+const systemLoginUrls = {
+  'school': 'http://localhost/school-management-system/login.php',
+  'hospital': 'https://myhospital.starletsystemsafrica.com',
+  'pos': 'https://mypos.starletsystemsafrica.com'
+};
+document.getElementById('openModal').addEventListener('click', e=>{e.preventDefault();modal.classList.add('open');});
+document.getElementById('closeModal').addEventListener('click', ()=>modal.classList.remove('open'));
+modal.addEventListener('click', e=>{if(e.target===modal)modal.classList.remove('open');});
+function selectSys(id,name){
+  selectedSystem = id;
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    modal.classList.remove('open');
+    setTimeout(()=>{
+      window.location.href = systemLoginUrls[selectedSystem];
+    }, 100);
+  }
+}
+function backToSys(){
+  selectedSystem = null;
+  document.getElementById('mTitle').textContent='Select Your System';
+  document.getElementById('stepSys').style.display='block';
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.remove('on');
+}
+function backToLogin(){
+  document.getElementById('stepReg').classList.remove('on');
+  document.getElementById('stepLogin').classList.add('on');
+  document.getElementById('mTitle').textContent='Sign In';
+}
+document.getElementById('toReg').addEventListener('click',()=>{
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.add('on');
+  document.getElementById('mTitle').textContent='Create Account';
+});
+document.getElementById('stepLogin').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    window.location.href = systemLoginUrls[selectedSystem];
+  }
+});
+// FAQ
+function toggleFaq(btn){
+  const body=btn.nextElementSibling,open=btn.classList.contains('open');
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+  if(!open){btn.classList.add('open');body.classList.add('open');}
+}
+// Scroll reveal
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}}),{threshold:0.1});
+document.querySelectorAll('.sc-card,.tst-card,.why-pt,.tm-card,.sov-card,.ank-stat,.proc-step').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity .6s ease,transform .6s ease';
+  io.observe(el);
+});
+</script>
+
 </body>
 </html>
-

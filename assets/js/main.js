@@ -1,5 +1,5 @@
 /**
- * Starlet Technologies Website - Main JavaScript
+ * Starlet Systems Africa Website - Main JavaScript
  * Handles animations, scroll effects, and interactions
  */
 

@@ -1,2153 +1,758 @@
-
 <!DOCTYPE html>
 <html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Bright ideas, Built for Africa. Affordable school management, hospital systems, POS and ICT solutions for African organisations. Request a free demo.">
+<title>Starlet Systems Africa | School, Clinic & POS Systems Built for Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
-  <head>
+<style>
+:root{
+  --navy:#0D3349;--navy-deep:#081E2E;--navy-mid:#124060;--navy-light:#1A5276;
+  --gold:#F5C518;--gold-dark:#C8A000;--gold-glow:rgba(245,197,24,.28);
+  --cyan:#00D4FF;--cyan-dark:#00A8CC;--cyan-glow:rgba(0,212,255,.22);
+  --cream:#F8F4EC;--warm-white:#FDFAF4;
+  --ank-tc:#C1440E;--ank-burnt:#E65100;--ank-ochre:#E6A817;--ank-green:#2E7D32;
+  --text:#0D1F2D;--text-mid:#3A5068;
+  --shadow-sm:0 2px 12px rgba(13,51,73,.08);--shadow-md:0 8px 32px rgba(13,51,73,.13);
+  --shadow-lg:0 20px 60px rgba(13,51,73,.2);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;color:var(--text);background:var(--warm-white);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Crimson Pro',serif;font-weight:600;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Reliable, affordable school management software, hospital/drugshop systems, POS solutions & ICT services in Uganda. Local support team. Request a free demo today.">
-    <meta name="author" content="Starlet Technologies">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+/* ── ANKARA SYSTEM ── */
+.kente-bar{height:7px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px,var(--navy) 88px 110px,var(--ank-ochre) 110px 132px)}
+.ankara-overlay{position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(45deg,rgba(245,197,24,.04) 0 2px,transparent 2px 22px),
+  repeating-linear-gradient(-45deg,rgba(0,212,255,.03) 0 2px,transparent 2px 22px),
+  repeating-conic-gradient(rgba(193,68,14,.03) 0% 25%,transparent 0% 50%) center/36px 36px}
+.ankara-diamonds{display:flex;justify-content:center;gap:10px;margin:18px 0}
+.ankara-diamonds span{display:block;width:10px;height:10px;transform:rotate(45deg)}
+.ad-gold{background:var(--gold)}.ad-tc{background:var(--ank-tc);width:16px!important;height:16px!important}
+.ad-cyan{background:var(--cyan)}.ad-gr{background:var(--ank-green)}.ad-oc{background:var(--ank-ochre)}
 
-    <title>Starlet Technologies | Affordable School, Clinic & POS Systems in Uganda</title>
+/* ── NAVBAR ── */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--navy-deep);border-bottom:1px solid rgba(245,197,24,.18)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:68px;max-width:1440px;margin:0 auto}
+.nav-logo{display:flex;align-items:center;gap:11px}
+.nav-logo img{height:38px;width:auto;object-fit:contain}
+.logo-text-wrap{display:flex;flex-direction:column}
+.logo-wordmark{font-family:'Crimson Pro',serif;font-size:20px;line-height:1}
+.logo-star{color:var(--gold)}.logo-let{color:var(--cyan)}
+.logo-sub{font-size:9.5px;letter-spacing:2.5px;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:3px;list-style:none}
+.nav-links a{color:rgba(255,255,255,.72);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:7px;transition:all .25s;letter-spacing:.2px}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);background:rgba(245,197,24,.08)}
+.nav-signin{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep)!important;border-radius:8px!important;padding:8px 17px!important;font-weight:700!important;font-size:13px!important;box-shadow:0 4px 16px rgba(245,197,24,.32);transition:all .25s!important}
+.nav-signin:hover{transform:translateY(-1px);box-shadow:0 6px 22px rgba(245,197,24,.45)!important;color:var(--navy-deep)!important}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+/* ── MODAL ── */
+.modal-bg{display:none;position:fixed;inset:0;z-index:2000;background:rgba(8,30,46,.88);backdrop-filter:blur(6px);align-items:center;justify-content:center}
+.modal-bg.open{display:flex}
+.modal-box{background:#fff;border-radius:20px;width:90%;max-width:500px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.38);animation:mIn .3s cubic-bezier(.34,1.56,.64,1)}
+@keyframes mIn{from{opacity:0;transform:scale(.9) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.modal-kente{height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,var(--cyan) 44px 66px,var(--ank-green) 66px 88px)}
+.modal-hdr{display:flex;align-items:center;justify-content:space-between;padding:20px 26px 14px;border-bottom:1px solid rgba(13,51,73,.1)}
+.modal-title{font-size:19px;font-weight:700;color:var(--navy);font-family:'Crimson Pro',serif}
+.modal-x{width:32px;height:32px;border-radius:50%;border:none;background:rgba(13,51,73,.07);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;color:var(--navy);transition:all .2s}
+.modal-x:hover{background:rgba(193,68,14,.12);color:var(--ank-tc)}
+.modal-body{padding:22px 26px 26px}
+.sys-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:14px 0 18px}
+.sys-card{border:2px solid rgba(13,51,73,.12);border-radius:12px;padding:16px 10px;text-align:center;cursor:pointer;transition:all .25s}
+.sys-card:hover,.sys-card.sel{border-color:var(--gold);background:rgba(245,197,24,.06);transform:translateY(-2px)}
+.sys-ico{width:46px;height:46px;border-radius:11px;margin:0 auto 9px;display:flex;align-items:center;justify-content:center;font-size:19px}
+.si-sch{background:rgba(193,68,14,.12);color:var(--ank-tc)}
+.si-hos{background:rgba(46,125,50,.12);color:#2E7D32}
+.si-pos{background:rgba(245,197,24,.15);color:var(--gold-dark)}
+.sys-card h5{font-size:11.5px;font-weight:700;color:var(--navy);margin-bottom:4px;font-family:'Sora',sans-serif}
+.sys-card p{font-size:11px;color:#999;line-height:1.4}
+.mform{display:none}.mform.on{display:block}
+.mback{display:flex;align-items:center;gap:6px;background:none;border:none;font-size:13px;font-weight:600;color:var(--text-mid);cursor:pointer;margin-bottom:14px;padding:0;font-family:'Sora',sans-serif}
+.mback:hover{color:var(--ank-tc)}
+.sys-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(245,197,24,.1);border:1px solid rgba(245,197,24,.3);border-radius:8px;padding:7px 13px;margin-bottom:18px;font-size:13px;font-weight:600;color:var(--navy)}
+.fg{margin-bottom:14px}
+.fg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:5px;letter-spacing:.4px}
+.fc{width:100%;padding:11px 13px;border:2px solid rgba(13,51,73,.14);border-radius:9px;font-size:14px;font-family:'Sora',sans-serif;background:var(--warm-white);color:var(--text);transition:all .2s;outline:none}
+.fc:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,197,24,.18)}
+.fchk{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-mid);margin-bottom:18px}
+.fchk input{accent-color:var(--gold)}
+.btn-mp{width:100%;padding:12px;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;transition:all .25s;margin-bottom:10px}
+.btn-mp:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(13,51,73,.28)}
+.btn-mo{width:100%;padding:10px;border:2px solid rgba(13,51,73,.18);border-radius:10px;font-size:13.5px;font-weight:600;cursor:pointer;font-family:'Sora',sans-serif;background:transparent;color:var(--navy);transition:all .25s}
+.btn-mo:hover{border-color:var(--navy);background:rgba(13,51,73,.04)}
+.mfnote{text-align:center;font-size:12px;color:#bbb;margin-top:14px}
+.mfnote a{color:var(--navy);font-weight:600}
+.mforgot{text-align:center;font-size:12.5px;color:var(--text-mid);margin-top:12px}
+.mforgot a{color:var(--navy);font-weight:600}
 
-<!--
+/* ── SECTION COMMONS ── */
+.section{padding:90px 5%;position:relative}
+.s-cream{background:var(--cream)}.s-white{background:var(--warm-white)}.s-dark{background:var(--navy-deep)}
+.s-eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-tc);margin-bottom:12px}
+.s-eyebrow.lt{color:var(--gold)}
+.s-title{font-size:clamp(28px,4vw,44px);font-weight:600;color:var(--navy);margin-bottom:14px}
+.s-title em{font-style:normal;color:var(--ank-tc)}
+.s-title.lt{color:#fff}.s-title.lt em{color:var(--gold)}
+.s-desc{font-size:15.5px;color:var(--text-mid);line-height:1.85;font-weight:300;max-width:600px}
+.s-hdr{text-align:center;margin-bottom:56px}
+.s-hdr .s-desc{margin:14px auto 0}
+.s-inner{max-width:1200px;margin:0 auto}
 
-Starlet Technologies Website
-Customized for Starlet Technologies
+/* ── PAGE HEADER ── */
+.page-hdr{padding:130px 5% 72px;background:var(--navy-deep);position:relative;overflow:hidden;text-align:center}
+.page-hdr::before{content:'';position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(245,197,24,.05) 0% 25%,transparent 0% 50%) center/44px 44px}
+.ph-inner{position:relative;z-index:1}
+.ph-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--ank-ochre);margin-bottom:14px}
+.ph-title{font-size:clamp(34px,5vw,56px);font-weight:600;color:#fff;margin-bottom:14px}
+.ph-title em{font-style:normal;background:linear-gradient(135deg,var(--gold),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ph-desc{font-size:17px;color:rgba(255,255,255,.65);max-width:600px;margin:0 auto;line-height:1.8;font-weight:300}
 
--->
+/* ── BUTTONS ── */
+.btn-gold{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--navy-deep);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 22px rgba(245,197,24,.33)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(245,197,24,.5);color:var(--navy-deep)}
+.btn-navy{display:inline-flex;align-items:center;gap:9px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 20px rgba(13,51,73,.25)}
+.btn-navy:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,51,73,.38);color:#fff}
+.btn-outline-gold{display:inline-flex;align-items:center;gap:9px;border:2px solid var(--gold);color:var(--gold);padding:12px 26px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s}
+.btn-outline-gold:hover{background:var(--gold);color:var(--navy-deep);transform:translateY(-2px)}
+.btn-outline-white{display:inline-flex;align-items:center;gap:9px;border:2px solid rgba(255,255,255,.25);color:rgba(255,255,255,.9);padding:12px 26px;border-radius:10px;font-size:15px;font-weight:600;transition:all .3s}
+.btn-outline-white:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+.btn-white{display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--navy);padding:14px 28px;border-radius:10px;font-size:15px;font-weight:700;transition:all .3s;box-shadow:0 4px 20px rgba(0,0,0,.14)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.22);color:var(--navy)}
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/templatemo-chain-app-dev.css">
-    <link rel="stylesheet" href="assets/css/mobile-responsive.css">
-    <link rel="stylesheet" href="assets/css/color-theme.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+/* ── SERVICE CARDS ── */
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+.sc-card{background:#fff;border-radius:18px;padding:36px 28px;border:1px solid rgba(13,51,73,.08);position:relative;overflow:hidden;transition:all .4s cubic-bezier(.23,1,.32,1);box-shadow:var(--shadow-sm)}
+.sc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.sc-school::after{background:linear-gradient(90deg,var(--ank-tc),var(--ank-burnt))}
+.sc-hospital::after{background:linear-gradient(90deg,#2E7D32,#43A047)}
+.sc-pos::after{background:linear-gradient(90deg,var(--gold),var(--ank-ochre))}
+.sc-ict::after{background:linear-gradient(90deg,var(--cyan-dark),var(--cyan))}
+.sc-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-lg)}.sc-card:hover::after{transform:scaleX(1)}
+.sc-ico{width:66px;height:66px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:27px;margin-bottom:20px;transition:transform .3s}
+.sc-card:hover .sc-ico{transform:scale(1.1) rotate(5deg)}
+.sci-s{background:rgba(193,68,14,.1);color:var(--ank-tc)}
+.sci-h{background:rgba(46,125,50,.1);color:#2E7D32}
+.sci-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.sci-i{background:rgba(0,212,255,.11);color:var(--cyan-dark)}
+.sc-card h3{font-size:20px;font-weight:600;color:var(--navy);margin-bottom:9px}
+.sc-card p{font-size:13.5px;color:var(--text-mid);line-height:1.8;margin-bottom:18px;font-weight:300}
+.sc-feats{list-style:none;margin-bottom:22px}
+.sc-feats li{font-size:13px;color:#555;padding:3.5px 0;display:flex;align-items:center;gap:8px}
+.sc-feats li::before{content:'';width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.sc-school .sc-feats li::before{background:var(--ank-tc)}
+.sc-hospital .sc-feats li::before{background:#2E7D32}
+.sc-pos .sc-feats li::before{background:var(--gold-dark)}
+.sc-ict .sc-feats li::before{background:var(--cyan-dark)}
+.sc-lnk{font-size:13px;font-weight:700;display:inline-flex;align-items:center;gap:6px;transition:gap .25s}
+.sc-lnk:hover{gap:10px}
+.sc-school .sc-lnk{color:var(--ank-tc)}.sc-hospital .sc-lnk{color:#2E7D32}
+.sc-pos .sc-lnk{color:var(--gold-dark)}.sc-ict .sc-lnk{color:var(--cyan-dark)}
 
-    <style>
-      /* Floating WhatsApp Button */
-      .whatsapp-float {
-        position: fixed;
-        width: 60px;
-        height: 60px;
-        bottom: 20px;
-        right: 20px;
-        background-color: #25d366;
-        color: #FFF;
-        border-radius: 50px;
-        text-align: center;
-        font-size: 30px;
-        box-shadow: 2px 2px 3px #999;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        text-decoration: none;
-      }
-      .whatsapp-float:hover {
-        background-color: #20ba5a;
-        transform: scale(1.1);
-        color: #FFF;
-        text-decoration: none;
-      }
-      .whatsapp-float i {
-        margin-top: 0;
-      }
-      @media (max-width: 767px) {
-        .whatsapp-float {
-          width: 50px;
-          height: 50px;
-          font-size: 24px;
-          bottom: 15px;
-          right: 15px;
-        }
-      }
-      /* FAQ Accordion Styling */
-      .faq-item {
-        margin-bottom: 15px;
-        border: 1px solid #e0e0e0;
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      .faq-button {
-        width: 100%;
-        text-align: left;
-        padding: 20px;
-        background: #fff;
-        border: none;
-        font-weight: 600;
-        color: #1a1a1a;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      .faq-button:hover {
-        background: #f8f9fa;
-        color: #1976d2;
-      }
-      .faq-button:not(.collapsed) {
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(3, 169, 244, 0.05) 100%);
-        color: #1976d2;
-      }
-      .faq-body {
-        padding: 20px;
-        background: #fff;
-        color: #222;
-        line-height: 1.8;
-      }
-      /* Service Icons Styling */
-      .service-item .icon i {
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-      .service-item:hover .icon i {
-        transform: scale(1.1);
-        color: #03a9f4 !important;
-      }
-      .service-item .icon {
-        text-align: center;
-      }
-      /* Premium Service Cards - Harvard-Level Design */
-      .service-item {
-        min-height: 480px;
-        display: flex;
-        flex-direction: column;
-        background: #ffffff;
-        border-radius: 24px;
-        padding: 45px 35px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
-        border: 1px solid rgba(26, 35, 126, 0.08);
-        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-      }
-      .service-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-      .service-item::after {
-        content: '';
-        position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(circle, rgba(25, 118, 210, 0.03) 0%, transparent 70%);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-      }
-      .service-item:hover::before {
-        transform: scaleX(1);
-      }
-      .service-item:hover::after {
-        opacity: 1;
-      }
-      .service-item:hover {
-        transform: translateY(-12px);
-        box-shadow: 0 20px 60px rgba(25, 118, 210, 0.15), 0 8px 25px rgba(0, 0, 0, 0.1);
-        border-color: rgba(25, 118, 210, 0.2);
-      }
-      .service-item .icon {
-        margin-bottom: 30px;
-        text-align: center;
-        position: relative;
-      }
-      .service-item .icon i {
-        width: 90px;
-        height: 90px;
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.08) 0%, rgba(25, 118, 210, 0.08) 100%);
-        border-radius: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-        font-size: 40px !important;
-        color: #1976d2 !important;
-        position: relative;
-        box-shadow: 0 4px 15px rgba(25, 118, 210, 0.1);
-      }
-      .service-item .icon i::before {
-        position: relative;
-        z-index: 2;
-      }
-      .service-item .icon i::after {
-        content: '';
-        position: absolute;
-        inset: -2px;
-        border-radius: 22px;
-        padding: 2px;
-        background: linear-gradient(135deg, #1a237e, #1976d2, #03a9f4);
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor;
-        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        mask-composite: exclude;
-        opacity: 0;
-        transition: opacity 0.5s ease;
-      }
-      .service-item:hover .icon i {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
-        color: #fff !important;
-        transform: scale(1.08) rotate(-2deg);
-        box-shadow: 0 12px 40px rgba(25, 118, 210, 0.25);
-      }
-      .service-item:hover .icon i::after {
-        opacity: 1;
-      }
-      .service-item h4 {
-        color: #1a237e;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 18px;
-        transition: color 0.4s ease;
-        letter-spacing: -0.3px;
-        line-height: 1.3;
-      }
-      .service-item:hover h4 {
-        color: #1976d2;
-      }
-      .service-item .service-description {
-        margin-bottom: 24px;
-        line-height: 1.75;
-        color: #4a5568;
-        font-size: 15.5px;
-        font-weight: 400;
-        letter-spacing: 0.1px;
-      }
-      .service-item:hover .service-description {
-        color: #2d3748;
-      }
-      .service-item .service-features-list {
-        list-style: none;
-        padding: 0;
-        margin: 24px 0;
-        flex-grow: 1;
-      }
-      .service-item .service-features-list li {
-        padding: 11px 0;
-        padding-left: 36px;
-        position: relative;
-        font-size: 14.5px;
-        color: #4a5568;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        line-height: 1.7;
-        font-weight: 400;
-        letter-spacing: 0.1px;
-      }
-      .service-item .service-features-list li:before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        background: linear-gradient(135deg, rgba(25, 118, 210, 0.1) 0%, rgba(3, 169, 244, 0.1) 100%);
-        border-radius: 50%;
-        border: 2px solid #1976d2;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-      }
-      .service-item .service-features-list li:after {
-        content: '\f00c';
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%) scale(0);
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        font-size: 10px;
-        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        z-index: 1;
-      }
-      .service-item:hover .service-features-list li {
-        color: #2d3748;
-        padding-left: 40px;
-        font-weight: 500;
-      }
-      .service-item:hover .service-features-list li:before {
-        background: linear-gradient(135deg, #1976d2 0%, #03a9f4 100%);
-        border-color: #1976d2;
-        transform: translateY(-50%) scale(1.1);
-        box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
-      }
-      .service-item:hover .service-features-list li:after {
-        transform: translateY(-50%) scale(1);
-      }
-      .service-item .text-button {
-        margin-top: auto;
-        padding-top: 20px;
-      }
-      .service-item .text-button a {
-        color: #1976d2;
-        font-weight: 600;
-        font-size: 15.5px;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        letter-spacing: 0.2px;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .service-item:hover .text-button a {
-        color: #1a237e;
-      }
-      .service-item .text-button a i {
-        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        font-size: 13px;
-      }
-      .service-item:hover .text-button a i {
-        transform: translateX(6px);
-      }
-      @media (max-width: 991px) {
-        .service-item {
-          min-height: auto;
-          margin-bottom: 30px;
-          padding: 35px 25px;
-        }
-        .service-item .icon i {
-          width: 75px;
-          height: 75px;
-          font-size: 34px !important;
-        }
-        .service-item h4 {
-          font-size: 22px;
-        }
-      }
-      @media (max-width: 767px) {
-        .service-item {
-          min-height: auto;
-          padding: 30px 20px;
-          border-radius: 20px;
-        }
-        .service-item .service-features-list {
-          margin: 20px 0;
-        }
-        .service-item .icon i {
-          width: 70px;
-          height: 70px;
-          font-size: 32px !important;
-        }
-        .service-item h4 {
-          font-size: 20px;
-        }
-        .service-item .service-description {
-          font-size: 15px;
-        }
-        .service-item .service-features-list li {
-          font-size: 14px;
-          padding-left: 32px;
-        }
-      }
-      /* Professional Testimonials Section */
-      .testimonials-wrapper {
-        padding: 40px 0;
-      }
-      
-      /* Client Cards - Professional Design */
-      .client-card {
-        cursor: pointer;
-        margin-bottom: 20px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      
-      .client-card-inner {
-        background: #fff;
-        border: 2px solid #e8ecf1;
-        border-radius: 12px;
-        padding: 25px;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .client-card-inner::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 4px;
-        height: 100%;
-        background: transparent;
-        transition: all 0.4s ease;
-      }
-      
-      .client-card:hover .client-card-inner {
-        border-color: #1976d2;
-        box-shadow: 0 8px 24px rgba(25, 118, 210, 0.12);
-        transform: translateY(-4px);
-      }
-      
-      .client-card:hover .client-card-inner::before {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
-      }
-      
-      .client-card.active .client-card-inner {
-        border-color: #1976d2;
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.03) 0%, rgba(25, 118, 210, 0.03) 100%);
-        box-shadow: 0 8px 24px rgba(25, 118, 210, 0.15);
-      }
-      
-      .client-card.active .client-card-inner::before {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
-      }
-      
-      .client-header {
-        margin-bottom: 12px;
-      }
-      
-      .client-header h4 {
-        font-size: 20px;
-        font-weight: 700;
-        color: #1a237e;
-        margin-bottom: 6px;
-        transition: color 0.3s ease;
-      }
-      
-      .client-card:hover .client-header h4,
-      .client-card.active .client-header h4 {
-        color: #1976d2;
-      }
-      
-      .client-date {
-        font-size: 13px;
-        color: #6c757d;
-        font-weight: 500;
-      }
-      
-      .client-category {
-        display: inline-block;
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.08) 0%, rgba(25, 118, 210, 0.08) 100%);
-        color: #1976d2;
-        padding: 6px 14px;
-        border-radius: 20px;
-        font-size: 13px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        transition: all 0.3s ease;
-      }
-      
-      .client-card:hover .client-category,
-      .client-card.active .client-category {
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.15) 0%, rgba(25, 118, 210, 0.15) 100%);
-      }
-      
-      .client-rating {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      
-      .client-rating i {
-        color: #ffc107;
-        font-size: 16px;
-      }
-      
-      .client-rating .rating-value {
-        font-size: 16px;
-        font-weight: 700;
-        color: #1a237e;
-        margin-left: 4px;
-      }
-      
-      /* Testimonial Slides - Professional Design */
-      .testimonial-slide {
-        padding: 10px;
-      }
-      
-      .testimonial-content-wrapper {
-        background: #fff;
-        border-radius: 16px;
-        padding: 35px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        transition: all 0.4s ease;
-      }
-      
-      .testimonial-quote {
-        position: relative;
-        margin-bottom: 30px;
-        flex-grow: 1;
-      }
-      
-      .testimonial-quote img {
-        width: 50px;
-        height: 50px;
-        opacity: 0.15;
-        position: absolute;
-        top: -5px;
-        left: -5px;
-      }
-      
-      .testimonial-quote p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #444;
-        margin-top: 15px;
-        text-align: justify;
-        font-style: italic;
-        position: relative;
-        z-index: 1;
-      }
-      
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-        padding-top: 25px;
-        border-top: 2px solid #f0f0f0;
-      }
-      
-      .testimonial-author img {
-        width: 70px;
-        height: 70px;
-        min-width: 70px;
-        min-height: 70px;
-        max-width: 70px;
-        max-height: 70px;
-        border-radius: 50%;
-        object-fit: cover;
-        object-position: center center;
-        margin-right: 18px;
-        border: 4px solid #e0f2f7;
-        box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
-        display: block;
-        flex-shrink: 0;
-        aspect-ratio: 1 / 1;
-        padding: 0;
-        background: #f8f9fa;
-      }
-      
-      /* Responsive circular images */
-      @media (max-width: 768px) {
-        .testimonial-author img {
-          width: 60px;
-          height: 60px;
-          min-width: 60px;
-          min-height: 60px;
-          max-width: 60px;
-          max-height: 60px;
-          margin-right: 15px;
-          border-width: 3px;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        .testimonial-author img {
-          width: 50px;
-          height: 50px;
-          min-width: 50px;
-          min-height: 50px;
-          max-width: 50px;
-          max-height: 50px;
-          margin-right: 12px;
-        }
-      }
-      
-      .author-details h4 {
-        font-size: 18px;
-        font-weight: 700;
-        color: #1a237e;
-        margin-bottom: 5px;
-      }
-      
-      .author-details span {
-        font-size: 14px;
-        color: #6c757d;
-        font-weight: 500;
-      }
-      
-      /* Testimonials Carousel Navigation - Professional */
-      .testimonials-carousel .owl-nav {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-        pointer-events: none;
-        z-index: 10;
-        padding: 0 20px;
-      }
-      
-      .testimonials-carousel .owl-nav button {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
-        color: #fff;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        transition: all 0.3s ease;
-        box-shadow: 0 6px 20px rgba(25, 118, 210, 0.3);
-        pointer-events: auto;
-        border: none;
-      }
-      
-      .testimonials-carousel .owl-nav button:hover {
-        background: linear-gradient(135deg, #1976d2 0%, #03a9f4 100%);
-        transform: scale(1.15);
-        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
-      }
-      
-      .testimonials-carousel .owl-nav .owl-prev {
-        margin-left: -25px;
-      }
-      
-      .testimonials-carousel .owl-nav .owl-next {
-        margin-right: -25px;
-      }
-      
-      .testimonials-carousel .owl-dots {
-        text-align: center;
-        margin-top: 35px;
-      }
-      
-      .testimonials-carousel .owl-dots button {
-        width: 12px;
-        height: 12px;
-        background-color: #ddd;
-        border-radius: 50%;
-        display: inline-block;
-        margin: 0 6px;
-        transition: all 0.3s ease;
-        border: none;
-      }
-      
-      .testimonials-carousel .owl-dots button.active {
-        background-color: #1976d2;
-        transform: scale(1.3);
-        width: 30px;
-        border-radius: 15px;
-      }
-      
-      /* Responsive Design */
-      @media (max-width: 991px) {
-        .testimonials-carousel .owl-nav {
-          position: relative;
-          transform: none;
-          justify-content: center;
-          margin-top: 20px;
-          padding: 0;
-        }
-        
-        .testimonials-carousel .owl-nav .owl-prev,
-        .testimonials-carousel .owl-nav .owl-next {
-          margin: 0 10px;
-          position: relative;
-        }
-        
-        .client-card-inner {
-          padding: 20px;
-        }
-        
-        .testimonial-content-wrapper {
-          padding: 25px;
-        }
-      }
-      /* Typography Improvements */
-      body {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        line-height: 1.7;
-        color: #222;
-        letter-spacing: 0.2px;
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: 700;
-        line-height: 1.3;
-        letter-spacing: -0.5px;
-        color: #1a237e;
-      }
-      h2 {
-        font-size: 42px;
-        line-height: 1.2;
-        color: #1a237e;
-      }
-      h4 {
-        font-size: 28px;
-        font-weight: 700;
-        color: #1a237e;
-      }
-      p {
-        font-size: 16px;
-        line-height: 1.8;
-        color: #333;
-        letter-spacing: 0.1px;
-      }
-      .section-heading p {
-        font-size: 17px;
-        line-height: 1.8;
-        color: #444;
-      }
-      .service-item h4 {
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        line-height: 1.4;
-      }
-      .service-item .service-description {
-        font-size: 15px;
-        line-height: 1.7;
-        color: #444;
-        margin-bottom: 20px;
-      }
-      .service-item .service-features-list li {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #333;
-      }
-      /* Get in Touch Section Improvements */
-      #contact {
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-        padding: 100px 0;
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-      }
-      #contact .section-heading {
-        margin-bottom: 60px;
-        position: relative;
-        z-index: 2;
-      }
-      #contact .section-heading h4 {
-        font-size: 36px;
-        font-weight: 700;
-        margin-bottom: 15px;
-        position: relative;
-        z-index: 2;
-        color: #888 !important;
-      }
-      #contact .section-heading h4 em {
-        color: #aaa !important;
-      }
-      #contact .section-heading img {
-        position: relative;
-        z-index: 1;
-        display: block;
-        margin: 15px auto;
-        max-width: 45px;
-        height: auto;
-      }
-      #contact .section-heading p {
-        font-size: 18px;
-        color: #bbb !important;
-        max-width: 700px;
-        margin: 20px auto 0;
-        position: relative;
-        z-index: 2;
-      }
-      #contact .container {
-        position: relative;
-        z-index: 2;
-      }
-      #contact .row {
-        position: relative;
-        z-index: 2;
-      }
-      .contact-form-wrapper {
-        background: #fff;
-        padding: 50px 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        border: 1px solid #f0f0f0;
-        position: relative;
-        z-index: 2;
-      }
-      .contact-form-wrapper h5 {
-        color: #1a237e;
-        font-size: 24px;
-        font-weight: 700;
-        margin-bottom: 30px;
-        padding-bottom: 15px;
-        border-bottom: 3px solid #1976d2;
-      }
-      .contact-form input,
-      .contact-form select,
-      .contact-form textarea {
-        width: 100%;
-        padding: 14px 18px;
-        border: 2px solid #e0e0e0;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        font-size: 15px;
-        transition: all 0.3s ease;
-        background: #fafafa;
-        font-family: 'Roboto', sans-serif;
-        color: #333;
-      }
-      .contact-form input:focus,
-      .contact-form select:focus,
-      .contact-form textarea:focus {
-        border-color: #1976d2;
-        outline: none;
-        box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.1);
-        background: #fff;
-        transform: translateY(-2px);
-      }
-      .contact-form input::placeholder,
-      .contact-form textarea::placeholder {
-        color: #777;
-        font-size: 15px;
-      }
-      .contact-info-wrapper {
-        background: #fff;
-        padding: 50px 40px;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-        border: 1px solid #f0f0f0;
-        position: relative;
-        z-index: 2;
-      }
-      .contact-info-card {
-        background: linear-gradient(135deg, rgba(26, 35, 126, 0.05) 0%, rgba(25, 118, 210, 0.05) 100%);
-        padding: 25px;
-        border-radius: 12px;
-        margin-bottom: 15px;
-        border: 1px solid #e8f4f8;
-        transition: all 0.3s ease;
-        height: 100%;
-      }
-      .contact-info-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(25, 118, 210, 0.15);
-        border-color: #1976d2;
-      }
-      .contact-info-card i {
-        font-size: 28px;
-        color: #1976d2;
-        margin-bottom: 15px;
-        display: block;
-      }
-      .contact-info-card h6 {
-        font-size: 16px;
-        font-weight: 600;
-        color: #1a237e;
-        margin-bottom: 10px;
-      }
-      .contact-info-card p {
-        font-size: 15px;
-        color: #222;
-        line-height: 1.7;
-        margin: 0;
-      }
-      .contact-info-card a {
-        font-size: 15px;
-        color: #1976d2 !important;
-        font-weight: 600;
-        line-height: 1.7;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-      .contact-info-card a:hover {
-        color: #1a237e !important;
-        text-decoration: underline;
-        transform: translateX(2px);
-      }
-      .contact-info-card p a {
-        color: #1976d2 !important;
-        font-weight: 600;
-      }
-      .contact-info-card p a:hover {
-        color: #1a237e !important;
-      }
-      .map-container {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        margin-top: 25px;
-        margin-bottom: 25px;
-        position: relative;
-        z-index: 1;
-        clear: both;
-        width: 100%;
-      }
-      .map-container iframe {
-        border: none;
-        width: 100%;
-        height: 250px;
-        display: block;
-      }
-      .whatsapp-button a {
-        background: linear-gradient(135deg, #25d366 0%, #20ba5a 100%);
-        border: none;
-        border-radius: 12px;
-        padding: 18px 30px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
-        width: 100%;
-        display: block;
-        text-align: center;
-        color: #fff;
-        text-decoration: none;
-      }
-      .whatsapp-button a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4);
-        color: #fff;
-      }
-      .social-icons a {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        border-radius: 50%;
-        background: #f0f7ff;
-        transition: all 0.3s ease;
-        margin: 0 8px;
-        text-decoration: none;
-      }
-      .social-icons a:hover {
-        transform: translateY(-5px) scale(1.1);
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-      }
-      .main-button {
-        background: linear-gradient(135deg, #1a237e 0%, #1976d2 100%);
-        border: none;
-        border-radius: 10px;
-        padding: 16px 40px;
-        font-size: 16px;
-        font-weight: 600;
-        color: #fff;
-        transition: all 0.3s ease;
-        width: 100%;
-        box-shadow: 0 5px 20px rgba(25, 118, 210, 0.3);
-        cursor: pointer;
-      }
-      .main-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(25, 118, 210, 0.4);
-      }
-      /* Ensure no image overlays content */
-      #contact * {
-        position: relative;
-      }
-      #contact .section-heading {
-        overflow: visible;
-      }
-      #contact .section-heading::before,
-      #contact .section-heading::after {
-        display: none;
-      }
-      /* Fix any absolute positioned decorative elements */
-      #contact .right-image,
-      #contact .left-image,
-      #contact .decoration {
-        display: none;
-      }
-      /* Contact section styling */
-      #contact {
-        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-      }
-      /* Contact form rows - keep light background */
-      #contact > .container > .row:first-child,
-      #contact > .container > .row:nth-child(2) {
-        background: transparent;
-      }
-      /* Footer section within #contact - use gradient background like other pages */
-      footer#contact {
-        background: linear-gradient(180deg, #1a237e 0%, #1976d2 50%, #03a9f4 100%) !important;
-        background-size: 100% 200% !important;
-        color: #fff !important;
-        margin-top: 60px !important;
-        padding-top: 80px !important;
-        padding-bottom: 60px !important;
-        position: relative;
-      }
-      @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-      footer#contact {
-        animation: gradientShift 8s ease infinite !important;
-      }
-      /* Footer text colors - white text on gradient background */
-      footer#contact .footer-widget h4,
-      footer#contact .footer-widget p,
-      footer#contact .footer-widget a,
-      footer#contact .copyright-text p {
-        color: #fff !important;
-      }
-      footer#contact .footer-widget a {
-        color: rgba(255, 255, 255, 0.9) !important;
-      }
-      footer#contact .footer-widget a:hover {
-        color: #fff !important;
-        opacity: 0.8;
-      }
-      #contact .section-heading h4,
-      #contact h4,
-      #contact h5,
-      #contact h6 {
-        color: #666 !important;
-      }
-      #contact .section-heading h4 em {
-        color: #888 !important;
-      }
-      #contact .section-heading p,
-      #contact .section-heading p {
-        color: #999 !important;
-      }
-      #contact p {
-        color: #333 !important;
-      }
-      #contact .contact-info-card h6 {
-        color: #1a237e !important;
-      }
-      #contact .contact-info-card p {
-        color: #222 !important;
-      }
-      #contact .contact-info-card p a {
-        color: #1976d2 !important;
-        font-weight: 600 !important;
-        text-decoration: none !important;
-      }
-      #contact .contact-info-card p a:hover {
-        color: #1a237e !important;
-        text-decoration: underline !important;
-      }
-      #contact .footer-widget h4,
-      #contact .footer-widget p,
-      #contact .footer-widget a,
-      #contact .copyright-text p {
-        color: #333 !important;
-      }
-      #contact .footer-widget a {
-        color: #1976d2 !important;
-      }
-      #contact .footer-widget a:hover {
-        color: #1a237e !important;
-      }
-      @media (max-width: 768px) {
-        h2 {
-          font-size: 32px;
-        }
-        h4 {
-          font-size: 24px;
-        }
-        #contact {
-          padding: 60px 0;
-        }
-        .contact-form-wrapper,
-        .contact-info-wrapper {
-          padding: 35px 25px;
-          margin-bottom: 30px;
-        }
-        #contact .section-heading h4 {
-          font-size: 28px;
-        }
-      }
-    </style>
+/* ── WHY US ── */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
+.ank-showcase{background:var(--navy);border-radius:22px;overflow:hidden;box-shadow:0 20px 60px rgba(13,51,73,.3)}
+.ank-kente-thick{height:11px;background:repeating-linear-gradient(90deg,var(--gold) 0 20px,var(--ank-tc) 20px 40px,var(--cyan) 40px 60px,var(--ank-green) 60px 80px,var(--ank-ochre) 80px 100px,var(--navy-light) 100px 120px)}
+.ank-body{padding:34px}
+.ank-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:22px}
+.ank-stat{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,24,.2);border-radius:12px;padding:18px;text-align:center}
+.ank-n{font-family:'Crimson Pro',serif;font-size:30px;color:var(--gold);display:block;line-height:1}
+.ank-l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1.2px;margin-top:4px}
+.why-pts{list-style:none}
+.why-pt{display:flex;gap:17px;margin-bottom:26px}
+.wpi{width:50px;height:50px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px}
+.wpi-1{background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:var(--gold)}
+.wpi-2{background:linear-gradient(135deg,#2E7D32,#43A047);color:#fff}
+.wpi-3{background:linear-gradient(135deg,var(--gold-dark),var(--ank-ochre));color:var(--navy)}
+.wpi-4{background:linear-gradient(135deg,var(--cyan-dark),var(--cyan));color:var(--navy)}
+.wpt h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:5px;font-family:'Sora',sans-serif}
+.wpt p{font-size:13.5px;color:var(--text-mid);line-height:1.78;font-weight:300}
 
-  </head>
+/* ── TESTIMONIALS ── */
+.tst-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;max-width:1200px;margin:0 auto}
+.tst-card{background:#fff;border-radius:18px;padding:32px 28px;border:1px solid rgba(13,51,73,.08);position:relative;box-shadow:var(--shadow-sm);overflow:hidden}
+.tst-card::before{content:'"';position:absolute;top:12px;right:20px;font-family:'Crimson Pro',serif;font-size:88px;line-height:1;color:rgba(13,51,73,.06)}
+.tst-stars{color:var(--gold);font-size:13px;margin-bottom:13px;letter-spacing:2px}
+.tst-text{font-size:14.5px;color:#555;line-height:1.85;margin-bottom:20px;font-style:italic;font-weight:300}
+.tst-auth{display:flex;align-items:center;gap:12px}
+.tst-av{width:43px;height:43px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--navy),var(--cyan-dark));display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-size:17px;font-weight:600;color:#fff}
+.tst-name{font-size:14.5px;font-weight:700;color:var(--navy)}
+.tst-role{font-size:12px;color:var(--ank-tc);font-weight:600}
 
+/* ── FAQ ── */
+.faq-wrap{max-width:740px;margin:0 auto}
+.faq-item{border:1px solid rgba(13,51,73,.1);border-radius:12px;margin-bottom:9px;overflow:hidden}
+.faq-btn{width:100%;background:#fff;border:none;padding:19px 22px;text-align:left;font-size:15px;font-weight:600;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:'Sora',sans-serif;transition:background .2s}
+.faq-ico{width:25px;height:25px;border-radius:50%;background:rgba(13,51,73,.07);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--navy);transition:all .3s;flex-shrink:0}
+.faq-btn.open{color:var(--ank-tc)}.faq-btn.open .faq-ico{background:var(--ank-tc);color:#fff;transform:rotate(45deg)}
+.faq-body{display:none;padding:0 22px 18px;font-size:14px;color:var(--text-mid);line-height:1.85;font-weight:300;background:#fff}
+.faq-body.open{display:block}
+
+/* ── CTA BAND ── */
+.cta-band{background:linear-gradient(135deg,var(--navy-deep),var(--navy-mid));padding:90px 5%;text-align:center;position:relative;overflow:hidden}
+.cta-band::before{content:'';position:absolute;inset:0;background:repeating-conic-gradient(rgba(245,197,24,.04) 0% 25%,transparent 0% 50%) center/36px 36px}
+.cta-inner{position:relative;z-index:1;max-width:680px;margin:0 auto}
+.cta-inner h2{font-size:clamp(28px,4vw,48px);color:#fff;margin-bottom:14px}
+.cta-inner p{font-size:16.5px;color:rgba(255,255,255,.7);line-height:1.8;margin-bottom:34px;font-weight:300}
+.cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.62)}
+.ft-top{padding:68px 5% 44px;max-width:1440px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr 1.2fr;gap:44px}
+.ft-logo img{height:42px;margin-bottom:16px}
+.ft-logo-text .nl-star{font-family:'Crimson Pro',serif;font-size:19px;color:var(--gold)}
+.ft-logo-text .nl-let{font-family:'Crimson Pro',serif;font-size:19px;color:var(--cyan)}
+.ft-logo-text small{display:block;font-size:9.5px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase;margin-top:2px}
+.ft-tag{font-size:13.5px;line-height:1.82;margin-bottom:18px;font-weight:300}
+.ft-contact a{color:var(--gold);font-size:13.5px;display:block;margin-bottom:4px;font-weight:600}
+.ft-social{display:flex;gap:9px;margin-top:14px}
+.fsoc{width:37px;height:37px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:15px;transition:all .25s}
+.fsoc:hover{transform:translateY(-2px)}
+.fs-wa{background:rgba(37,211,102,.14);color:#25D366}.fs-fb{background:rgba(24,119,242,.14);color:#1877F2}.fs-li{background:rgba(0,119,181,.14);color:#0077B5}
+.ft-col h4{font-family:'Sora',sans-serif;font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:2px;margin-bottom:18px;padding-bottom:9px;border-bottom:2px solid rgba(245,197,24,.28)}
+.ft-lnks{list-style:none}
+.ft-lnks li{margin-bottom:8px}
+.ft-lnks a{font-size:13.5px;color:rgba(255,255,255,.52);transition:color .2s;font-weight:300}
+.ft-lnks a:hover{color:var(--gold)}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding:18px 5%;text-align:center;font-size:12.5px;color:rgba(255,255,255,.28);max-width:1440px;margin:0 auto}
+
+/* ── WHATSAPP FLOAT ── */
+.wa-float{position:fixed;bottom:22px;right:22px;z-index:900;width:54px;height:54px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,.48);transition:all .3s}
+.wa-float:hover{transform:scale(1.1);color:#fff;box-shadow:0 8px 28px rgba(37,211,102,.6)}
+
+/* ── TEAM CARDS ── */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:26px;max-width:1200px;margin:0 auto}
+.tm-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid rgba(13,51,73,.08);transition:all .4s cubic-bezier(.23,1,.32,1)}
+.tm-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(245,197,24,.3)}
+.tm-card-top{height:6px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--ank-tc) 18px 36px,var(--cyan) 36px 54px,var(--ank-green) 54px 72px)}
+.tm-body{padding:30px 26px}
+.tm-avatar{width:100px;height:100px;border-radius:50%;object-fit:cover;margin:0 auto 18px;border:4px solid rgba(245,197,24,.25);transition:all .3s;display:block}
+.tm-card:hover .tm-avatar{border-color:var(--gold);transform:scale(1.04)}
+.tm-avatar-placeholder{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Crimson Pro',serif;font-size:36px;font-weight:600;color:var(--gold)}
+.tm-name{text-align:center;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:5px}
+.tm-role{text-align:center;font-size:13px;font-weight:700;color:var(--ank-tc);margin-bottom:4px}
+.tm-role-sub{text-align:center;font-size:12px;color:#999;margin-bottom:16px;font-style:italic}
+.tm-bio{font-size:13.5px;color:var(--text-mid);line-height:1.8;font-weight:300;margin-bottom:18px}
+.tm-bio p{margin-bottom:10px}
+.tm-bio p:last-child{margin-bottom:0}
+.tm-soc{display:flex;justify-content:center;gap:9px}
+.tm-soc a{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:14px;border:1.5px solid rgba(13,51,73,.15);color:var(--navy);transition:all .25s}
+.tm-soc a:hover{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:1200px;margin:0 auto;align-items:start}
+.cform-box{background:#fff;border-radius:20px;padding:44px 36px;box-shadow:var(--shadow-md);border:1px solid rgba(13,51,73,.08)}
+.cform-hdr{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(13,51,73,.1)}
+.cform-ico{width:50px;height:50px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:20px}
+.cform-hdr h3{font-size:22px;font-weight:600;color:var(--navy)}
+.cform-hdr p{font-size:12px;color:#999;margin-top:2px}
+.cfg{margin-bottom:16px}
+.cfg label{display:block;font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px;letter-spacing:.4px}
+.cfi{width:100%;padding:12px 15px;border:2px solid rgba(13,51,73,.13);border-radius:9px;font-size:14px;font-family:'Sora',sans-serif;background:var(--warm-white);color:var(--text);transition:all .2s;outline:none}
+.cfi:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(245,197,24,.16)}
+.cfg-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn-submit-form{width:100%;padding:14px;border:none;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Sora',sans-serif;background:linear-gradient(135deg,var(--navy),var(--navy-mid));color:#fff;transition:all .3s;box-shadow:0 4px 18px rgba(13,51,73,.24)}
+.btn-submit-form:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(13,51,73,.36)}
+.cinfo-col{display:flex;flex-direction:column;gap:18px}
+.wa-cta-big{background:linear-gradient(135deg,#1B5E20,#25D366);border-radius:16px;padding:22px 26px;display:flex;align-items:center;gap:15px;transition:all .3s;box-shadow:0 4px 20px rgba(37,211,102,.28)}
+.wa-cta-big:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(37,211,102,.4)}
+.wa-cta-big .wa-ico{font-size:34px;color:#fff}
+.wa-cta-big h4{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:3px}
+.wa-cta-big p{font-size:13px;color:rgba(255,255,255,.82)}
+.info-card{background:#fff;border-radius:14px;padding:22px;border:1px solid rgba(13,51,73,.09);display:flex;align-items:flex-start;gap:16px;transition:all .3s;box-shadow:var(--shadow-sm)}
+.info-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:rgba(245,197,24,.3)}
+.ic-ico{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.ici-loc{background:rgba(193,68,14,.11);color:var(--ank-tc)}
+.ici-ph{background:rgba(46,125,50,.11);color:#2E7D32}
+.ici-em{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.ici-clk{background:rgba(0,212,255,.11);color:var(--cyan-dark)}
+.ic-text h5{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.ic-text p,.ic-text a{font-size:13.5px;color:var(--text-mid);line-height:1.7;font-weight:300}
+.ic-text a{color:var(--ank-tc);font-weight:600}
+.hrs-box{background:var(--navy);border-radius:14px;overflow:hidden}
+.hrs-kente{height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--ank-tc) 18px 36px,var(--cyan) 36px 54px)}
+.hrs-body{padding:20px 22px}
+.hrs-body h4{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:14px}
+.hrs-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}
+.hrs-row:last-of-type{border:none}
+.hrs-day{color:rgba(255,255,255,.55)}.hrs-time{color:var(--gold);font-weight:700}
+.hrs-note{font-size:12px;color:#25D366;margin-top:11px;display:flex;align-items:center;gap:6px}
+.social-bar{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.soc-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border-radius:30px;font-size:13px;font-weight:700;transition:all .3s}
+.soc-pill:hover{transform:translateY(-2px)}
+.sp-wa{background:rgba(37,211,102,.11);color:#25D366}.sp-fb{background:rgba(24,119,242,.11);color:#1877F2}.sp-li{background:rgba(0,119,181,.11);color:#0077B5}
+
+/* ── PRODUCTS PAGE ── */
+.prod-tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px;position:relative;z-index:1}
+.ptab{padding:11px 22px;border-radius:50px;border:2px solid rgba(255,255,255,.2);background:rgba(255,255,255,.06);color:rgba(255,255,255,.7);font-family:'Sora',sans-serif;font-size:13.5px;font-weight:700;cursor:pointer;transition:all .3s;display:flex;align-items:center;gap:8px}
+.ptab:hover,.ptab.active{border-color:var(--gold);background:rgba(245,197,24,.12);color:var(--gold)}
+.prod-panel{display:none;padding:72px 5%}
+.prod-panel.on{display:block}
+.prod-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto}
+.prod-inner.flip{direction:rtl}.prod-inner.flip>*{direction:ltr}
+.prod-visual{background:var(--navy);border-radius:20px;overflow:hidden}
+.pv-kente{height:9px}
+.pv-s{background:repeating-linear-gradient(90deg,var(--ank-tc) 0 22px,var(--gold) 22px 44px,#2E7D32 44px 66px)}
+.pv-h{background:repeating-linear-gradient(90deg,#2E7D32 0 22px,var(--gold) 22px 44px,var(--cyan) 44px 66px)}
+.pv-p{background:repeating-linear-gradient(90deg,var(--gold) 0 22px,var(--ank-tc) 22px 44px,#2E7D32 44px 66px)}
+.pv-body{padding:36px}
+.pv-icon{width:72px;height:72px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:30px;margin-bottom:20px}
+.pvi-s{background:rgba(193,68,14,.25);color:#FF7043}
+.pvi-h{background:rgba(46,125,50,.25);color:#66BB6A}
+.pvi-p{background:rgba(245,197,24,.2);color:var(--gold)}
+.pv-body h3{font-size:22px;color:#fff;margin-bottom:10px}
+.pv-body p{font-size:13.5px;color:rgba(255,255,255,.55);font-weight:300;line-height:1.75;margin-bottom:22px}
+.pv-stats{display:flex;gap:22px}
+.pvs-n{font-family:'Crimson Pro',serif;font-size:28px;color:var(--gold);display:block;line-height:1}
+.pvs-l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.pd-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 15px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:20px}
+.pd-s{background:rgba(193,68,14,.1);color:var(--ank-tc)}.pd-h{background:rgba(46,125,50,.1);color:#2E7D32}.pd-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.pd-detail h2{font-size:clamp(24px,3.5vw,36px);font-weight:600;color:var(--navy);margin-bottom:13px}
+.pd-detail h2 em{font-style:normal;color:var(--ank-tc)}
+.pd-detail p{font-size:15px;color:var(--text-mid);line-height:1.85;margin-bottom:28px;font-weight:300}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:30px}
+.feat-item{display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--warm-white);border-radius:10px;border:1px solid rgba(13,51,73,.08)}
+.feat-ico{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0}
+.fi-s{background:rgba(193,68,14,.11);color:var(--ank-tc)}.fi-h{background:rgba(46,125,50,.11);color:#2E7D32}.fi-p{background:rgba(245,197,24,.14);color:var(--gold-dark)}
+.feat-item span{font-size:12.5px;font-weight:600;color:#444;line-height:1.5}
+.pd-actions{display:flex;gap:13px;flex-wrap:wrap}
+
+/* ── SERVICES DETAIL ── */
+.sd-section{padding:72px 5%}
+.sd-section:nth-child(even){background:#fff}
+.sd-section:nth-child(odd){background:var(--cream)}
+.sd-hdr{display:flex;align-items:center;gap:18px;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid rgba(13,51,73,.1)}
+.sd-ico{width:70px;height:70px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:27px;flex-shrink:0}
+.sd-hdr-text h3{font-size:clamp(22px,3vw,32px);color:var(--navy);margin-bottom:7px}
+.sd-hdr-text h3 em{font-style:normal;color:var(--ank-tc)}
+.sd-hdr-text p{font-size:14.5px;color:var(--text-mid);font-weight:300;line-height:1.7}
+.sd-content{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.sd-desc{font-size:15px;color:#555;line-height:1.9;margin-bottom:24px;font-weight:300}
+.sd-feats{list-style:none}
+.sd-feats li{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid rgba(13,51,73,.07);font-size:13.5px;color:#444}
+.sd-feats li:last-child{border:none}
+.sd-feats li i{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.sfi-tc{background:rgba(193,68,14,.11);color:var(--ank-tc)}.sfi-bl{background:rgba(21,101,192,.11);color:#1565C0}
+.sfi-gr{background:rgba(46,125,50,.11);color:#2E7D32}.sfi-gd{background:rgba(245,197,24,.13);color:var(--gold-dark)}
+.sfi-pu{background:rgba(123,31,162,.11);color:#7B1FA2}.sfi-tl{background:rgba(0,121,107,.11);color:#00796B}
+.sd-visual-box{background:var(--navy);border-radius:18px;padding:30px}
+.sd-visual-kente{height:6px;border-radius:3px;margin-bottom:22px}
+.sd-visual-box h4{font-family:'Sora',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-bottom:16px}
+.sd-stats{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:22px}
+.sd-stat{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,24,.2);border-radius:10px;padding:14px;text-align:center}
+.sd-stat .n{font-family:'Crimson Pro',serif;font-size:25px;color:var(--gold)}
+.sd-stat .l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1px;margin-top:3px}
+.sd-cta-btn{display:block;width:100%;padding:13px;border-radius:10px;font-size:14px;font-weight:700;text-align:center;font-family:'Sora',sans-serif;transition:all .3s;color:#fff}
+.sd-cta-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(193,68,14,.35);color:#fff}
+
+/* ── PROCESS STEPS ── */
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:1200px;margin:0 auto}
+.proc-step{text-align:center;position:relative}
+.proc-step::after{content:'→';position:absolute;right:-18px;top:18px;font-size:22px;color:var(--gold);opacity:.4}
+.proc-step:last-child::after{display:none}
+.proc-num{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-mid));display:flex;align-items:center;justify-content:center;font-family:'Crimson Pro',serif;font-size:22px;font-weight:600;color:var(--gold);margin:0 auto 14px;box-shadow:0 4px 16px rgba(13,51,73,.25)}
+.proc-step h4{font-size:16px;color:var(--navy);margin-bottom:7px}
+.proc-step p{font-size:13px;color:var(--text-mid);line-height:1.65;font-weight:300}
+
+/* ── OVERVIEW CARDS (services) ── */
+.sov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1200px;margin:0 auto}
+.sov-card{background:#fff;border-radius:16px;padding:34px 26px;border:1px solid rgba(13,51,73,.09);transition:all .4s;cursor:pointer;display:block;text-decoration:none}
+.sov-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg);border-color:rgba(245,197,24,.3);text-decoration:none}
+.sov-ico{width:62px;height:62px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:25px;margin-bottom:18px;transition:transform .3s}
+.sov-card:hover .sov-ico{transform:scale(1.1) rotate(5deg)}
+.sov-card h5{font-size:16px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.sov-card p{font-size:13.5px;color:var(--text-mid);line-height:1.75;margin-bottom:14px;font-weight:300}
+.sov-tags{display:flex;flex-wrap:wrap;gap:5px}
+.sov-tag{font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px}
+
+/* ── RESPONSIVE ── */
+@media (max-width:1024px){
+  .ft-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .why-grid{grid-template-columns:1fr}
+  .sov-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:fixed;top:75px;left:0;right:0;background:var(--navy-deep);padding:14px 5%;gap:2px;border-bottom:1px solid rgba(245,197,24,.13)}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:flex}
+  .section{padding:68px 5%}
+  .sc-grid,.tst-grid,.why-grid,.contact-grid,.prod-inner,.prod-inner.flip,.sd-content,.feat-grid,.sov-grid,.process-steps{grid-template-columns:1fr!important;direction:ltr!important}
+  .ft-grid{grid-template-columns:1fr;gap:26px}
+  .sys-grid{grid-template-columns:1fr}
+  .prod-tabs{gap:7px}
+  .proc-step::after{display:none}
+  .cfg-row{grid-template-columns:1fr}
+}
+</style>
+
+</head>
 <body>
 
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+<div class="kente-bar"></div>
+<nav class="navbar">
+<div class="nav-inner">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="logo-text-wrap" style="display:none">
+      <div class="logo-wordmark"><span class="logo-star">Star</span><span class="logo-let">Let</span></div>
+      <span class="logo-sub">Systems Africa</span>
     </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#" data-bs-toggle="modal" data-bs-target="#loginModal"><i class="fa fa-sign-in-alt"></i> Sign In Now</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-  
-  <!-- Bootstrap Modal for System Selection -->
-  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title header_title" id="loginModalLabel">Select System</h5>
-          <button type="button" class="btn-close modal_close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <!-- System Selection -->
-          <div class="system_selection">
-            <div class="text-center mb-4">
-              <p class="mb-0">Please select the system you want to login to:</p>
-            </div>
-
-            <div class="system_options">
-              <div class="system_option" data-system="school">
-                <div class="system_icon">
-                  <i class="fas fa-graduation-cap"></i>
-                </div>
-                <h4>School Management System</h4>
-                <p>Manage students, teachers, and academic activities</p>
-              </div>
-
-              <div class="system_option" data-system="hospital">
-                <div class="system_icon">
-                  <i class="fas fa-hospital"></i>
-                </div>
-                <h4>Hospital/Drugshop Management System</h4>
-                <p>Manage patients, appointments, and inventory</p>
-              </div>
-
-              <div class="system_option" data-system="pos">
-                <div class="system_icon">
-                  <i class="fas fa-cash-register"></i>
-                </div>
-                <h4>Point of Sale Systems</h4>
-                <p>Process sales and manage transactions</p>
-              </div>
-            </div>
-            
-            <div class="text-center mt-4">
-              <p class="text-muted small">New client? Request access or demo below.</p>
-            </div>
-          </div>
-
-          <!-- Social Login (Hidden initially) -->
-          <div class="social_login" style="display:none;">
-            <div class="mb-3">
-              <a href="#" class="social_box fb d-block mb-2 text-decoration-none">
-                <span class="icon"><i class="fab fa-facebook"></i></span>
-                <span class="icon_title">Connect with Facebook</span>
-              </a>
-
-              <a href="#" class="social_box google d-block text-decoration-none">
-                <span class="icon"><i class="fab fa-google-plus"></i></span>
-                <span class="icon_title">Connect with Google</span>
-              </a>
-            </div>
-
-            <div class="text-center my-3">
-              <span>Or use your Email address</span>
-            </div>
-
-            <div class="d-grid gap-2 d-md-flex">
-              <button type="button" class="btn btn-primary flex-fill" id="login_form">Login</button>
-              <button type="button" class="btn btn-outline-primary flex-fill" id="register_form">Sign up</button>
-            </div>
-          </div>
-
-          <!-- Username & Password Login form -->
-          <div class="user_login" style="display:none;">
-            <div class="selected_system_info mb-3">
-              <p class="mb-0"><strong>Selected System:</strong> <span id="selected_system_name"></span></p>
-            </div>
-            <form>
-              <div class="mb-3">
-                <label for="login_email" class="form-label">Email / Username</label>
-                <input type="text" class="form-control" id="login_email" />
-              </div>
-
-              <div class="mb-3">
-                <label for="login_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="login_password" />
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="remember" />
-                <label class="form-check-label" for="remember">Remember me on this computer</label>
-              </div>
-
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_to_systems">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Login</button>
-              </div>
-            </form>
-
-            <div class="text-center mt-3">
-              <a href="#" class="forgot_password text-decoration-none">Forgot password?</a>
-            </div>
-          </div>
-
-          <!-- Register Form -->
-          <div class="user_register" style="display:none;">
-            <form>
-              <div class="mb-3">
-                <label for="register_name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="register_name" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="register_email" />
-              </div>
-
-              <div class="mb-3">
-                <label for="register_password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="register_password" />
-              </div>
-
-              <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="send_updates" />
-                <label class="form-check-label" for="send_updates">Send me occasional email updates</label>
-              </div>
-
-              <div class="d-grid gap-2 d-md-flex">
-                <button type="button" class="btn btn-outline-secondary flex-fill back_btn">
-                  <i class="fa fa-angle-double-left"></i> Back
-                </button>
-                <button type="button" class="btn btn-primary flex-fill btn_red">Register</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Affordable Technology Solutions for Schools, Clinics & Businesses in Uganda</h2>
-                    <p>Starlet Technologies builds easy-to-use systems that help you manage students, patients, inventory and sales — with fast, local support right here in Uganda.</p>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="white-button first-button scroll-to-section">
-                      <a href="#contact">Request Free Demo <i class="fa fa-calendar-check"></i></a>
-                    </div>
-                    <div class="white-button">
-                      <a href="products.html">View Products <i class="fa fa-arrow-right"></i></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <!-- Add collage of system screenshots or local office photo -->
-                <img src="assets/images/slider-dec.png" alt="Starlet Technologies Systems">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="services" class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>What <em>We Do</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Delivering reliable, secure, and scalable technology solutions.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item first-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-code" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>Custom Software Solutions</h4>
-            <p class="service-description">Tailored business systems for schools, clinics, retail &amp; SACCOS. We develop custom software solutions designed specifically for your unique business needs and operational requirements.</p>
-            <ul class="service-features-list">
-              <li>School Management Systems</li>
-              <li>Hospital & Clinic Systems</li>
-              <li>Retail & POS Solutions</li>
-              <li>SACCOS Management</li>
-              <li>Offline Capability</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item second-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-mobile-alt" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>Web &amp; Mobile Applications</h4>
-            <p class="service-description">Professional websites &amp; mobile apps. We create responsive, user-friendly web and mobile applications that enhance your digital presence and engage your customers effectively.</p>
-            <ul class="service-features-list">
-              <li>Responsive Web Design</li>
-              <li>Android & iOS Apps</li>
-              <li>E-commerce Platforms</li>
-              <li>Progressive Web Apps</li>
-              <li>SEO Optimization</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item third-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-network-wired" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>IT Systems &amp; Infrastructure</h4>
-            <p class="service-description">Networks, servers &amp; cloud solutions. We design, implement, and maintain robust IT infrastructure to ensure your business has reliable and scalable technology foundations.</p>
-            <ul class="service-features-list">
-              <li>Network Design & Setup</li>
-              <li>Server Configuration</li>
-              <li>Cloud Solutions</li>
-              <li>Security & Firewalls</li>
-              <li>Backup & Recovery</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item fourth-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-laptop" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>Computer &amp; Hardware Supply</h4>
-            <p class="service-description">Laptops, desktops &amp; enterprise hardware. We supply quality IT equipment from trusted manufacturers, providing complete hardware solutions for your business needs.</p>
-            <ul class="service-features-list">
-              <li>Laptops & Desktops</li>
-              <li>Servers & Networking</li>
-              <li>Printers & Scanners</li>
-              <li>Installation & Setup</li>
-              <li>Warranty Support</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item first-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-headset" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>Managed IT Services &amp; Support</h4>
-            <p class="service-description">IT support, cybersecurity &amp; data backup. Our managed services ensure your IT infrastructure runs smoothly, securely, and efficiently with 24/7 monitoring and support.</p>
-            <ul class="service-features-list">
-              <li>24/7 Helpdesk Support</li>
-              <li>Cybersecurity Protection</li>
-              <li>Automated Backups</li>
-              <li>System Monitoring</li>
-              <li>Proactive Maintenance</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="service-item second-service">
-            <div class="icon" style="background: none; width: auto; height: auto; margin-bottom: 20px;">
-              <i class="fas fa-lightbulb" style="font-size: 48px; color: #1976d2; display: block;"></i>
-            </div>
-            <h4>Consulting &amp; Digital Transformation</h4>
-            <p class="service-description">Strategy &amp; technology advisory. We provide expert consulting services to help businesses modernize operations and develop technology strategies aligned with their goals.</p>
-            <ul class="service-features-list">
-              <li>Technology Strategy</li>
-              <li>Digital Transformation</li>
-              <li>IT Assessment & Audits</li>
-              <li>Process Optimization</li>
-              <li>Implementation Planning</li>
-            </ul>
-            <div class="text-button">
-              <a href="services.html">Learn More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="products" class="services section" style="background-color: #f8f9fa;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Our <em>Products</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Explore our feature-rich management systems built for reliability and ease of use. Each system includes free training and ongoing support from our Uganda office. Request a free demo to see how they can transform your operations.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <img src="assets/images/demo.PNG" alt="School Management System" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-            <h4>School Management System</h4>
-            <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-              <li>Student registration and records management</li>
-              <li>Fee collection and payment tracking</li>
-              <li>Attendance monitoring and reports</li>
-              <li>Timetable creation and management</li>
-              <li>Exam results and academic reporting</li>
-              <li>Parent communication portal</li>
-            </ul>
-            <div class="border-button">
-              <a href="contact.html">Request Free Demo</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <img src="assets/images/hospital-system.png" alt="Hospital Management System" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-            <h4>Hospital &amp; Drugshop Management</h4>
-            <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-              <li>Patient registration and medical records</li>
-              <li>Appointment scheduling system</li>
-              <li>Prescription and medication management</li>
-              <li>Inventory tracking for drugs and supplies</li>
-              <li>Billing and payment processing</li>
-              <li>Medical reports and analytics</li>
-            </ul>
-            <div class="border-button">
-              <a href="contact.html">Request Free Demo</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <img src="assets/images/pos-system.png" alt="POS System" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-            <h4>Point of Sale (POS) System</h4>
-            <ul style="text-align: left; padding-left: 20px; margin-bottom: 20px;">
-              <li>Fast checkout and receipt printing</li>
-              <li>Real-time inventory management</li>
-              <li>Sales reports and analytics</li>
-              <li>Multiple payment methods support</li>
-              <li>Customer management and loyalty programs</li>
-              <li>Offline mode for unreliable internet</li>
-            </ul>
-            <div class="border-button">
-              <a href="contact.html">Request Free Demo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="section-heading">
-            <h4>About <em>Starlet Technologies</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Based in Uganda, Starlet Technologies is dedicated to bridging the digital gap and empowering local institutions with affordable, reliable technology solutions. We understand the unique challenges faced by schools, clinics, and businesses in our region and design our systems accordingly.</p>
-            <p>Our mission is to make professional management systems accessible to organizations across Uganda, helping them operate more efficiently and serve their communities better. With local expertise and ongoing support, we're committed to your success.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#contact">Local Uganda Team</a></h4>
-                <p>Our team is based right here in Uganda, providing quick response times and understanding local needs</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#contact">Affordable Pricing</a></h4>
-                <p>Competitive pricing designed for Ugandan businesses and institutions, with flexible payment options</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#products">Offline-Capable Systems</a></h4>
-                <p>All systems work offline when internet is unreliable, ensuring continuous operations</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#contact">Free Training &amp; Installation</a></h4>
-                <p>Comprehensive training and installation included with every system to ensure your team can use it effectively</p>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div class="box-item">
-                <h4><a href="#contact">Ongoing Support</a></h4>
-                <p>Continuous support from our Uganda office ensures your systems run smoothly and you get help when needed</p>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p>Whether you're a school administrator, clinic manager, or business owner in Uganda, we're here to help you leverage technology for better operations. Contact us today for a free consultation.</p>
-              <div class="gradient-button">
-                <a href="contact.html">Request Free Demo</a>
-              </div>
-              <span>*No Obligation Required</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            <img src="assets/images/about-right-dec.png" alt="Starlet Technologies Team">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="clients" class="the-clients">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>What <em>Our Clients Say</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Hear from schools, clinics, and businesses across Uganda who are using our systems to improve their operations.</p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="testimonials-wrapper">
-            <div class="row">
-              <div class="col-lg-7 align-self-center">
-                <div class="clients-list clients-carousel owl-carousel">
-                  <div class="client-card" data-testimonial="0">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>Uganda Secondary School</h4>
-                        <span class="client-date">15 January 2024</span>
-                      </div>
-                      <div class="client-category">School Management</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">5.0</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-card" data-testimonial="1">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>St. Mary's Clinic, Uganda</h4>
-                        <span class="client-date">8 December 2023</span>
-                      </div>
-                      <div class="client-category">Hospital Management</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">4.9</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-card" data-testimonial="2">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>City Mart Supermarket</h4>
-                        <span class="client-date">22 November 2023</span>
-                      </div>
-                      <div class="client-category">POS System</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">4.8</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-card" data-testimonial="3">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>Kampala Primary School</h4>
-                        <span class="client-date">10 October 2023</span>
-                      </div>
-                      <div class="client-category">School Management</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">5.0</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-card" data-testimonial="4">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>Nakawa Medical Center</h4>
-                        <span class="client-date">5 September 2023</span>
-                      </div>
-                      <div class="client-category">Hospital Management</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">4.9</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="client-card" data-testimonial="5">
-                    <div class="client-card-inner">
-                      <div class="client-header">
-                        <h4>Mukono SACCOS</h4>
-                        <span class="client-date">18 August 2023</span>
-                      </div>
-                      <div class="client-category">Financial System</div>
-                      <div class="client-rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <span class="rating-value">5.0</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> 
-              <div class="col-lg-5">
-                <div class="testimonials-carousel owl-carousel">
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"The school management system has reduced our administrative workload dramatically. Fee collection is now much faster, and we can generate reports instantly. The offline capability is crucial for us when internet is slow. Highly recommend Starlet Technologies!"</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Mr. Okello James">
-                        <div class="author-details">
-                          <h4>Mr. Okello James</h4>
-                          <span>Headteacher, Uganda Secondary School</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"Managing patient records and appointments used to be chaotic. Now everything is organized digitally. The inventory tracking for drugs has saved us money and time. The team in Uganda provides excellent support whenever we need help."</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Dr. Aceng Sarah">
-                        <div class="author-details">
-                          <h4>Dr. Aceng Sarah</h4>
-                          <span>Medical Director, St. Mary's Clinic, Uganda</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"Our sales have increased since implementing the POS system. The inventory management helps us know exactly what's in stock, and the sales reports are very detailed. The system works perfectly even when internet is down. Great value for money!"</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Mr. Ocen Peter">
-                        <div class="author-details">
-                          <h4>Mr. Ocen Peter</h4>
-                          <span>Owner, City Mart Supermarket, Uganda</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"As a primary school, we needed an affordable system that our teachers could easily use. Starlet Technologies delivered exactly that. The attendance tracking and parent communication features have transformed how we operate. The training was excellent and the support team responds quickly to any questions."</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Ms. Nakato Grace">
-                        <div class="author-details">
-                          <h4>Ms. Nakato Grace</h4>
-                          <span>Headmistress, Kampala Primary School</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"The hospital management system has streamlined our entire operation. Patient registration is now instant, and we can track medical history efficiently. The drug inventory alerts help us avoid stockouts. What impressed us most was the local support - they understand our needs and are always available."</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Dr. Kigozi Robert">
-                        <div class="author-details">
-                          <h4>Dr. Kigozi Robert</h4>
-                          <span>Administrator, Nakawa Medical Center</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testimonial-slide">
-                    <div class="testimonial-content-wrapper">
-                      <div class="testimonial-quote">
-                        <img src="assets/images/quote.png" alt="">
-                        <p>"Managing our SACCOS operations manually was time-consuming and error-prone. The financial management system from Starlet Technologies has automated member registration, loan processing, and savings tracking. Our members love the transparency, and our staff can now focus on serving members better. Highly recommended for any SACCOS in Uganda!"</p>
-                      </div>
-                      <div class="testimonial-author">
-                        <img src="assets/images/client-image.jpg" alt="Mr. Ssemwogerere David">
-                        <div class="author-details">
-                          <h4>Mr. Ssemwogerere David</h4>
-                          <span>Chairman, Mukono SACCOS</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>          
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div id="faq" class="services section" style="background-color: #f8f9fa;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>Frequently Asked <em>Questions</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="">
-            <p>Have questions? We're here to help. Contact us directly if you need more information.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="accordion" id="faqAccordion">
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                <i class="fa fa-question-circle me-2"></i> How much do your systems cost?
-              </button>
-              <div id="faq1" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  We offer competitive, affordable pricing designed for Ugandan businesses and institutions. Pricing varies based on your specific needs, number of users, and features required. We provide custom quotes after understanding your requirements. Contact us for a free consultation and personalized quote. We also offer flexible payment plans to make our systems accessible.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                <i class="fa fa-question-circle me-2"></i> Can the systems work offline?
-              </button>
-              <div id="faq2" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  Yes! All our systems are designed to work offline, which is crucial for Uganda where internet connectivity can be unreliable. Data syncs automatically when internet is available. This ensures your operations continue smoothly even during power outages or poor connectivity. Offline capability is one of our key features.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                <i class="fa fa-question-circle me-2"></i> Do you provide training and installation?
-              </button>
-              <div id="faq3" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  Absolutely! Free training and installation are included with every system. Our Uganda-based team will install the system, train your staff, and ensure everyone is comfortable using it. We provide comprehensive training sessions tailored to your team's needs. Ongoing support is also available whenever you need assistance.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                <i class="fa fa-question-circle me-2"></i> What hardware is required?
-              </button>
-              <div id="faq4" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  Our systems run on standard computers, laptops, or tablets. Minimum requirements: Windows 7 or higher, or Android devices. We can work with your existing hardware in most cases. For POS systems, we can recommend compatible receipt printers and barcode scanners. We also provide guidance on hardware setup if needed.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                <i class="fa fa-question-circle me-2"></i> How secure is our data?
-              </button>
-              <div id="faq5" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  Data security is our top priority. All systems include user authentication, role-based access controls, and regular automated backups. Your data is stored securely and can be backed up locally or to cloud storage (your choice). We follow best practices for data protection and can provide additional security measures based on your needs.
-                </div>
-              </div>
-            </div>
-            <div class="faq-item">
-              <button class="faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                <i class="fa fa-question-circle me-2"></i> Do you integrate with mobile money?
-              </button>
-              <div id="faq6" class="collapse" data-bs-parent="#faqAccordion">
-                <div class="faq-body">
-                  Yes, our POS and payment systems can integrate with mobile money services including MTN Mobile Money, Airtel Money, and other popular payment methods in Uganda. This makes it easy for your customers to pay and for you to track all transactions in one place. Integration details are discussed during setup.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="text-center mt-4">
-            <div class="gradient-button">
-              <a href="#contact">Still have questions? Contact Us</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer id="contact" class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading text-center">
-            <h4 style="color: #888 !important;">Get in Touch – <em style="color: #aaa !important;">We're Based in Uganda</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="" style="display: block; margin: 15px auto; max-width: 45px; height: 2px; position: relative; z-index: 1; opacity: 0.5;">
-            <p style="margin-top: 20px; position: relative; z-index: 2; color: #bbb !important;">Ready to transform your operations? Contact us for a free demo or consultation. We're based in Uganda and serve clients across the nation. Call, WhatsApp, or visit us today!</p>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-lg-6">
-          <div class="contact-form-wrapper">
-            <h5>Send Us a Message</h5>
-            <form id="contactForm" action="#" method="POST" class="contact-form">
-              <fieldset>
-                <input type="text" name="name" id="name" placeholder="Your Full Name" required>
-              </fieldset>
-              <fieldset>
-                <input type="tel" name="phone" id="phone" placeholder="Phone Number (e.g., +256 769 214 437)" required>
-              </fieldset>
-              <fieldset>
-                <input type="email" name="email" id="email" placeholder="Email Address" required>
-              </fieldset>
-              <fieldset>
-                <select name="business_type" id="business_type" required>
-                  <option value="">Select Business Type</option>
-                  <option value="school">School</option>
-                  <option value="clinic">Clinic/Hospital</option>
-                  <option value="drugshop">Drugshop/Pharmacy</option>
-                  <option value="shop">Shop/Retail Business</option>
-                  <option value="saccos">SACCOS</option>
-                  <option value="other">Other</option>
-                </select>
-              </fieldset>
-              <fieldset>
-                <textarea name="message" id="message" placeholder="Tell us about your needs and how we can help..." rows="6" required></textarea>
-              </fieldset>
-              <fieldset>
-                <button type="submit" class="main-button">
-                  <i class="fa fa-paper-plane"></i> Request Free Demo
-                </button>
-              </fieldset>
-            </form>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="contact-info-wrapper">
-            <div class="whatsapp-button mb-4">
-              <a href="https://wa.me/256769214437" target="_blank">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-              </a>
-            </div>
-            
-            <div class="row mb-4">
-              <div class="col-lg-6 mb-3">
-                <div class="contact-info-card">
-                  <i class="fa fa-map-marker-alt"></i>
-                  <h6>Our Location</h6>
-                  <p>Kampala, Uganda<br>Based in Uganda, serving the nation</p>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-3">
-                <div class="contact-info-card">
-                  <i class="fa fa-phone"></i>
-                  <h6>Phone</h6>
-                  <p>
-                    <a href="tel:+256394558267">0394 558 267</a><br>
-                    <a href="tel:+256769214437">+256 769 214 437</a>
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-3">
-                <div class="contact-info-card">
-                  <i class="fa fa-envelope"></i>
-                  <h6>Email</h6>
-                  <p><a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
-                </div>
-              </div>
-              <div class="col-lg-6 mb-3">
-                <div class="contact-info-card">
-                  <i class="fab fa-whatsapp"></i>
-                  <h6>WhatsApp</h6>
-                  <p><a href="https://wa.me/256769214437" target="_blank">+256 769 214 437</a></p>
-                </div>
-              </div>
-            </div>
-
-            <div class="map-container" style="border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-top: 20px; margin-bottom: 20px;">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63856.515416234!2d32.5292!3d0.3476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177db3e8c6e6c6b5%3A0x1e3a4b5c6d7e8f9a!2sKampala%2C%20Uganda!5e0!3m2!1sen!2sug!4v1234567890123!5m2!1sen!2sug" width="100%" height="250" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="social-icons text-center">
-              <h6 style="color: #1a237e; font-size: 18px; font-weight: 600; margin-bottom: 15px;">Follow Us</h6>
-              <a href="https://wa.me/256769214437" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp" style="color: #25d366; font-size: 24px;"></i>
-              </a>
-              <a href="#" target="_blank" title="Facebook">
-                <i class="fab fa-facebook" style="color: #1877f2; font-size: 24px;"></i>
-              </a>
-              <a href="#" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin" style="color: #0077b5; font-size: 24px;"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row mt-5">
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="team.html">Team</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="services.html">School Management System</a></li>
-              <li><a href="services.html">Hospital Management</a></li>
-              <li><a href="services.html">POS Systems</a></li>
-              <li><a href="services.html">ICT Solutions</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="footer-widget">
-            <h4>About Starlet Technologies</h4>
-            <div class="logo">
-              <img src="assets/images/starlet_logo.png" alt="Starlet Technologies" style="max-width: 150px; margin-bottom: 15px;">
-            </div>
-            <p>Empowering schools, clinics, and businesses across Uganda with affordable, reliable technology solutions. Based in Uganda, serving the nation.</p>
-            <p class="mt-3"><strong>Contact:</strong><br>
-            Tel: <a href="tel:+256394558267">0394 558 267</a> / <a href="tel:+256769214437">+256 769 214 437</a><br>
-            Email: <a href="mailto:info@starlettechnologies.com">info@starlettechnologies.com</a></p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Copyright © <span id="copyright-year">2025</span> Starlet Technologies – Uganda. All Rights Reserved.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/256769214437" target="_blank" class="whatsapp-float" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
   </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+<li><a href="services.html" >Services</a></li>
+<li><a href="products.html" >Products</a></li>
+<li><a href="about.html" >About</a></li>
+<li><a href="team.html" >Team</a></li>
+<li><a href="contact.html" >Contact</a></li>
+    <li><a href="#" class="nav-signin" id="openModal"><i class="fa fa-sign-in-alt"></i> Sign In</a></li>
+  </ul>
+  <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+</nav>
 
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-  <script>
-    // Update copyright year dynamically
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('copyright-year');
-      if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-      }
-    });
+<div class="modal-bg" id="loginModal">
+<div class="modal-box">
+  <div class="modal-kente"></div>
+  <div class="modal-hdr">
+    <span class="modal-title" id="mTitle">Select Your System</span>
+    <button class="modal-x" id="closeModal">✕</button>
+  </div>
+  <div class="modal-body">
+    <div id="stepSys">
+      <p style="font-size:13px;color:#999;margin-bottom:14px;">Choose the system you want to access to continue signing in.</p>
+      <div class="sys-grid">
+        <div class="sys-card" onclick="selectSys('school','School Management System')">
+          <div class="sys-ico si-sch"><i class="fa fa-graduation-cap"></i></div>
+          <h5>School System</h5><p>Students, fees & academics</p>
+        </div>
+        <div class="sys-card" onclick="selectSys('hospital','Hospital / Clinic System')">
+          <div class="sys-ico si-hos"><i class="fa fa-hospital"></i></div>
+          <h5>Hospital System</h5><p>Patients, pharmacy & billing</p>
+        </div>
+        <div class="sys-card" onclick="selectSys('pos','Point of Sale System')">
+          <div class="sys-ico si-pos"><i class="fa fa-cash-register"></i></div>
+          <h5>POS System</h5><p>Sales & inventory</p>
+        </div>
+      </div>
+      <p class="mfnote">New client? <a href="contact.html">Request a free demo</a></p>
+    </div>
     
-    // Professional Testimonials Carousel with Perfect Synchronization
-    jQuery(document).ready(function($) {
-      if ($('.clients-carousel').length && $('.testimonials-carousel').length) {
-        var isNavigating = false;
-        var clientsCarousel, testimonialsCarousel;
-        
-        // Initialize clients carousel
-        clientsCarousel = $('.clients-carousel').owlCarousel({
-          loop: false,
-          margin: 20,
-          nav: false,
-          dots: false,
-          autoplay: false,
-          smartSpeed: 600,
-          items: 1,
-          responsive: {
-            0: { items: 1 },
-            768: { items: 1 },
-            992: { items: 1 }
-          }
-        });
-        
-        // Initialize testimonials carousel
-        testimonialsCarousel = $('.testimonials-carousel').owlCarousel({
-          loop: false,
-          margin: 0,
-          nav: true,
-          dots: true,
-          autoplay: true,
-          autoplayTimeout: 6000,
-          autoplayHoverPause: true,
-          smartSpeed: 600,
-          items: 1,
-          responsive: {
-            0: { items: 1 },
-            768: { items: 1 },
-            992: { items: 1 }
-          },
-          navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
-        });
-        
-        // Set first client as active
-        $('.client-card').first().addClass('active');
-        
-        // Click handler for client cards - Perfect synchronization using data attributes
-        $(document).on('click', '.client-card', function(e) {
-          e.preventDefault();
-          if (isNavigating) return;
-          
-          var testimonialIndex = parseInt($(this).attr('data-testimonial'));
-          
-          if (!isNaN(testimonialIndex)) {
-            isNavigating = true;
-            
-            // Remove active class from all cards
-            $('.client-card').removeClass('active');
-            
-            // Add active class to clicked card
-            $(this).addClass('active');
-            
-            // Navigate both carousels to the same index
-            testimonialsCarousel.trigger('to.owl.carousel', [testimonialIndex, 600]);
-            clientsCarousel.trigger('to.owl.carousel', [testimonialIndex, 600]);
-            
-            // Stop autoplay temporarily
-            testimonialsCarousel.trigger('stop.owl.autoplay');
-            
-            setTimeout(function() {
-              isNavigating = false;
-              // Resume autoplay after a delay
-              setTimeout(function() {
-                testimonialsCarousel.trigger('play.owl.autoplay');
-              }, 3000);
-            }, 650);
-          }
-        });
-        
-        // Synchronize: when testimonials carousel changes (via nav/dots/autoplay), update clients
-        testimonialsCarousel.on('changed.owl.carousel', function(event) {
-          if (!isNavigating) {
-            isNavigating = true;
-            var currentIndex = event.item.index;
-            
-            // Update active client card
-            $('.client-card').removeClass('active');
-            $('.client-card[data-testimonial="' + currentIndex + '"]').addClass('active');
-            
-            // Sync clients carousel
-            clientsCarousel.trigger('to.owl.carousel', [currentIndex, 600]);
-            
-            setTimeout(function() {
-              isNavigating = false;
-            }, 650);
-          }
-        });
-        
-        // Pause autoplay when hovering over client cards
-        $('.clients-list').on('mouseenter', function() {
-          testimonialsCarousel.trigger('stop.owl.autoplay');
-        });
-        
-        $('.clients-list').on('mouseleave', function() {
-          if (!isNavigating) {
-            testimonialsCarousel.trigger('play.owl.autoplay');
-          }
-        });
-      }
-    });
-  </script>
+    <form class="mform" id="stepLogin">
+      <button type="button" class="mback" onclick="backToSys()">← Back to Systems</button>
+      <div class="sys-badge"><span id="sysLabel">School Management System</span></div>
+      <div class="fg">
+        <label>Email or Phone</label>
+        <input type="text" class="fc" placeholder="Enter your email or phone number" required>
+      </div>
+      <div class="fg">
+        <label>Password</label>
+        <input type="password" class="fc" placeholder="Enter your password" required>
+      </div>
+      <label class="fchk"><input type="checkbox"> Remember me</label>
+      <button type="submit" class="btn-mp">Sign In</button>
+      <button type="button" class="btn-mo" id="toReg">Create Account Instead</button>
+      <div class="mforgot">Forgot password? <a href="#">Reset here</a></div>
+    </form>
+    
+    <form class="mform" id="stepReg">
+      <button type="button" class="mback" onclick="backToLogin()">← Back to Sign In</button>
+      <div class="sys-badge"><span id="sysLabel">School Management System</span></div>
+      <div class="fg">
+        <label>Organisation Name</label>
+        <input type="text" class="fc" placeholder="Your school, clinic, or business name" required>
+      </div>
+      <div class="fg">
+        <label>Contact Email</label>
+        <input type="email" class="fc" placeholder="your@email.com" required>
+      </div>
+      <div class="fg">
+        <label>Phone Number</label>
+        <input type="tel" class="fc" placeholder="+256 700 000 000" required>
+      </div>
+      <div class="fg">
+        <label>Create Password</label>
+        <input type="password" class="fc" placeholder="Strong password" required>
+      </div>
+      <label class="fchk"><input type="checkbox" required> I agree to the terms and conditions</label>
+      <button type="submit" class="btn-mp">Create Account</button>
+      <div class="mfnote">Already have an account? <a href="#" onclick="backToLogin()">Sign in here</a></div>
+    </form>
+  </div>
+</div>
+</div>
+
+<style>
+.hero{min-height:100vh;padding-top:75px;background:var(--navy-deep);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.hero-overlay{position:absolute;inset:0;background-image:repeating-conic-gradient(rgba(245,197,24,.05) 0% 25%,transparent 0% 50%) center/48px 48px,repeating-linear-gradient(60deg,rgba(0,212,255,.04) 0 1px,transparent 1px 44px),repeating-linear-gradient(120deg,rgba(193,68,14,.04) 0 1px,transparent 1px 44px)}
+.hero-glow{position:absolute;border-radius:50%;pointer-events:none}
+.hg1{top:-130px;right:-90px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,212,255,.12) 0%,transparent 65%)}
+.hg2{bottom:-220px;left:-120px;width:700px;height:700px;background:radial-gradient(circle,rgba(245,197,24,.08) 0%,transparent 65%)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:76px 5% 56px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;flex:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,212,255,.11);border:1px solid rgba(0,212,255,.28);color:var(--cyan);padding:6px 16px;border-radius:30px;font-size:11.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:20px}
+.h-badge::before{content:'';width:6px;height:6px;background:var(--cyan);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.h-title{font-size:clamp(36px,5.2vw,66px);font-weight:600;line-height:1.1;color:#fff;margin-bottom:6px}
+.h-title-accent{font-size:clamp(36px,5.2vw,66px);font-weight:600;line-height:1.1;background:linear-gradient(135deg,var(--gold) 0%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:22px}
+.h-desc{font-size:16.5px;color:rgba(255,255,255,.7);line-height:1.82;font-weight:300;margin-bottom:34px;max-width:510px}
+.h-actions{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:44px}
+.h-stats{display:flex;gap:32px;padding-top:28px;border-top:1px solid rgba(255,255,255,.1)}
+.hs-n{font-family:'Crimson Pro',serif;font-size:32px;color:var(--gold);display:block;line-height:1}
+.hs-l{font-size:11px;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px}
+.h-card{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,24,.18);border-radius:22px;padding:34px;backdrop-filter:blur(12px);position:relative;overflow:hidden}
+.h-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0 18px,var(--cyan) 18px 36px,var(--ank-tc) 36px 54px,var(--ank-green) 54px 72px)}
+.hc-label{font-size:11px;font-weight:700;color:rgba(255,255,255,.45);letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.pl{list-style:none}
+.pl li{display:flex;align-items:center;gap:13px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.07);transition:padding-left .25s}
+.pl li:last-child{border:none}
+.pl li:hover{padding-left:4px}
+.p-ico{width:41px;height:41px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.pi-s{background:rgba(193,68,14,.24);color:#FF7043}
+.pi-h{background:rgba(46,125,50,.24);color:#66BB6A}
+.pi-p{background:rgba(245,197,24,.18);color:var(--gold)}
+.pi-i{background:rgba(0,212,255,.18);color:var(--cyan)}
+.p-nm{font-size:13.5px;font-weight:600;color:rgba(255,255,255,.88)}
+.p-sb{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:2px}
+@media(max-width:768px){.hero-content{grid-template-columns:1fr;gap:32px;padding:56px 5% 44px}.h-stats{flex-wrap:wrap;gap:18px}}
+</style>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-glow hg1"></div>
+  <div class="hero-glow hg2"></div>
+  <div class="hero-content">
+    <div>
+      <div class="h-badge">✦ Bright Ideas, Built for Africa</div>
+      <h1 class="h-title">Smarter Systems<br>for a Growing</h1>
+      <span class="h-title-accent">Africa.</span>
+      <p class="h-desc">We build affordable, robust software and ICT solutions for schools, healthcare facilities, and businesses across Africa — designed for local realities, backed by on-the-ground support.</p>
+      <div class="h-actions">
+        <a href="contact.html" class="btn-gold"><i class="fa fa-play-circle"></i> Request Free Demo</a>
+        <a href="products.html" class="btn-outline-white">Explore Products <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="h-stats">
+        <div><span class="hs-n">200+</span><span class="hs-l">Clients Served</span></div>
+        <div><span class="hs-n">5+</span><span class="hs-l">Years Delivering</span></div>
+        <div><span class="hs-n">24/7</span><span class="hs-l">Support Access</span></div>
+      </div>
+    </div>
+    <div>
+      <div class="h-card">
+        <p class="hc-label">✦ Our Core Systems</p>
+        <ul class="pl">
+          <li><div class="p-ico pi-s"><i class="fa fa-graduation-cap"></i></div><div><div class="p-nm">School Management System</div><div class="p-sb">Fees · Attendance · Exams · SMS</div></div></li>
+          <li><div class="p-ico pi-h"><i class="fa fa-hospital"></i></div><div><div class="p-nm">Hospital & Clinic System</div><div class="p-sb">Patients · Pharmacy · Billing</div></div></li>
+          <li><div class="p-ico pi-p"><i class="fa fa-cash-register"></i></div><div><div class="p-nm">Point of Sale System</div><div class="p-sb">Sales · Inventory · Mobile Money</div></div></li>
+          <li><div class="p-ico pi-i"><i class="fa fa-network-wired"></i></div><div><div class="p-nm">ICT Infrastructure</div><div class="p-sb">Networks · CCTV · Hardware</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section s-cream" style="position:relative">
+<div class="ankara-overlay"></div>
+<div style="position:relative;z-index:1">
+  <div class="s-hdr"><span class="s-eyebrow">✦ What We Deliver</span><h2 class="s-title">Solutions Built for<br><em>African Organisations</em></h2><div class="ankara-diamonds"><span class="ad-gold"></span><span class="ad-tc"></span><span class="ad-cyan"></span><span class="ad-gr"></span><span class="ad-oc"></span></div><p class="s-desc" style="margin:14px auto 0">From classrooms to consulting rooms, our purpose-built software eliminates paperwork, improves efficiency, and gives leaders real-time visibility across their organisation.</p></div>
+  <div class="sc-grid">
+    <div class="sc-card sc-school"><div class="sc-ico sci-s"><i class="fa fa-graduation-cap"></i></div><h3>School Management</h3><p>A complete digital backbone for schools — handling admissions, fees, attendance, exams, and staff payroll all in one intuitive platform.</p><ul class="sc-feats"><li>Student enrollment & fee collection</li><li>Exam results & automated report cards</li><li>Staff payroll & attendance tracking</li><li>SMS notifications to parents</li></ul><a href="products.html" class="sc-lnk">Explore System <i class="fa fa-arrow-right"></i></a></div>
+    <div class="sc-card sc-hospital"><div class="sc-ico sci-h"><i class="fa fa-hospital"></i></div><h3>Hospital & Clinic System</h3><p>Streamline patient management, pharmacy inventory, and billing for clinics, hospitals, and drugshops of every size.</p><ul class="sc-feats"><li>Patient records & consultation history</li><li>Pharmacy & drug inventory control</li><li>Billing, receipts & insurance claims</li><li>Lab results & appointment scheduling</li></ul><a href="products.html" class="sc-lnk">Explore System <i class="fa fa-arrow-right"></i></a></div>
+    <div class="sc-card sc-pos"><div class="sc-ico sci-p"><i class="fa fa-cash-register"></i></div><h3>Point of Sale System</h3><p>Fast, modern retail management for shops and supermarkets — tracking sales, managing inventory, and accepting mobile money payments.</p><ul class="sc-feats"><li>Barcode scanning & receipt printing</li><li>Real-time inventory with low-stock alerts</li><li>MTN & Airtel Mobile Money integration</li><li>Multi-branch & offline mode</li></ul><a href="products.html" class="sc-lnk">Explore System <i class="fa fa-arrow-right"></i></a></div>
+    <div class="sc-card sc-ict"><div class="sc-ico sci-i"><i class="fa fa-network-wired"></i></div><h3>ICT Infrastructure</h3><p>End-to-end technology infrastructure — from hardware supply and network setup to CCTV security and managed IT support.</p><ul class="sc-feats"><li>Computer labs & hardware supply</li><li>LAN, WiFi & structured cabling</li><li>CCTV & security system installation</li><li>Ongoing managed IT support</li></ul><a href="services.html" class="sc-lnk">View Services <i class="fa fa-arrow-right"></i></a></div>
+  </div>
+</div>
+</section>
+
+<!-- WHY US -->
+<section class="section s-white">
+<div class="why-grid">
+  <div class="ank-showcase">
+    <div class="ank-kente-thick"></div>
+    <div class="ank-body">
+      <p style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:7px">Technology That Understands Africa</p>
+      <h3 style="font-size:26px;color:#fff;margin-bottom:8px">Africa-First. <span style="color:var(--gold)">Always.</span></h3>
+      <p style="font-size:13.5px;color:rgba(255,255,255,.52);font-weight:300;line-height:1.75">We design every system for the real-world conditions of African organisations — from unreliable internet to local payment ecosystems.</p>
+      <div class="ank-stat-grid">
+        <div class="ank-stat"><span class="ank-n">200+</span><span class="ank-l">Organisations</span></div>
+        <div class="ank-stat"><span class="ank-n">5+</span><span class="ank-l">Years Active</span></div>
+        <div class="ank-stat"><span class="ank-n">UGX</span><span class="ank-l">Local Pricing</span></div>
+        <div class="ank-stat"><span class="ank-n">24/7</span><span class="ank-l">Support</span></div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span class="s-eyebrow">✦ Why Starlet Systems</span>
+    <h2 class="s-title" style="margin-bottom:32px">Support-First. <em>Africa-First.</em></h2>
+    <ul class="why-pts">
+      <li class="why-pt"><div class="wpi wpi-1"><i class="fa fa-globe-africa"></i></div><div class="wpt"><h4>Grounded in Africa</h4><p>Our team is embedded in the communities we serve — local experts who understand your context, language, and operational realities. No overseas call centres.</p></div></li>
+      <li class="why-pt"><div class="wpi wpi-2"><i class="fa fa-hand-holding-usd"></i></div><div class="wpt"><h4>Genuinely Affordable</h4><p>Pricing built for African budgets, charged in local currency. Transparent subscriptions, no hidden fees, and plans that scale with your growth.</p></div></li>
+      <li class="why-pt"><div class="wpi wpi-3"><i class="fa fa-chalkboard-teacher"></i></div><div class="wpt"><h4>Full Setup & Training Included</h4><p>We install and configure everything on-site, then train every member of your team until they're fully confident — before we hand over the keys.</p></div></li>
+      <li class="why-pt"><div class="wpi wpi-4"><i class="fab fa-whatsapp"></i></div><div class="wpt"><h4>WhatsApp Support, Always On</h4><p>Reach our team instantly via WhatsApp, phone, or email. Emergency assistance is never more than a message away, day or night.</p></div></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section s-cream" style="position:relative">
+<div class="ankara-overlay"></div>
+<div style="position:relative;z-index:1">
+  <div class="s-hdr"><span class="s-eyebrow">✦ Client Voices</span><h2 class="s-title">Trusted by Organisations <em>Across Africa</em></h2><div class="ankara-diamonds"><span class="ad-gold"></span><span class="ad-tc"></span><span class="ad-cyan"></span><span class="ad-gr"></span><span class="ad-oc"></span></div></div>
+  <div class="tst-grid">
+    <div class="tst-card"><div class="tst-stars">★★★★★</div><p class="tst-text">The school system completely transformed how we manage fees and academic records. Parents receive SMS updates on their children's results, and our admin time dropped by 70%. The support team is exceptional — always available.</p><div class="tst-auth"><div class="tst-av">M</div><div><div class="tst-name">Mr. Moses Okello</div><div class="tst-role">Headteacher, Kampala Secondary School</div></div></div></div>
+    <div class="tst-card"><div class="tst-stars">★★★★★</div><p class="tst-text">Before Starlet, we were losing stock records constantly. Now our pharmacy inventory, patient billing, and prescriptions are automatically tracked. It has genuinely changed how our clinic operates and serves patients.</p><div class="tst-auth"><div class="tst-av">D</div><div><div class="tst-name">Dr. Diana Namukasa</div><div class="tst-role">Medical Director, Mbarara Health Centre</div></div></div></div>
+    <div class="tst-card"><div class="tst-stars">★★★★★</div><p class="tst-text">The POS works even during power cuts. My cashiers process sales faster, I can check daily reports from my phone anywhere, and Mobile Money integration is seamless. The best investment I've made in my business.</p><div class="tst-auth"><div class="tst-av">J</div><div><div class="tst-name">Joyce Atuhaire</div><div class="tst-role">Owner, Atuhaire Supermarket</div></div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="section s-white">
+<div class="s-hdr s-inner" style="margin-bottom:44px"><span class="s-eyebrow">✦ Common Questions</span><h2 class="s-title">Answers to Your <em>Questions</em></h2><div class="ankara-diamonds"><span class="ad-gold"></span><span class="ad-tc"></span><span class="ad-cyan"></span><span class="ad-gr"></span><span class="ad-oc"></span></div></div>
+<div class="faq-wrap">
+  <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">How long does it take to set everything up?<span class="faq-ico"><i class="fa fa-plus"></i></span></button><div class="faq-body">Most systems are installed and fully operational within 1–3 business days. Our team handles on-site setup, data migration from your existing records, and comprehensive staff training before handover.</div></div>
+  <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Will the system work without reliable internet?<span class="faq-ico"><i class="fa fa-plus"></i></span></button><div class="faq-body">Absolutely. Our systems are engineered for Africa's connectivity realities. All core functions operate fully offline, and data synchronises automatically whenever your connection is restored.</div></div>
+  <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">How is pricing structured?<span class="faq-ico"><i class="fa fa-plus"></i></span></button><div class="faq-body">Pricing is tailored to your organisation's size, sector, and needs, denominated in local currency. We offer monthly and annual plans with no hidden fees. Contact us for a customised quote after your free demo.</div></div>
+  <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">What ongoing support do you provide after installation?<span class="faq-ico"><i class="fa fa-plus"></i></span></button><div class="faq-body">All clients receive ongoing support via WhatsApp, phone, and email. Emergency support is available around the clock for critical issues, and all system updates are delivered free of charge.</div></div>
+  <div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)">Can I request a demo before committing?<span class="faq-ico"><i class="fa fa-plus"></i></span></button><div class="faq-body">Yes — we strongly encourage it. We'll visit your premises, demonstrate the system live in your working environment, and tailor the demo to your specific workflow. There's no obligation whatsoever.</div></div>
+</div>
+</section>
+
+<!-- CTA -->
+<div class="kente-bar"></div>
+<section class="cta-band"><div class="cta-inner"><span class="s-eyebrow lt" style="text-align:center;display:block">✦ Ready to Get Started?</span><h2>Transform Your Organisation Today</h2><p>Book a free demo with our team. We'll come to you, walk you through the system live, and show you exactly how it fits your organisation — no pressure, no obligation.</p><div class="cta-btns"><a href="contact.html" class="btn-gold"><i class="fa fa-calendar-check"></i> Book Free Demo</a><a href="https://wa.me/256769214437" target="_blank" class="btn-outline-gold"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></div></div></section>
+
+
+<div class="kente-bar"></div>
+<footer>
+<div class="ft-top">
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">
+        <img src="assets/images/starlet logo clean.png" alt="Starlet Systems Africa"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="ft-logo-text" style="display:none">
+          <span class="nl-star">Star</span><span class="nl-let">Let</span>
+          <small>Systems Africa</small>
+        </div>
+      </div>
+      <p class="ft-tag">Empowering schools, clinics, and businesses across Africa with affordable, reliable technology. Purpose-built for African organisations, delivered with on-the-ground expertise.</p>
+      <div class="ft-contact">
+        <a href="tel:+256394558267"><i class="fa fa-phone" style="margin-right:7px;width:14px"></i>0394 558 267</a>
+        <a href="tel:+256769214437"><i class="fab fa-whatsapp" style="margin-right:7px;width:14px"></i>+256 769 214 437</a>
+        <a href="mailto:info@starlettechnologies.com"><i class="fa fa-envelope" style="margin-right:7px;width:14px"></i>info@starlettechnologies.com</a>
+      </div>
+      <div class="ft-social">
+        <a href="https://wa.me/256769214437" target="_blank" class="fsoc fs-wa"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="fsoc fs-fb"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="fsoc fs-li"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Navigate</h4>
+      <ul class="ft-lnks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Systems</h4>
+      <ul class="ft-lnks">
+        <li><a href="products.html">School Management</a></li>
+        <li><a href="products.html">Hospital System</a></li>
+        <li><a href="products.html">POS System</a></li>
+        <li><a href="services.html">ICT Infrastructure</a></li>
+        <li><a href="services.html">Web & Mobile Apps</a></li>
+        <li><a href="services.html">Managed IT Support</a></li>
+      </ul>
+    </div>
+    <div class="ft-col">
+      <h4>Our Mission</h4>
+      <p style="font-size:13.5px;color:rgba(255,255,255,.42);line-height:1.82;font-weight:300;">"Bright ideas, built for Africa." We exist to make world-class technology accessible to every African school, clinic, and business — regardless of size or location.</p>
+    </div>
+  </div>
+</div>
+<div class="ft-bot">
+  <p>Copyright &copy; <span id="yr"></span> Starlet Systems Africa. All Rights Reserved. &nbsp;|&nbsp; <em>Bright ideas, Built for Africa.</em></p>
+</div>
+</footer>
+<a href="https://wa.me/256769214437" target="_blank" class="wa-float" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+// Modal
+const modal = document.getElementById('loginModal');
+let selectedSystem = null;
+const systemLoginUrls = {
+  'school': 'http://localhost/school-management-system/login.php',
+  'hospital': 'https://myhospital.starletsystemsafrica.com',
+  'pos': 'https://mypos.starletsystemsafrica.com'
+};
+document.getElementById('openModal').addEventListener('click', e=>{e.preventDefault();modal.classList.add('open');});
+document.getElementById('closeModal').addEventListener('click', ()=>modal.classList.remove('open'));
+modal.addEventListener('click', e=>{if(e.target===modal)modal.classList.remove('open');});
+function selectSys(id,name){
+  selectedSystem = id;
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    modal.classList.remove('open');
+    setTimeout(()=>{
+      window.location.href = systemLoginUrls[selectedSystem];
+    }, 100);
+  }
+}
+function backToSys(){
+  selectedSystem = null;
+  document.getElementById('mTitle').textContent='Select Your System';
+  document.getElementById('stepSys').style.display='block';
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.remove('on');
+}
+function backToLogin(){
+  document.getElementById('stepReg').classList.remove('on');
+  document.getElementById('stepLogin').classList.add('on');
+  document.getElementById('mTitle').textContent='Sign In';
+}
+document.getElementById('toReg').addEventListener('click',()=>{
+  document.getElementById('stepLogin').classList.remove('on');
+  document.getElementById('stepReg').classList.add('on');
+  document.getElementById('mTitle').textContent='Create Account';
+});
+// Sign In form submission - redirect to system login
+document.getElementById('stepLogin').addEventListener('submit', e=>{
+  e.preventDefault();
+  if(selectedSystem && systemLoginUrls[selectedSystem]){
+    window.location.href = systemLoginUrls[selectedSystem];
+  }
+});
+// FAQ
+function toggleFaq(btn){
+  const body=btn.nextElementSibling,open=btn.classList.contains('open');
+  document.querySelectorAll('.faq-btn').forEach(b=>{b.classList.remove('open');b.nextElementSibling.classList.remove('open');});
+  if(!open){btn.classList.add('open');body.classList.add('open');}
+}
+// Scroll reveal
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}}),{threshold:0.1});
+document.querySelectorAll('.sc-card,.tst-card,.why-pt,.tm-card,.sov-card,.ank-stat,.proc-step').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(18px)';el.style.transition='opacity .6s ease,transform .6s ease';
+  io.observe(el);
+});
+</script>
+
 </body>
 </html>
